@@ -174,7 +174,7 @@ decodificação volumétrica sem FlashVDM (77–80 s).
   (`microsoft/TRELLIS-image-large`, MIT) já estão no cache.
 * **TRELLIS.2 (Microsoft, 4B):** além das extensões CUDA próprias (o-voxel, CuMesh, FlexGEMM, nvdiffrec), o
   condicionamento usa o DINOv3 (`facebook/dinov3-vitl16-pretrain-lvd1689m`), repositório com acesso restrito
-  (*gated*, aprovação manual) — **pendente**: login no Hugging Face e aceite da licença pelo bolsista.
+  (*gated*, aprovação manual) — **pendente**: login no Hugging Face e aceite da licença pelo Eduardo.
 * **Stable Fast 3D e SPAR3D (Stability AI):** repositórios *gated* (licença Stability AI Community) — **pendente** o
   mesmo passo (login HF + aceite). O código (`third_party/stable-fast-3d`) já está clonado.
 

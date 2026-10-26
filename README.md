@@ -40,7 +40,7 @@ e [`RELATORIO_SECAO_SERVIDOR.md`](RELATORIO_SECAO_SERVIDOR.md) (servidor, O2-A5 
 | Hunyuan3D-2.1 PBR | 2/2 | 242,9 s | textura PBR | 0,032 | 0,949 | 0,994 | 0,883 | 0,878 | 13,8 GB |
 
 Autoteste das métricas (malha de referência transformada): Chamfer médio 0,0042 e F@0,05 ≥ 0,976. TRELLIS, TRELLIS.2,
-Stable Fast 3D e SPAR3D ficaram bloqueados (sem `spconv`/`cumm` para aarch64; repositórios *gated*), com a evidência
+Stable Fast 3D e SPAR3D ficaram bloqueados (sem `spconv`/`cumm` para aarch64; repositórios *gated*, pendentes de login no Hugging Face e aceite das licenças pelo Eduardo), com a evidência
 em `resultados/trellis_bloqueio_pypi.txt` e no relatório.
 
 **A3 — otimização** (série intercalada, 4 objetos, `resultados/a3i_tabela.csv`): tempo mediano base 63,9 s →
