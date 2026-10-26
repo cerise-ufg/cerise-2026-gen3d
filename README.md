@@ -98,6 +98,9 @@ padrão): GLB pronto em 16,1 s, 0,72 MB, baixado em 0,33 s, validado com 0 erros
 
 ## Como reproduzir
 
+**Roteiro de implementação passo a passo** (requisitos, pesos, benchmark A1, testes A4, servidor, testes com curl e
+com o app, teste de carga e problemas comuns): [`ROTEIRO.md`](ROTEIRO.md).
+
 Pré-requisitos: máquina NVIDIA com Docker + `nvidia-container-toolkit` (os comandos abaixo foram usados no DGX
 Spark, aarch64), os repositórios oficiais em `third_party/` nos commits de [`TERCEIROS.md`](TERCEIROS.md) e os pesos
 no cache do Hugging Face.
