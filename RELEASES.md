@@ -23,8 +23,8 @@ pesos de terceiros.
 ## Como baixar e extrair
 
 ```bash
-# na raiz de um clone deste repositório (substituir <org> pelo nome da organização)
-gh release download dados-2026-10-26 -R <org>/cerise-2026-gen3d -D _releases
+# na raiz de um clone deste repositório (substituir cerise-ufg pelo nome da organização)
+gh release download dados-2026-10-26 -R cerise-ufg/cerise-2026-gen3d -D _releases
 cd _releases && sha256sum -c SHA256SUMS && cd ..
 for f in _releases/gen3d_*.tar.gz; do tar -xzf "$f"; done
 ```
@@ -38,7 +38,7 @@ contém as mesmas somas da tabela acima.
 
 ```bash
 cd <pasta com os pacotes>
-gh release create dados-2026-10-26 -R <org>/cerise-2026-gen3d \
+gh release create dados-2026-10-26 -R cerise-ufg/cerise-2026-gen3d \
   --title "Dados e saídas brutas — 26/10/2026" --notes "Ver RELEASES.md" \
   gen3d_*.tar.gz SHA256SUMS
 ```
