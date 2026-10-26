@@ -1,0 +1,170 @@
+[
+ {
+  "arquivo": "e2e_out/model.glb",
+  "bytes": 720904,
+  "gltf_version": "2.0",
+  "generator": "glTF-Transform v4.5.1",
+  "triangles": 20000,
+  "extensionsUsed": [],
+  "extensionsRequired": [],
+  "materials": 1,
+  "baseColorTexture": true,
+  "images": [
+   {
+    "mimeType": "image/jpeg",
+    "real": "jpeg",
+    "w": 1024,
+    "h": 1024,
+    "bytes": 228500
+   }
+  ],
+  "bbox_min_m": [
+   -0.1256,
+   0.0,
+   -0.0587
+  ],
+  "bbox_max_m": [
+   0.1256,
+   0.3,
+   0.0587
+  ],
+  "dims_m": [
+   0.2513,
+   0.3,
+   0.1175
+  ],
+  "max_dim_m": 0.3,
+  "y_min_m": 0.0,
+  "centro_xz_m": [
+   0.0,
+   -0.0
+  ],
+  "ok_app": true
+ },
+ {
+  "arquivo": "e2e_out/legado_objeto_ajustado.glb",
+  "bytes": 441568,
+  "gltf_version": "2.0",
+  "generator": "glTF-Transform v4.5.1",
+  "triangles": 10000,
+  "extensionsUsed": [],
+  "extensionsRequired": [],
+  "materials": 1,
+  "baseColorTexture": true,
+  "images": [
+   {
+    "mimeType": "image/jpeg",
+    "real": "jpeg",
+    "w": 1024,
+    "h": 1024,
+    "bytes": 197999
+   }
+  ],
+  "bbox_min_m": [
+   -0.1258,
+   0.0,
+   -0.059
+  ],
+  "bbox_max_m": [
+   0.1258,
+   0.3,
+   0.059
+  ],
+  "dims_m": [
+   0.2516,
+   0.3,
+   0.1181
+  ],
+  "max_dim_m": 0.3,
+  "y_min_m": 0.0,
+  "centro_xz_m": [
+   0.0,
+   0.0
+  ],
+  "ok_app": true
+ },
+ {
+  "arquivo": "e2e_out_antes_png/model.glb",
+  "bytes": 2974392,
+  "gltf_version": "2.0",
+  "generator": "glTF-Transform v4.5.1",
+  "triangles": 20000,
+  "extensionsUsed": [],
+  "extensionsRequired": [],
+  "materials": 1,
+  "baseColorTexture": true,
+  "images": [
+   {
+    "mimeType": "image/png",
+    "real": "png",
+    "w": 1024,
+    "h": 1024,
+    "bytes": 2481988
+   }
+  ],
+  "bbox_min_m": [
+   -0.1256,
+   0.0,
+   -0.0587
+  ],
+  "bbox_max_m": [
+   0.1256,
+   0.3,
+   0.0587
+  ],
+  "dims_m": [
+   0.2513,
+   0.3,
+   0.1175
+  ],
+  "max_dim_m": 0.3,
+  "y_min_m": 0.0,
+  "centro_xz_m": [
+   0.0,
+   -0.0
+  ],
+  "ok_app": true
+ },
+ {
+  "arquivo": "e2e_out_antes_png/legado_objeto_ajustado.glb",
+  "bytes": 2600560,
+  "gltf_version": "2.0",
+  "generator": "glTF-Transform v4.5.1",
+  "triangles": 10000,
+  "extensionsUsed": [],
+  "extensionsRequired": [],
+  "materials": 1,
+  "baseColorTexture": true,
+  "images": [
+   {
+    "mimeType": "image/png",
+    "real": "png",
+    "w": 1024,
+    "h": 1024,
+    "bytes": 2356995
+   }
+  ],
+  "bbox_min_m": [
+   -0.1258,
+   0.0,
+   -0.059
+  ],
+  "bbox_max_m": [
+   0.1258,
+   0.3,
+   0.059
+  ],
+  "dims_m": [
+   0.2516,
+   0.3,
+   0.1181
+  ],
+  "max_dim_m": 0.3,
+  "y_min_m": 0.0,
+  "centro_xz_m": [
+   0.0,
+   0.0
+  ],
+  "ok_app": true
+ }
+]

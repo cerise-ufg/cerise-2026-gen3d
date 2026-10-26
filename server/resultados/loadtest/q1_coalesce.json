@@ -1,0 +1,1355 @@
+{
+ "args": {
+  "scenario": "coalesce",
+  "base": "http://127.0.0.1:8095",
+  "mode": "queue",
+  "images": "/opt/gen3d/server/loadtest/pool",
+  "pool_start": 40,
+  "levels": "1,2,4,8,16",
+  "seq1": 3,
+  "preset": "rapido",
+  "clients": 8,
+  "jobs_per_client": 2,
+  "mix": "rapido:0.5,padrao:0.35,alto:0.15",
+  "seed": 7,
+  "poll": 1.0,
+  "probe_rate": 10.0,
+  "duration": 60.0,
+  "client_timeout": 900.0,
+  "pause_between": 0.0,
+  "tag": "q1_coalesce",
+  "save_dir": "",
+  "out": "/opt/gen3d/server/results/loadtest/q1_coalesce.json"
+ },
+ "t_start": 1793014887.2082105,
+ "t_end": 1793014899.6100638,
+ "records": [
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.7",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2234592,
+   "t_accepted": 1793014887.3776965,
+   "submit_status": 202,
+   "job_id": "34da26d0ec264b02893715cebcffa83d",
+   "pos0": 1,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": false,
+   "t_running_seen": 1793014888.3856027,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2424839,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.153,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": false,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": null,
+    "cached_from": null
+   },
+   "download_s": 0.0076677799224853516,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.4483716,
+   "latency_s": 12.224912405014038
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.5",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2229764,
+   "t_accepted": 1793014887.3969815,
+   "submit_status": 202,
+   "job_id": "23c9d2336eaa448480ed7a66f11ebf64",
+   "pos0": 0,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2404325,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.155,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.03600263595581055,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.522718,
+   "latency_s": 12.299741506576538
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.2",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2221062,
+   "t_accepted": 1793014887.3891675,
+   "submit_status": 202,
+   "job_id": "8837edaa8733442b9df3245923f182d6",
+   "pos0": 1,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2471912,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.148,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.03566932678222656,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.5249639,
+   "latency_s": 12.302857637405396
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.4",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2227192,
+   "t_accepted": 1793014887.3904307,
+   "submit_status": 202,
+   "job_id": "caef7d37e2674516873e443025279c1a",
+   "pos0": 1,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2469158,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.149,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.04086875915527344,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.5270524,
+   "latency_s": 12.304333209991455
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.6",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2232227,
+   "t_accepted": 1793014887.3886669,
+   "submit_status": 202,
+   "job_id": "347436e5b3cd4b738149ca68b3d5c1de",
+   "pos0": 1,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.246706,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.149,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.03481888771057129,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.529106,
+   "latency_s": 12.305883169174194
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.3",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2224488,
+   "t_accepted": 1793014887.422948,
+   "submit_status": 202,
+   "job_id": "56a4aaa4205f4cf98b60edd29dcc0cc5",
+   "pos0": 0,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2462714,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.149,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.03300595283508301,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.5309083,
+   "latency_s": 12.308459520339966
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.1",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2082677,
+   "t_accepted": 1793014887.3958428,
+   "submit_status": 202,
+   "job_id": "1ca9fc0550384b2b8a08032041118772",
+   "pos0": 1,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2405589,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.155,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.03443455696105957,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.5319648,
+   "latency_s": 12.323697090148926
+  },
+  {
+   "mode": "queue",
+   "image": "040_gso_Android_Figure_Panda_rgba_esp.png",
+   "preset": "rapido",
+   "client": "10.80.0.8",
+   "level": 8,
+   "tag": "q1_coalesce",
+   "t_submit": 1793014887.2236888,
+   "t_accepted": 1793014887.3896873,
+   "submit_status": 202,
+   "job_id": "cdbe84a35db348e88686b3d9cfa7fb78",
+   "pos0": 1,
+   "eta0": 11.8,
+   "cached": false,
+   "dedup": true,
+   "final_status": "done",
+   "timings": {
+    "created_at": 1793014887.2469704,
+    "started_at": 1793014887.3954597,
+    "finished_at": 1793014899.1299198,
+    "queue_s": 0.148,
+    "run_s": 11.734
+   },
+   "stats": {
+    "seconds": 11.73,
+    "total_s": 11.731,
+    "faces": 9998,
+    "glb_bytes": 1047984,
+    "dims_m": [
+     0.2673051536239561,
+     0.29999999999999993,
+     0.1719746773266705
+    ],
+    "peak_gpu_gb": 18.873,
+    "slot": 0,
+    "worker": "worker1",
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "times": {
+     "bg_removal": 0.0114,
+     "shape_diffusion": 1.9017,
+     "shape_decode_mc": 0.605,
+     "mesh_postproc": 0.4367,
+     "tex_delight": 2.1482,
+     "tex_uv_unwrap": 0.2406,
+     "tex_render_cond": 0.732,
+     "tex_multiview_diffusion": 4.5319,
+     "tex_bake": 0.1474,
+     "tex_inpaint": 0.1787,
+     "tex_export": 0.0066,
+     "export_glb": 0.1482,
+     "mobile_postproc": 0.5446,
+     "thumbnail": 0.096
+    },
+    "cached": true,
+    "queue_wait_s": 0.153,
+    "deduplicated_from": "34da26d0ec264b02893715cebcffa83d",
+    "cached_from": null
+   },
+   "download_s": 0.03345489501953125,
+   "glb_bytes": 1047984,
+   "glb_sha": "5c09f6184b9f6461c4aa849389d6f7e0855d43809f477ac3156aeeac1eed179c",
+   "ok": true,
+   "t_end": 1793014899.5330286,
+   "latency_s": 12.309339761734009
+  }
+ ],
+ "probes": [
+  {
+   "kind": "health",
+   "t": 1793014887.2239637,
+   "latency_s": 0.011738777160644531,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014887.308987,
+   "latency_s": 0.004042625427246094,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014887.4090838,
+   "latency_s": 0.0031638145446777344,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014887.5091698,
+   "latency_s": 0.003807544708251953,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014887.609215,
+   "latency_s": 0.004502773284912109,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014887.7091413,
+   "latency_s": 0.005079746246337891,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014887.8096845,
+   "latency_s": 0.004317045211791992,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014887.9094317,
+   "latency_s": 0.004102468490600586,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014888.0088735,
+   "latency_s": 0.004242658615112305,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014888.1096342,
+   "latency_s": 0.0036468505859375,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014888.2086759,
+   "latency_s": 0.0037560462951660156,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014888.3088508,
+   "latency_s": 0.004758596420288086,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014888.4095178,
+   "latency_s": 0.003080606460571289,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014888.5090992,
+   "latency_s": 0.004224061965942383,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014888.6087492,
+   "latency_s": 0.0037164688110351562,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014888.7089536,
+   "latency_s": 0.0035567283630371094,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014888.8089464,
+   "latency_s": 0.0045740604400634766,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014888.909098,
+   "latency_s": 0.003312349319458008,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014889.0091674,
+   "latency_s": 0.004507303237915039,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014889.1095893,
+   "latency_s": 0.003735780715942383,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014889.2089155,
+   "latency_s": 0.0047092437744140625,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014889.3088653,
+   "latency_s": 0.0041162967681884766,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014889.4095817,
+   "latency_s": 0.016466617584228516,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014889.5100029,
+   "latency_s": 0.0051784515380859375,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014889.6099885,
+   "latency_s": 0.0058879852294921875,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014889.7092023,
+   "latency_s": 0.003271341323852539,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014889.808703,
+   "latency_s": 0.0028450489044189453,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014889.9089024,
+   "latency_s": 0.0029897689819335938,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014890.0092366,
+   "latency_s": 0.0031499862670898438,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014890.1090086,
+   "latency_s": 0.0030553340911865234,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014890.2097912,
+   "latency_s": 0.0028409957885742188,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014890.3088834,
+   "latency_s": 0.0028476715087890625,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014890.4091985,
+   "latency_s": 0.006053447723388672,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014890.508972,
+   "latency_s": 0.002444028854370117,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014890.6086483,
+   "latency_s": 0.004307746887207031,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014890.7092884,
+   "latency_s": 0.0044248104095458984,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014890.809059,
+   "latency_s": 0.0031256675720214844,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014890.909731,
+   "latency_s": 0.005038022994995117,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014891.0089455,
+   "latency_s": 0.0028717517852783203,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014891.109227,
+   "latency_s": 0.0053751468658447266,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014891.2089944,
+   "latency_s": 0.004674673080444336,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014891.3090785,
+   "latency_s": 0.0031163692474365234,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014891.4092402,
+   "latency_s": 0.0026540756225585938,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014891.509025,
+   "latency_s": 0.003230571746826172,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014891.6086886,
+   "latency_s": 0.004651546478271484,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014891.7086804,
+   "latency_s": 0.005117177963256836,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014891.808999,
+   "latency_s": 0.0036215782165527344,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014891.9091523,
+   "latency_s": 0.006349802017211914,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014892.0087178,
+   "latency_s": 0.004467487335205078,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014892.1094017,
+   "latency_s": 0.004021167755126953,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014892.208923,
+   "latency_s": 0.006255388259887695,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014892.3095229,
+   "latency_s": 0.003092527389526367,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014892.4093544,
+   "latency_s": 0.002830982208251953,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014892.509033,
+   "latency_s": 0.002385854721069336,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014892.6087637,
+   "latency_s": 0.0027227401733398438,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014892.708795,
+   "latency_s": 0.002418994903564453,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014892.809504,
+   "latency_s": 0.002634763717651367,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014892.9093337,
+   "latency_s": 0.002602815628051758,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014893.009145,
+   "latency_s": 0.0024335384368896484,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014893.1087756,
+   "latency_s": 0.0025360584259033203,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014893.2086887,
+   "latency_s": 0.002718210220336914,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014893.30871,
+   "latency_s": 0.0023491382598876953,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014893.4093475,
+   "latency_s": 0.0023462772369384766,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014893.5085425,
+   "latency_s": 0.002298116683959961,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014893.609631,
+   "latency_s": 0.005616664886474609,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014893.7096398,
+   "latency_s": 0.01092672348022461,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014893.80898,
+   "latency_s": 0.008475542068481445,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014893.908823,
+   "latency_s": 0.005804538726806641,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014894.0090013,
+   "latency_s": 0.009321451187133789,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014894.1086874,
+   "latency_s": 0.0047075748443603516,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014894.2092876,
+   "latency_s": 0.011350870132446289,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014894.309384,
+   "latency_s": 0.00610661506652832,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014894.4088423,
+   "latency_s": 0.004391670227050781,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014894.5090818,
+   "latency_s": 0.005190610885620117,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014894.6088774,
+   "latency_s": 0.0064563751220703125,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014894.7088294,
+   "latency_s": 0.004997968673706055,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014894.8091698,
+   "latency_s": 0.004817962646484375,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014894.9092178,
+   "latency_s": 0.0031931400299072266,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014895.0088801,
+   "latency_s": 0.0034122467041015625,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014895.1085486,
+   "latency_s": 0.004027605056762695,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014895.2093217,
+   "latency_s": 0.003904581069946289,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014895.309956,
+   "latency_s": 0.004831552505493164,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014895.4093854,
+   "latency_s": 0.007153034210205078,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014895.5090587,
+   "latency_s": 0.005306720733642578,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014895.6089284,
+   "latency_s": 0.004615068435668945,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014895.7087755,
+   "latency_s": 0.0033037662506103516,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014895.809321,
+   "latency_s": 0.004071950912475586,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014895.9087818,
+   "latency_s": 0.00446009635925293,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014896.0084677,
+   "latency_s": 0.006398677825927734,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014896.1091418,
+   "latency_s": 0.004410266876220703,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014896.2091103,
+   "latency_s": 0.006388425827026367,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014896.308879,
+   "latency_s": 0.004853963851928711,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014896.4093802,
+   "latency_s": 0.006101131439208984,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014896.5090785,
+   "latency_s": 0.004092216491699219,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014896.6093981,
+   "latency_s": 0.004212617874145508,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014896.7089424,
+   "latency_s": 0.004625797271728516,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014896.808912,
+   "latency_s": 0.004292726516723633,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014896.9096482,
+   "latency_s": 0.004665374755859375,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014897.008925,
+   "latency_s": 0.006062030792236328,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014897.1094077,
+   "latency_s": 0.005480289459228516,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014897.2096806,
+   "latency_s": 0.006536722183227539,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014897.3101208,
+   "latency_s": 0.006354331970214844,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014897.4091742,
+   "latency_s": 0.005654573440551758,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014897.5092437,
+   "latency_s": 0.00889444351196289,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014897.6096253,
+   "latency_s": 0.004800319671630859,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014897.7092087,
+   "latency_s": 0.007710456848144531,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014897.8096557,
+   "latency_s": 0.006553173065185547,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014897.9096591,
+   "latency_s": 0.0051648616790771484,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014898.0090475,
+   "latency_s": 0.0032510757446289062,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014898.1085358,
+   "latency_s": 0.005105733871459961,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014898.2091012,
+   "latency_s": 0.0033838748931884766,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014898.3087232,
+   "latency_s": 0.003654956817626953,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014898.408605,
+   "latency_s": 0.003429889678955078,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014898.509227,
+   "latency_s": 0.0035331249237060547,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014898.6089857,
+   "latency_s": 0.003543853759765625,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014898.708766,
+   "latency_s": 0.0037407875061035156,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014898.8087418,
+   "latency_s": 0.0035839080810546875,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014898.9086602,
+   "latency_s": 0.003304719924926758,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014899.0091636,
+   "latency_s": 0.003316164016723633,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014899.1087968,
+   "latency_s": 0.0035295486450195312,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014899.208548,
+   "latency_s": 0.003557920455932617,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014899.3093405,
+   "latency_s": 0.0037462711334228516,
+   "status": 200
+  },
+  {
+   "kind": "health",
+   "t": 1793014899.409318,
+   "latency_s": 0.003557443618774414,
+   "status": 200
+  },
+  {
+   "kind": "job",
+   "t": 1793014899.5084627,
+   "latency_s": 0.007542848587036133,
+   "status": 200
+  }
+ ],
+ "events": [
+  {
+   "event": "level_start",
+   "level": 8,
+   "t": 1793014887.2082238
+  },
+  {
+   "event": "level_end",
+   "level": 8,
+   "t": 1793014899.5330825
+  }
+ ]
+}

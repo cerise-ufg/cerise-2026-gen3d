@@ -1,0 +1,44 @@
+
+=============
+== PyTorch ==
+=============
+
+PyTorch Version 2.12.0a0+5aff392
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/)
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/product-specific-terms-for-ai-products/).
+
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+
+== nivel 16 clientes
+  [q1_backpressure L16] 023_gso_Sonny_School_Bus_rgb rapido ok=False lat=0.3s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 016_foto_cc0_cat.jpg         rapido ok=False lat=0.3s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 024_gso_Reebok_ZIGLITE_RUSH_ rapido ok=False lat=0.3s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 026_gso_Crosley_Alarm_Clock_ rapido ok=False lat=0.3s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 022_gso_ACE_Coffee_Mug_Krist rapido ok=False lat=0.3s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 020_gso_Schleich_African_Bla rapido ok=False lat=0.4s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 025_gso_Schleich_African_Bla rapido ok=False lat=0.4s HTTP 429: {"detail":"Fila do servidor cheia. Tente novamente em instantes."}
+  [q1_backpressure L16] 029_gso_Breyer_Horse_Of_The_ rapido ok=True lat=12.2s 
+  [q1_backpressure L16] 028_gso_Schleich_Lion_Action rapido ok=True lat=24.4s 
+  [q1_backpressure L16] 030_gso_Breyer_Horse_Of_The_ rapido ok=True lat=36.5s 
+  [q1_backpressure L16] 017_gso_Breyer_Horse_Of_The_ rapido ok=True lat=48.5s 
+  [q1_backpressure L16] 031_gso_Schleich_Bald_Eagle_ rapido ok=True lat=60.6s 
+  [q1_backpressure L16] 019_gso_Reebok_ZIGLITE_RUSH_ rapido ok=True lat=72.7s 
+  [q1_backpressure L16] 018_gso_Reebok_ZIGLITE_RUSH_ rapido ok=True lat=84.7s 
+  [q1_backpressure L16] 021_gso_Breyer_Horse_Of_The_ rapido ok=True lat=95.7s 
+  [q1_backpressure L16] 027_gso_Sonny_School_Bus_bra rapido ok=True lat=108.9s 
+== q1_backpressure: 9/16 ok; latencia mediana 60.6 s; sondas 1089 -> /opt/gen3d/server/results/loadtest/q1_backpressure.json

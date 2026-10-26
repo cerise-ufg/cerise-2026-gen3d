@@ -20,3 +20,12 @@ __pycache__/
 # area de trabalho local (copia bruta do Spark)
 _spark/
 
+
+# servidor (server/): banco/jobs, modelo do rembg, pool de imagens e resultados brutos ficam no Spark
+server/data/
+server/models/
+server/loadtest/pool/
+server/results/
+server/e2e_out*/
+*.onnx
+*.sqlite3*

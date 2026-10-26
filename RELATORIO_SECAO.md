@@ -317,6 +317,15 @@ geométrica economizaria só ~21%, porque a textura domina o tamanho.
 
 ![Figura 10: Tamanho do GLB final por estratégia (19 objetos, preset padrão, 20 mil faces): JPEG em 2048/1024/512 px sem compressão geométrica e, para comparação, Draco e meshopt (não usados no app).](evidencias/a3_compressao.png)
 
+> **Errata (26/10, constatada no teste ponta a ponta do servidor).** A recodificação "em JPEG" acima **não ocorreu**:
+> o `postprocess.compress` chamava `gltf-transform jpeg` sem `--formats`, e na glTF-Transform 4.5 o padrão é
+> `--formats jpeg` (só recomprime texturas que já são JPEG). Os GLBs desta seção — inclusive os da Figura 10 e os
+> tamanhos dos presets — têm textura **PNG** redimensionada (conferido em `server/resultados/e2e/glb_check_presets_anteriores.txt`:
+> rooster rápido/padrão/alto com PNG 1024/1024/2048). As conclusões qualitativas e de geometria não mudam; os
+> tamanhos estão superestimados. Com a correção (`--formats "*"`, já ativa no servidor), a mesma foto no preset
+> padrão passa de 2,97 MB para 0,72 MB e no rápido de 2,60 MB para 0,44 MB; a figura e a tabela de presets devem
+> ser refeitas numa próxima rodada.
+
 ### 4.4 Empacotamento para o servidor
 
 O pipeline foi empacotado como a classe `Gen3DPipeline` (`pipeline/gen3d_pipeline.py`), com carga quente única no

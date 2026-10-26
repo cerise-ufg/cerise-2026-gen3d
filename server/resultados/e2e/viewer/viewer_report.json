@@ -1,0 +1,62 @@
+[
+ {
+  "glb": "/workspace/server/results/e2e/model_padrao.glb",
+  "model_viewer": "ok",
+  "three": {
+   "meshes": 1,
+   "triangles": 20000,
+   "materials": 1,
+   "baseColorMaps": 1,
+   "size_m": [
+    0.251,
+    0.3,
+    0.117
+   ],
+   "min_y": 0,
+   "extensions": []
+  },
+  "screenshot": "/workspace/server/results/e2e/viewer/00_results_e2e_model_padrao.png",
+  "size_bytes": 720904,
+  "console": []
+ },
+ {
+  "glb": "/workspace/server/results/e2e/legado_objeto_ajustado.glb",
+  "model_viewer": "ok",
+  "three": {
+   "meshes": 1,
+   "triangles": 10000,
+   "materials": 1,
+   "baseColorMaps": 1,
+   "size_m": [
+    0.252,
+    0.3,
+    0.118
+   ],
+   "min_y": 0,
+   "extensions": []
+  },
+  "screenshot": "/workspace/server/results/e2e/viewer/01_results_e2e_legado_objeto_ajustado.png",
+  "size_bytes": 441568,
+  "console": []
+ },
+ {
+  "glb": "/workspace/server/results/e2e/model_padrao_antes_png.glb",
+  "model_viewer": "ok",
+  "three": {
+   "meshes": 1,
+   "triangles": 20000,
+   "materials": 1,
+   "baseColorMaps": 1,
+   "size_m": [
+    0.251,
+    0.3,
+    0.117
+   ],
+   "min_y": 0,
+   "extensions": []
+  },
+  "screenshot": "/workspace/server/results/e2e/viewer/02_results_e2e_model_padrao_antes_png.png",
+  "size_bytes": 2974392,
+  "console": []
+ }
+]

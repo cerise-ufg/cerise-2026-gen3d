@@ -1,0 +1,37 @@
+$ GET http://127.0.0.1:18095/api/v1/health
+{"status": "ok", "model": "Hunyuan3D-2 Turbo (dit-v2-0-turbo + FlashVDM, paint-v2-0-turbo; alto: paint-v2-0)", "gpu": "NVIDIA GB10", "queue_length": 0, "workers": 1, "presets": ["rapido", "padrao", "alto"]}
+
+$ POST http://127.0.0.1:18095/api/v1/jobs  (foto cc0_rooster.jpg, 230533 bytes, preset padrao)
+202 {"job_id":"5555cec43a554cf2aa0a016887c9c753","status":"queued","position":1,"eta_seconds":18.3}
+  t=  0.5s  queued     0%  na fila                      pos=1 eta=18.3s
+  t=  1.6s  running    1%  removendo fundo              pos=0 eta=17.4s
+  t=  2.7s  running    1%  removendo fundo              pos=0 eta=16.3s
+  t=  3.8s  running   23%  otimizando malha             pos=0 eta=15.2s
+  t=  4.9s  running   30%  removendo iluminação         pos=0 eta=14.1s
+  t=  6.0s  running   30%  removendo iluminação         pos=0 eta=13.0s
+  t=  7.1s  running   44%  planificando UV              pos=0 eta=11.8s
+  t=  8.2s  running   48%  renderizando vistas          pos=0 eta=10.8s
+  t=  9.3s  running   48%  renderizando vistas          pos=0 eta=9.7s
+  t= 10.4s  running   48%  renderizando vistas          pos=0 eta=8.6s
+  t= 11.5s  running   48%  renderizando vistas          pos=0 eta=7.5s
+  t= 12.6s  running   84%  preenchendo textura          pos=0 eta=6.3s
+  t= 13.7s  running   91%  exportando textura           pos=0 eta=5.2s
+  t= 14.8s  running   94%  preparando para o celular    pos=0 eta=4.1s
+  t= 15.9s  done     100%  concluido                    pos=0 eta=0.0s
+
+concluido em 15.9 s (fila 0.431 s, geracao 15.22 s); faces=20000 glb=2974392 bytes dims_m=[0.251, 0.3, 0.117]
+$ GET /api/v1/jobs/5555cec43a554cf2aa0a016887c9c753/model.glb -> HTTP 200 model/gltf-binary 2974392 bytes em 1.46 s -> e2e_out\model.glb
+$ GET /api/v1/jobs/5555cec43a554cf2aa0a016887c9c753/thumbnail.png -> HTTP 200 image/png 155995 bytes em 0.09 s -> e2e_out\thumbnail.png
+GLB: {"magic": "glTF", "version": 2, "bytes": 2974392, "triangles": 20000, "extensionsUsed": [], "images": ["image/png"], "materials": 1, "pos_min": [-0.8391461968421936, -1.0000338554382324, -0.39908555150032043], "pos_max": [0.8140270113945007, 0.9737571477890015, 0.3737289011478424]}
+sem Draco/meshopt/KTX2: True | texturas: ['image/png']
+
+$ POST /api/v1/jobs (mesma foto e opcoes de novo -> cache)
+202 {"job_id":"1feefe6c64b749fcb3a55a18b1e876f7","status":"done","position":0,"eta_seconds":0.0,"cached":true} (164 ms)
+
+$ POST /  (endpoint legado do app Android 2025: 'front' + metadata, resposta = GLB)
+HTTP 200 model/gltf-binary attachment; filename="objeto_ajustado.glb" 2600560 bytes em 12.7 s (job a1eb6f3956ac4a4586ed934ae17cc899) -> e2e_out\legado_objeto_ajustado.glb
+
+$ erros de validacao
+  texto no lugar da foto -> 400 {'detail': 'Tipo de arquivo não suportado (text/plain). Envie JPEG ou PNG.'}
+  preset invalido        -> 400 {'detail': "Preset inválido: 'ultra'. Use: rapido, padrao, alto."}
+  job inexistente        -> 404 {'detail': 'Job não encontrado (ou já apagado pela política de retenção de 7 dias).'}

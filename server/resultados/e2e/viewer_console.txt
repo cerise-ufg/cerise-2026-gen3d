@@ -1,0 +1,32 @@
+== glTF-Validator (Khronos)
+model_padrao.glb: erros=0 avisos=0 infos=0 | 20000 triangulos, 1 material, imagens: image/jpeg 1024x1024
+legado_objeto_ajustado.glb: erros=0 avisos=0 infos=0 | 10000 triangulos, 1 material, imagens: image/jpeg 1024x1024
+model_padrao_antes_png.glb: erros=0 avisos=0 infos=0 | 20000 triangulos, 1 material, imagens: image/png 1024x1024
+== <model-viewer> + three.js (Chromium headless)
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /index.html?src=m/00_results_e2e_model_padrao.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/model-viewer.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/three.module.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/jsm/loaders/GLTFLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/jsm/loaders/DRACOLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/jsm/libs/meshopt_decoder.module.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/jsm/utils/BufferGeometryUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/jsm/utils/SkeletonUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/three.core.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /m/00_results_e2e_model_padrao.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /lib/meshopt_decoder.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:06] "GET /m/00_results_e2e_model_padrao.glb HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:10] "GET /index.html?src=m/01_results_e2e_legado_objeto_ajustado.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:10] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:10] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:10] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:10] "GET /m/01_results_e2e_legado_objeto_ajustado.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:10] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:13] "GET /index.html?src=m/02_results_e2e_model_padrao_antes_png.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:13] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:13] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:13] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 12:46:13] "GET /m/02_results_e2e_model_padrao_antes_png.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 12:46:13] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+{"glb": "/workspace/server/results/e2e/model_padrao.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 20000, "materials": 1, "baseColorMaps": 1, "size_m": [0.251, 0.3, 0.117], "min_y": 0, "extensions": []}, "screenshot": "/workspace/server/results/e2e/viewer/00_results_e2e_model_padrao.png", "size_bytes": 720904, "console": []}
+{"glb": "/workspace/server/results/e2e/legado_objeto_ajustado.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 10000, "materials": 1, "baseColorMaps": 1, "size_m": [0.252, 0.3, 0.118], "min_y": 0, "extensions": []}, "screenshot": "/workspace/server/results/e2e/viewer/01_results_e2e_legado_objeto_ajustado.png", "size_bytes": 441568, "console": []}
+{"glb": "/workspace/server/results/e2e/model_padrao_antes_png.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 20000, "materials": 1, "baseColorMaps": 1, "size_m": [0.251, 0.3, 0.117], "min_y": 0, "extensions": []}, "screenshot": "/workspace/server/results/e2e/viewer/02_results_e2e_model_padrao_antes_png.png", "size_bytes": 2974392, "console": []}

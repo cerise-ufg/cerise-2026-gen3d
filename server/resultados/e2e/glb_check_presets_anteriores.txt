@@ -1,0 +1,12 @@
+presets/preset_rapido/cc0_rooster/model.glb: glTF 2.0 binario, 2600560 bytes, 10000 triangulos, 1 material(is), baseColorTexture=True
+   extensoes: nenhuma | texturas: png 1024x1024 (2301 KiB)
+   caixa no mundo (m): dims=[0.2516, 0.3, 0.1181] maior=0.3 y_min=0.0 centro_xz=[0.0, 0.0] -> requisitos do app: OK
+presets/preset_padrao/cc0_rooster/model.glb: glTF 2.0 binario, 2974400 bytes, 20000 triangulos, 1 material(is), baseColorTexture=True
+   extensoes: nenhuma | texturas: png 1024x1024 (2423 KiB)
+   caixa no mundo (m): dims=[0.2513, 0.3, 0.1175] maior=0.3 y_min=0.0 centro_xz=[0.0, -0.0] -> requisitos do app: OK
+presets/preset_alto/cc0_rooster/model.glb: glTF 2.0 binario, 8818488 bytes, 40000 triangulos, 1 material(is), baseColorTexture=True
+   extensoes: nenhuma | texturas: png 2048x2048 (7706 KiB)
+   caixa no mundo (m): dims=[0.2509, 0.3, 0.1175] maior=0.3 y_min=0.0 centro_xz=[0.0, 0.0] -> requisitos do app: OK
+test/pp_bus/model_none_1024.glb: glTF 2.0 binario, 2371840 bytes, 40000 triangulos, 1 material(is), baseColorTexture=True
+   extensoes: nenhuma | texturas: png 1024x1024 (1340 KiB)
+   caixa no mundo (m): dims=[0.1944, 0.3, 0.2986] maior=0.3 y_min=0.0 centro_xz=[0.0, 0.0] -> requisitos do app: OK

@@ -1,0 +1,7 @@
+config,rota,n,p50_ms,p95_ms,p99_ms,max_ms,erros,taxa_req_s
+sync_nolock,GET / (Flask),642,3.9,102.4,213.0,433.1,0,10.0
+sync_lock,GET / (Flask),4346,3.9,123.4,228.6,551.9,0,10.0
+q1_burst,GET /api/v1/health,2012,3.7,6.6,8.3,38.3,0,5.0
+q1_burst,GET /api/v1/jobs/{id},2004,3.8,6.7,8.6,35.5,0,5.0
+q2_burst,GET /api/v1/health,1818,4.1,6.6,9.2,26.2,0,5.0
+q2_burst,GET /api/v1/jobs/{id},1808,4.1,6.7,9.0,12.2,0,5.0

@@ -1,0 +1,65 @@
+
+=============
+== PyTorch ==
+=============
+
+PyTorch Version 2.12.0a0+5aff392
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/)
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/product-specific-terms-for-ai-products/).
+
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+
+== nivel 1 clientes
+  [sync_nolock L1] 000_foto_cc0_duck_esp.jpg    rapido ok=True lat=12.5s 
+  [sync_nolock L1] 001_gso_Vtech_Roll_Learn_Tur rapido ok=True lat=12.2s 
+  [sync_nolock L1] 002_gso_ACE_Coffee_Mug_Krist rapido ok=True lat=12.3s 
+== nivel 2 clientes
+  [sync_nolock L2] 003_gso_Schleich_Lion_Action rapido ok=False lat=3.0s HTTP 500: {"erro":"IndexError: index 6 is out of bounds for dimension 0 with size 6","m
+  [sync_nolock L2] 004_foto_cc0_duck.jpg        rapido ok=False lat=3.2s HTTP 500: {"erro":"IndexError: index 6 is out of bounds for dimension 0 with size 6","m
+== nivel 4 clientes
+  [sync_nolock L4] 008_gso_Vtech_Stack_Sing_Rin rapido ok=False lat=3.9s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","m
+  [sync_nolock L4] 005_gso_ACE_Coffee_Mug_Krist rapido ok=False lat=4.2s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","m
+  [sync_nolock L4] 006_gso_Transformers_Age_of_ rapido ok=False lat=4.4s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","m
+  [sync_nolock L4] 007_gso_Transformers_Age_of_ rapido ok=False lat=4.6s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","m
+== nivel 8 clientes
+  [sync_nolock L8] 013_gso_Schleich_African_Bla rapido ok=False lat=5.5s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 012_gso_Vtech_Stack_Sing_Rin rapido ok=False lat=5.5s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 009_gso_Android_Figure_Panda rapido ok=False lat=5.8s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 014_gso_Schleich_Bald_Eagle_ rapido ok=False lat=6.7s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 011_gso_Vtech_Stack_Sing_Rin rapido ok=False lat=6.9s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 016_foto_cc0_cat.jpg         rapido ok=False lat=7.3s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 015_foto_cc0_donkey_esp.jpg  rapido ok=False lat=7.3s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+  [sync_nolock L8] 010_gso_Schleich_Bald_Eagle_ rapido ok=False lat=7.4s HTTP 500: {"erro":"IndexError: index 9 is out of bounds for dimension 0 with size 9","m
+== nivel 16 clientes
+  [sync_nolock L16] 020_gso_Schleich_African_Bla rapido ok=False lat=8.2s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","
+  [sync_nolock L16] 025_gso_Schleich_African_Bla rapido ok=False lat=8.3s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","
+  [sync_nolock L16] 027_gso_Sonny_School_Bus_bra rapido ok=False lat=8.4s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","
+  [sync_nolock L16] 018_gso_Reebok_ZIGLITE_RUSH_ rapido ok=False lat=8.4s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","
+  [sync_nolock L16] 022_gso_ACE_Coffee_Mug_Krist rapido ok=False lat=8.4s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","
+  [sync_nolock L16] 029_gso_Breyer_Horse_Of_The_ rapido ok=False lat=8.4s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7","
+  [sync_nolock L16] 017_gso_Breyer_Horse_Of_The_ rapido ok=False lat=11.2s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 024_gso_Reebok_ZIGLITE_RUSH_ rapido ok=False lat=11.2s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 023_gso_Sonny_School_Bus_rgb rapido ok=False lat=11.3s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 026_gso_Crosley_Alarm_Clock_ rapido ok=False lat=11.6s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 019_gso_Reebok_ZIGLITE_RUSH_ rapido ok=False lat=11.6s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 030_gso_Breyer_Horse_Of_The_ rapido ok=False lat=11.7s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 028_gso_Schleich_Lion_Action rapido ok=False lat=11.8s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 031_gso_Schleich_Bald_Eagle_ rapido ok=False lat=11.8s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 021_gso_Breyer_Horse_Of_The_ rapido ok=False lat=11.9s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+  [sync_nolock L16] 032_gso_Crosley_Alarm_Clock_ rapido ok=False lat=11.9s HTTP 500: {"erro":"IndexError: index 7 is out of bounds for dimension 0 with size 7",
+== sync_nolock: 3/33 ok; latencia mediana 12.3 s; sondas 642 -> /opt/gen3d/server/results/loadtest/sync_nolock.json

@@ -1,0 +1,213 @@
+{
+ "job": {
+  "job_id": "28eeae17f0cc49bbbba666ca101df327",
+  "status": "done",
+  "progress": 100,
+  "stage": "concluido",
+  "position": 0,
+  "eta_seconds": 0.0,
+  "error": null,
+  "result": {
+   "glb_url": "/api/v1/jobs/28eeae17f0cc49bbbba666ca101df327/model.glb",
+   "thumbnail_url": "/api/v1/jobs/28eeae17f0cc49bbbba666ca101df327/thumbnail.png",
+   "stats": {
+    "preset": "rapido",
+    "texture": true,
+    "remove_background": true,
+    "seconds": 11.49,
+    "total_s": 11.495,
+    "times": {
+     "bg_removal": 0.3076,
+     "shape_diffusion": 1.653,
+     "shape_decode_mc": 0.4351,
+     "mesh_postproc": 0.228,
+     "tex_delight": 1.9776,
+     "tex_uv_unwrap": 0.4291,
+     "tex_render_cond": 0.8416,
+     "tex_multiview_diffusion": 4.1635,
+     "tex_bake": 0.2554,
+     "tex_inpaint": 0.1801,
+     "tex_export": 0.0073,
+     "export_glb": 0.2508,
+     "mobile_postproc": 0.6832,
+     "thumbnail": 0.0812
+    },
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "faces_raw": 244944,
+    "faces": 9998,
+    "dims_m": [
+     0.3,
+     0.23269355952095583,
+     0.15838900159056796
+    ],
+    "peak_gpu_gb": 18.873,
+    "peak_gpu_scope": "job",
+    "slot": 0,
+    "vertices": 6545,
+    "triangles": 9998,
+    "materials": 1,
+    "textures": 1,
+    "texture_mime": [
+     "image/jpeg"
+    ],
+    "gltf_extensions": [],
+    "glb_bytes": 370328,
+    "params": {
+     "shape": "dit-v2-0-turbo",
+     "paint": "hunyuan3d-paint-v2-0-turbo",
+     "steps": 5,
+     "octree": 256,
+     "max_faces": 10000,
+     "texture_size": 1024,
+     "mobile_texture": 1024,
+     "target_size_m": 0.3
+    },
+    "worker": "worker1",
+    "queue_wait_s": 0.289,
+    "cached": false
+   }
+  },
+  "preset": "rapido",
+  "options": {
+   "preset": "rapido",
+   "texture": true,
+   "remove_background": true
+  },
+  "cached": false,
+  "timings": {
+   "created_at": 1793019089.5146058,
+   "started_at": 1793019089.803477,
+   "finished_at": 1793019101.3014967,
+   "queue_s": 0.289,
+   "run_s": 11.498
+  }
+ },
+ "glb": {
+  "magic": "glTF",
+  "version": 2,
+  "bytes": 370328,
+  "triangles": 9998,
+  "extensionsUsed": [],
+  "images": [
+   "image/jpeg"
+  ],
+  "materials": 1,
+  "pos_min": [
+   -1.0008195638656616,
+   -0.7787898182868958,
+   -0.5374143719673157
+  ],
+  "pos_max": [
+   0.9593231081962585,
+   0.7415854334831238,
+   0.49746909737586975
+  ]
+ },
+ "glb_check": {
+  "arquivo": "e2e_out_final_rapido\\model.glb",
+  "bytes": 370328,
+  "gltf_version": "2.0",
+  "generator": "glTF-Transform v4.5.1",
+  "triangles": 9998,
+  "extensionsUsed": [],
+  "extensionsRequired": [],
+  "materials": 1,
+  "baseColorTexture": true,
+  "images": [
+   {
+    "mimeType": "image/jpeg",
+    "real": "jpeg",
+    "w": 1024,
+    "h": 1024,
+    "bytes": 118063
+   }
+  ],
+  "bbox_min_m": [
+   -0.15,
+   0.0,
+   -0.0792
+  ],
+  "bbox_max_m": [
+   0.15,
+   0.2327,
+   0.0792
+  ],
+  "dims_m": [
+   0.3,
+   0.2327,
+   0.1584
+  ],
+  "max_dim_m": 0.3,
+  "y_min_m": 0.0,
+  "centro_xz_m": [
+   0.0,
+   0.0
+  ]
+ },
+ "cache": {
+  "job_id": "e191bd9fa778421d9a16ec80404f792d",
+  "status": "done",
+  "position": 0,
+  "eta_seconds": 0.0,
+  "cached": true
+ },
+ "cache_ms": 156.3,
+ "legado": {
+  "status": 200,
+  "bytes": 370328,
+  "job": "678438a120a540f0a637c83d3949d85c",
+  "seconds": 0.16,
+  "glb_check": {
+   "arquivo": "e2e_out_final_rapido\\legado_objeto_ajustado.glb",
+   "bytes": 370328,
+   "gltf_version": "2.0",
+   "generator": "glTF-Transform v4.5.1",
+   "triangles": 9998,
+   "extensionsUsed": [],
+   "extensionsRequired": [],
+   "materials": 1,
+   "baseColorTexture": true,
+   "images": [
+    {
+     "mimeType": "image/jpeg",
+     "real": "jpeg",
+     "w": 1024,
+     "h": 1024,
+     "bytes": 118063
+    }
+   ],
+   "bbox_min_m": [
+    -0.15,
+    0.0,
+    -0.0792
+   ],
+   "bbox_max_m": [
+    0.15,
+    0.2327,
+    0.0792
+   ],
+   "dims_m": [
+    0.3,
+    0.2327,
+    0.1584
+   ],
+   "max_dim_m": 0.3,
+   "y_min_m": 0.0,
+   "centro_xz_m": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "erros": {
+  "texto": 400,
+  "preset": 400,
+  "inexistente": 404
+ }
+}

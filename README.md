@@ -17,8 +17,16 @@ servidor (a etapa seguinte — o servidor HTTP — usa a pasta `server/` deste m
   **rápido** ≈ 24 s / 1,7 MB, **padrão** ≈ 30 s / 2,0 MB, **alto** ≈ 57–82 s / 6,1 MB (medianas; ver relatório).
 * Resultados, tabelas e figuras: [`RELATORIO_SECAO.md`](RELATORIO_SECAO.md) e `evidencias/`, `resultados/`.
 
-> Publicação: o histórico git está pronto neste espelho local; para criar o repositório privado e enviar, rodar na
-> pasta: `gh repo create EduardoCaixeta/cerise-2026-gen3d --private --source . --remote origin --push`.
+> **Servidor de geração 3D (Objetivo 2, Atividade 5 e lado servidor da Atividade 2):** pasta [`server/`](server/README.md)
+> — API FastAPI assíncrona + fila SQLite + worker de GPU, teste de carga contra a arquitetura de 2025 e teste ponta a
+> ponta; relatório em [`RELATORIO_SECAO_SERVIDOR.md`](RELATORIO_SECAO_SERVIDOR.md).
+>
+> **Correção de 26/10 (textura JPEG):** o `postprocess.compress` chamava `gltf-transform jpeg` sem `--formats`; na
+> glTF-Transform 4.5 o padrão é `--formats jpeg`, então a textura PNG gerada pelo Hunyuan3D **não era convertida** e
+> os GLBs medidos nesta seção (A3/A4, presets) saíram com textura **PNG** 1024/2048 — os tamanhos de GLB relatados
+> aqui correspondem a PNG. A fonte foi corrigida (`--formats "*"`); o servidor já entrega JPEG (preset padrão,
+> mesma foto: 2,97 MB → 0,72 MB). A imagem `cerise26_gen3d:latest` ainda contém a versão antiga do arquivo (o
+> servidor usa a sua própria rotina); a rodada de presets deve ser repetida para atualizar os tamanhos.
 
 ## Resultados principais (medidos no Spark, máquina compartilhada)
 

@@ -1,0 +1,35 @@
+
+=============
+== PyTorch ==
+=============
+
+PyTorch Version 2.12.0a0+5aff392
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/)
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/product-specific-terms-for-ai-products/).
+
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.2s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+  [q1_coalesce L8] 040_gso_Android_Figure_Panda rapido ok=True lat=12.3s 
+== q1_coalesce: 8/8 ok; latencia mediana 12.3 s; sondas 124 -> /opt/gen3d/server/results/loadtest/q1_coalesce.json

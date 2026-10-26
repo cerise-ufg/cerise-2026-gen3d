@@ -1,0 +1,29 @@
+digraph A2025 {
+  graph [rankdir=LR, fontname="DejaVu Sans", fontsize=13, labelloc=t, pad=0.3, nodesep=0.5, ranksep=0.6,
+         label="Arquitetura de 2025 (CERISE-AR/server.py): requisição síncrona, sem fila, resultado simulado"];
+  node  [fontname="DejaVu Sans", fontsize=11, shape=box, style="rounded,filled", fillcolor="#f4f6f7", color="#7f8c8d"];
+  edge  [fontname="DejaVu Sans", fontsize=10, color="#555555"];
+
+  app [label="App Android 2025\n(Kotlin, ARCore)\nOkHttp: readTimeout 5 min\n4 fotos (front/left/back/right)", fillcolor="#eaf2f8"];
+  subgraph cluster_srv {
+    label="Notebook/PC do laboratório — IP fixo 10.1.1.75:5000"; fontsize=11; style="rounded,dashed"; color="#c0392b";
+    flask [label="Flask (servidor de desenvolvimento)\napp.run(debug=True)\n1 thread por conexão", fillcolor="#fdedec"];
+    save  [label="salva fotos em uploads/\n(nome do arquivo do cliente)", fillcolor="#fdedec"];
+    sleep [label="time.sleep(67)\n(simula o processamento)", fillcolor="#fadbd8", color="#c0392b", penwidth=2];
+    glb   [label="objeto_ajustado.glb FIXO\n(preparado na inicialização\npor central_z.py)", fillcolor="#fdedec"];
+  }
+  app -> flask [label="POST / multipart\n(conexão presa ~67 s)"];
+  flask -> save -> sleep -> glb;
+  glb -> app [label="200 GLB (sempre o mesmo)", style=dashed, constraint=false];
+
+  gargalos [shape=note, fillcolor="#fef9e7", color="#b7950b", fontsize=10, label=<
+    <B>Gargalos e riscos</B><BR ALIGN="LEFT"/>
+    1. Processamento dentro da requisição: conexão presa durante toda a geração<BR ALIGN="LEFT"/>
+    2. Sem fila nem limite de concorrência: N pedidos = N threads disputando a GPU<BR ALIGN="LEFT"/>
+    3. Nada persiste: queda/restart perde todos os pedidos; sem progresso nem cancelamento<BR ALIGN="LEFT"/>
+    4. Arquivos de nome fixo: pedidos simultâneos sobrescrevem entrada/saída<BR ALIGN="LEFT"/>
+    5. Servidor de desenvolvimento com debug=True (console Werkzeug) e IP fixo<BR ALIGN="LEFT"/>
+    6. Sem validação de imagem, limites, autenticação, TLS, métricas ou logs estruturados<BR ALIGN="LEFT"/>
+  >];
+  sleep -> gargalos [style=invis];
+}

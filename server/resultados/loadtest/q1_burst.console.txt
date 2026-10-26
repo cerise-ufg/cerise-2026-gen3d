@@ -1,0 +1,65 @@
+
+=============
+== PyTorch ==
+=============
+
+PyTorch Version 2.12.0a0+5aff392
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/)
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/product-specific-terms-for-ai-products/).
+
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+
+== nivel 1 clientes
+  [q1_burst L1] 000_foto_cc0_duck_esp.jpg    rapido ok=True lat=13.3s 
+  [q1_burst L1] 001_gso_Vtech_Roll_Learn_Tur rapido ok=True lat=12.2s 
+  [q1_burst L1] 002_gso_ACE_Coffee_Mug_Krist rapido ok=True lat=13.3s 
+== nivel 2 clientes
+  [q1_burst L2] 003_gso_Schleich_Lion_Action rapido ok=True lat=13.2s 
+  [q1_burst L2] 004_foto_cc0_duck.jpg        rapido ok=True lat=24.3s 
+== nivel 4 clientes
+  [q1_burst L4] 005_gso_ACE_Coffee_Mug_Krist rapido ok=True lat=13.2s 
+  [q1_burst L4] 006_gso_Transformers_Age_of_ rapido ok=True lat=25.2s 
+  [q1_burst L4] 007_gso_Transformers_Age_of_ rapido ok=True lat=37.3s 
+  [q1_burst L4] 008_gso_Vtech_Stack_Sing_Rin rapido ok=True lat=48.4s 
+== nivel 8 clientes
+  [q1_burst L8] 009_gso_Android_Figure_Panda rapido ok=True lat=12.2s 
+  [q1_burst L8] 010_gso_Schleich_Bald_Eagle_ rapido ok=True lat=24.3s 
+  [q1_burst L8] 015_foto_cc0_donkey_esp.jpg  rapido ok=True lat=36.4s 
+  [q1_burst L8] 016_foto_cc0_cat.jpg         rapido ok=True lat=48.5s 
+  [q1_burst L8] 011_gso_Vtech_Stack_Sing_Rin rapido ok=True lat=61.5s 
+  [q1_burst L8] 013_gso_Schleich_African_Bla rapido ok=True lat=72.6s 
+  [q1_burst L8] 014_gso_Schleich_Bald_Eagle_ rapido ok=True lat=85.6s 
+  [q1_burst L8] 012_gso_Vtech_Stack_Sing_Rin rapido ok=True lat=97.7s 
+== nivel 16 clientes
+  [q1_burst L16] 017_gso_Breyer_Horse_Of_The_ rapido ok=True lat=12.2s 
+  [q1_burst L16] 018_gso_Reebok_ZIGLITE_RUSH_ rapido ok=True lat=24.4s 
+  [q1_burst L16] 020_gso_Schleich_African_Bla rapido ok=True lat=36.5s 
+  [q1_burst L16] 022_gso_ACE_Coffee_Mug_Krist rapido ok=True lat=49.6s 
+  [q1_burst L16] 021_gso_Breyer_Horse_Of_The_ rapido ok=True lat=60.6s 
+  [q1_burst L16] 019_gso_Reebok_ZIGLITE_RUSH_ rapido ok=True lat=72.7s 
+  [q1_burst L16] 023_gso_Sonny_School_Bus_rgb rapido ok=True lat=84.8s 
+  [q1_burst L16] 025_gso_Schleich_African_Bla rapido ok=True lat=96.8s 
+  [q1_burst L16] 026_gso_Crosley_Alarm_Clock_ rapido ok=True lat=108.9s 
+  [q1_burst L16] 028_gso_Schleich_Lion_Action rapido ok=True lat=119.9s 
+  [q1_burst L16] 027_gso_Sonny_School_Bus_bra rapido ok=True lat=133.1s 
+  [q1_burst L16] 024_gso_Reebok_ZIGLITE_RUSH_ rapido ok=True lat=145.2s 
+  [q1_burst L16] 029_gso_Breyer_Horse_Of_The_ rapido ok=True lat=157.2s 
+  [q1_burst L16] 030_gso_Breyer_Horse_Of_The_ rapido ok=True lat=169.3s 
+  [q1_burst L16] 031_gso_Schleich_Bald_Eagle_ rapido ok=True lat=181.4s 
+  [q1_burst L16] 032_gso_Crosley_Alarm_Clock_ rapido ok=True lat=192.3s 
+== q1_burst: 33/33 ok; latencia mediana 49.6 s; sondas 4016 -> /opt/gen3d/server/results/loadtest/q1_burst.json

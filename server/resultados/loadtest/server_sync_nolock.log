@@ -1,0 +1,786 @@
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 26.05 (build 313520560)
+PyTorch Version 2.12.0a0+5aff392
+Container image Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+GOVERNING TERMS: The software and materials are governed by the NVIDIA Software License Agreement
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/)
+and the Product-Specific Terms for NVIDIA AI Products
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/product-specific-terms-for-ai-products/).
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 13.2 driver version 595.58.03 with kernel driver version 580.178.04.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+[2025-real] carregando o modelo (preset rapido, modo nolock)...
+W1026 11:22:22.146000 1 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+2026-10-26 11:22:22,639 - hy3dgen.shapgen - INFO - Try to load model from local path: /opt/gen3d/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-dit-v2-0-turbo
+2026-10-26 11:22:22,641 - hy3dgen.shapgen - INFO - Loading model from /opt/gen3d/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-dit-v2-0-turbo/model.fp16.safetensors
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is given, using pc_size=5120, pc_sharpedge_size=5120
+2026-10-26 11:22:36,467 - hy3dgen.shapgen - INFO - Try to load model from local path: /opt/gen3d/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-vae-v2-0-turbo
+2026-10-26 11:22:36,468 - hy3dgen.shapgen - INFO - Loading model from /opt/gen3d/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-vae-v2-0-turbo/model.fp16.safetensors
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is given, using pc_size=5120, pc_sharpedge_size=5120
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:03,  1.53it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:01,  2.44it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  6.23it/s]
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:21<01:45, 21.01s/it]Loading pipeline components...:  33%|███▎      | 2/6 [00:21<00:36,  9.02s/it]An error occurred while trying to fetch /opt/gen3d/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-paint-v2-0-turbo/vae: Error no file named diffusion_pytorch_model.safetensors found in directory /opt/gen3d/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-paint-v2-0-turbo/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:22<00:02,  2.67s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:22<00:00,  3.68s/it]
+2026-10-26 11:23:08,659 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [63, 126, 252]
+/opt/gen3d/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+/tmp/hf_modules/diffusers_modules/local/pipeline.py:598: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  index = torch.range(29, 0, -bsz, device='cuda').long()
+The first timestep on the custom timestep schedule is 989, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+The custom timestep schedule contains the following timesteps which are not on the original training/distillation timestep schedule: [tensor(890), tensor(791), tensor(692), tensor(593), tensor(494), tensor(395), tensor(296), tensor(197), tensor(98)]. You may get unexpected results when using this timestep schedule.
+[2025-real] modelo pronto em 76.3 s
+ * Serving Flask app 'server_2025_real'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8096
+ * Running on http://172.17.0.5:8096
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [26/Oct/2026 11:23:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+2026-10-26 11:23:24,932 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [63, 126, 252]
+172.17.0.1 - - [26/Oct/2026 11:23:24] "GET / HTTP/1.1" 200 -
+/opt/gen3d/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:27] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:29] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+/tmp/hf_modules/diffusers_modules/local/pipeline.py:598: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  index = torch.range(29, 0, -bsz, device='cuda').long()
+The first timestep on the custom timestep schedule is 989, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+The custom timestep schedule contains the following timesteps which are not on the original training/distillation timestep schedule: [tensor(890), tensor(791), tensor(692), tensor(593), tensor(494), tensor(395), tensor(296), tensor(197), tensor(98)]. You may get unexpected results when using this timestep schedule.
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:30] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "POST / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:35] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+2026-10-26 11:23:37,097 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [63, 126, 252]
+/opt/gen3d/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:37] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:38] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:40] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+/tmp/hf_modules/diffusers_modules/local/pipeline.py:598: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  index = torch.range(29, 0, -bsz, device='cuda').long()
+The first timestep on the custom timestep schedule is 989, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+The custom timestep schedule contains the following timesteps which are not on the original training/distillation timestep schedule: [tensor(890), tensor(791), tensor(692), tensor(593), tensor(494), tensor(395), tensor(296), tensor(197), tensor(98)]. You may get unexpected results when using this timestep schedule.
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:43] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:46] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "POST / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:47] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+2026-10-26 11:23:49,289 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [63, 126, 252]
+/opt/gen3d/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:50] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:51] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:52] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+/tmp/hf_modules/diffusers_modules/local/pipeline.py:598: UserWarning: torch.range is deprecated and will be removed in a future release because its behavior is inconsistent with Python's range builtin. Instead, use torch.arange, which produces values in [start, end).
+  index = torch.range(29, 0, -bsz, device='cuda').long()
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+The first timestep on the custom timestep schedule is 989, not `self.config.num_train_timesteps - 1`: 999. You may get unexpected results when using this timestep schedule.
+The custom timestep schedule contains the following timesteps which are not on the original training/distillation timestep schedule: [tensor(890), tensor(791), tensor(692), tensor(593), tensor(494), tensor(395), tensor(296), tensor(197), tensor(98)]. You may get unexpected results when using this timestep schedule.
+172.17.0.1 - - [26/Oct/2026 11:23:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:55] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:56] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:58] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "POST / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:23:59] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:00] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 6 is out of bounds for dimension 0 with size 6
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 6 is out of bounds for dimension 0 with size 6
+172.17.0.1 - - [26/Oct/2026 11:24:02] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:02] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:06] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:06] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:07] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:07] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:07] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:09] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:10] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:12] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:12] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:13] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:13] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:13] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:14] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:14] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:14] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:14] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 9 is out of bounds for dimension 0 with size 9
+172.17.0.1 - - [26/Oct/2026 11:24:14] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:16] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:18] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:19] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:21] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:22] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:23] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:25] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+172.17.0.1 - - [26/Oct/2026 11:24:26] "GET / HTTP/1.1" 200 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[2025-real] ERRO: IndexError: index 7 is out of bounds for dimension 0 with size 7
+172.17.0.1 - - [26/Oct/2026 11:24:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -

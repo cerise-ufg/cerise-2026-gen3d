@@ -53,7 +53,10 @@ def compress(glb_in, glb_out, method="draco", texture_size=1024, jpeg_quality=85
     tmp = glb_out + ".tmp.glb"
     shutil.copy(glb_in, tmp)
     _run([gt, "resize", tmp, tmp, "--width", str(texture_size), "--height", str(texture_size)])
-    _run([gt, "jpeg", tmp, tmp, "--quality", str(jpeg_quality)])
+    # --formats "*": na glTF-Transform 4.5 o padrao do comando jpeg e --formats jpeg (so recomprime texturas que ja
+    # sao JPEG); sem isso a textura PNG do Hunyuan3D passava sem conversao (constatado no teste ponta a ponta do
+    # servidor, 26/10). A imagem cerise26_gen3d:latest ainda tem a versao antiga; o servidor usa a sua propria rotina.
+    _run([gt, "jpeg", tmp, tmp, "--formats", "*", "--quality", str(jpeg_quality)])
     if method == "draco":
         _run([gt, "draco", tmp, glb_out, "--method", "edgebreaker"])
     elif method == "meshopt":

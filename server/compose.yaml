@@ -1,0 +1,71 @@
+# CERISE 2026 - servidor de geracao 3D no DGX Spark.
+#   sudo docker compose -f compose.yaml up -d        (ou scripts/start.sh, que confere a memoria antes)
+#   sudo docker compose -f compose.yaml down          (parada graciosa: o worker termina o job em andamento)
+# A porta e publicada SO no loopback do Spark (127.0.0.1:8095). Nenhuma rota pela internet: para testar de fora,
+# usar encaminhamento LOCAL de SSH (ssh -N -L 127.0.0.1:18095:localhost:8095 spark-bridge). Exposicao publica:
+# ver a PROPOSTA no README (decisao pendente do Eduardo).
+name: cerise26_gen3d
+
+x-common: &common
+  image: cerise26_gen3d_server:latest
+  env_file: [gen3d.env]
+  restart: unless-stopped
+  # NUMBA_CACHE_DIR (gen3d.env) aponta para este tmpfs: cache do numba sempre limpo a cada start (ver gen3d.env)
+  tmpfs: ["/tmp/numba_cache:size=256m"]
+  logging:
+    driver: json-file
+    options: {max-size: "20m", max-file: "5"}
+
+services:
+  api:
+    <<: *common
+    container_name: cerise26_gen3d_api
+    command: ["uvicorn", "cerise_gen3d_server.api:app", "--host", "0.0.0.0", "--port", "8095", "--workers", "1",
+              "--timeout-keep-alive", "5", "--limit-concurrency", "512", "--backlog", "2048", "--no-access-log"]
+    ports: ["127.0.0.1:8095:8095"]
+    environment:
+      # 1 so atras de um proxy confiavel (ou no teste de carga, que simula clientes distintos por X-Forwarded-For)
+      GEN3D_TRUST_PROXY: ${GEN3D_TRUST_PROXY:-0}
+      GEN3D_MAX_QUEUE: ${GEN3D_MAX_QUEUE:-32}
+      GEN3D_CACHE: ${GEN3D_CACHE:-1}
+      GEN3D_PRIORITY_OFFSETS: ${GEN3D_PRIORITY_OFFSETS:-rapido:0,padrao:30,alto:90}
+    volumes:
+      - ${GEN3D_DATA:-/home/energiainteligente/cerise2026/gen3d/server/data}:/data
+    mem_limit: 4g
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; urllib.request.urlopen('http://127.0.0.1:8095/api/v1/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker1:
+    <<: *common
+    container_name: cerise26_gen3d_worker1
+    command: ["python", "-m", "cerise_gen3d_server.worker"]
+    environment:
+      GEN3D_WORKER_ID: worker1
+      GEN3D_WORKER_SLOTS: ${GEN3D_WORKER_SLOTS:-1}
+      GEN3D_WORKER_PRESETS: ${GEN3D_WORKER_PRESETS:-rapido,padrao,alto}
+    network_mode: none          # o worker nao precisa de rede: le/escreve so o volume compartilhado
+    ipc: host
+    stop_grace_period: 150s     # tempo para terminar o job em andamento no SIGTERM
+    volumes:
+      - ${GEN3D_DATA:-/home/energiainteligente/cerise2026/gen3d/server/data}:/data
+      - /home/energiainteligente/cerise2026/hf_cache:/root/.cache/huggingface:ro
+      - /home/energiainteligente/cerise2026/gen3d/hy3dgen_models:/opt/gen3d/hy3dgen_models:ro
+      - /home/energiainteligente/cerise2026/gen3d/server/models/u2net:/root/.u2net:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # Um segundo PROCESSO de GPU (outra copia dos pesos) precisaria de ~2 x 14,5 GB de pico, acima do teto de 24 GB
+  # desta frente no Spark compartilhado; por isso a concorrencia usa slots no mesmo processo (GEN3D_WORKER_SLOTS=2,
+  # pesos compartilhados). Numa GPU dedicada, basta duplicar o servico abaixo com GEN3D_WORKER_ID=worker2.
+  # worker2:
+  #   <<: *common
+  #   container_name: cerise26_gen3d_worker2
+  #   ...

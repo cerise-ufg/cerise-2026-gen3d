@@ -1,0 +1,37 @@
+
+=============
+== PyTorch ==
+=============
+
+PyTorch Version 2.12.0a0+5aff392
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-software-license-agreement/)
+(found at https://www.nvidia.com/en-us/agreements/enterprise-software/product-specific-terms-for-ai-products/).
+
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+
+  [q1_cache L1] 000_foto_cc0_duck_esp.jpg    rapido ok=True lat=0.0s 
+  [q1_cache L1] 001_gso_Vtech_Roll_Learn_Tur rapido ok=True lat=0.0s 
+  [q1_cache L1] 002_gso_ACE_Coffee_Mug_Krist rapido ok=True lat=0.0s 
+  [q1_cache L1] 003_gso_Schleich_Lion_Action rapido ok=True lat=0.0s 
+  [q1_cache L1] 004_foto_cc0_duck.jpg        rapido ok=True lat=0.0s 
+  [q1_cache L1] 005_gso_ACE_Coffee_Mug_Krist rapido ok=True lat=0.0s 
+  [q1_cache L1] 006_gso_Transformers_Age_of_ rapido ok=True lat=0.0s 
+  [q1_cache L1] 007_gso_Transformers_Age_of_ rapido ok=True lat=0.0s 
+  [q1_cache L1] 008_gso_Vtech_Stack_Sing_Rin rapido ok=True lat=0.0s 
+  [q1_cache L1] 009_gso_Android_Figure_Panda rapido ok=True lat=0.0s 
+== q1_cache: 10/10 ok; latencia mediana 0.0 s; sondas 2 -> /opt/gen3d/server/results/loadtest/q1_cache.json

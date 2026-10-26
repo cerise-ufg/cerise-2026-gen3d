@@ -1,0 +1,187 @@
+# HELP gen3d_http_requests_total Requisicoes HTTP
+# TYPE gen3d_http_requests_total counter
+gen3d_http_requests_total{method="GET",route="/api/v1/health",status="200"} 549.0
+gen3d_http_requests_total{method="POST",route="/api/v1/jobs",status="202"} 9.0
+gen3d_http_requests_total{method="GET",route="/api/v1/jobs/{job_id}",status="200"} 1091.0
+gen3d_http_requests_total{method="POST",route="/api/v1/jobs",status="429"} 7.0
+gen3d_http_requests_total{method="GET",route="/api/v1/jobs/{job_id}/model.glb",status="200"} 9.0
+# HELP gen3d_http_requests_created Requisicoes HTTP
+# TYPE gen3d_http_requests_created gauge
+gen3d_http_requests_created{method="GET",route="/api/v1/health",status="200"} 1.7930153488527e+09
+gen3d_http_requests_created{method="POST",route="/api/v1/jobs",status="202"} 1.7930153489885302e+09
+gen3d_http_requests_created{method="GET",route="/api/v1/jobs/{job_id}",status="200"} 1.7930153489925978e+09
+gen3d_http_requests_created{method="POST",route="/api/v1/jobs",status="429"} 1.793015349103357e+09
+gen3d_http_requests_created{method="GET",route="/api/v1/jobs/{job_id}/model.glb",status="200"} 1.793015361074064e+09
+# HELP gen3d_http_request_duration_seconds Latencia HTTP (s)
+# TYPE gen3d_http_request_duration_seconds histogram
+gen3d_http_request_duration_seconds_bucket{le="0.002",method="GET",route="/api/v1/health"} 526.0
+gen3d_http_request_duration_seconds_bucket{le="0.005",method="GET",route="/api/v1/health"} 548.0
+gen3d_http_request_duration_seconds_bucket{le="0.01",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="0.025",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="0.05",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="0.1",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="0.25",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="0.5",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="1.0",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="2.5",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="5.0",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="10.0",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="30.0",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="120.0",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="300.0",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_bucket{le="+Inf",method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_count{method="GET",route="/api/v1/health"} 549.0
+gen3d_http_request_duration_seconds_sum{method="GET",route="/api/v1/health"} 0.5999381665606052
+gen3d_http_request_duration_seconds_bucket{le="0.002",method="POST",route="/api/v1/jobs"} 0.0
+gen3d_http_request_duration_seconds_bucket{le="0.005",method="POST",route="/api/v1/jobs"} 0.0
+gen3d_http_request_duration_seconds_bucket{le="0.01",method="POST",route="/api/v1/jobs"} 0.0
+gen3d_http_request_duration_seconds_bucket{le="0.025",method="POST",route="/api/v1/jobs"} 0.0
+gen3d_http_request_duration_seconds_bucket{le="0.05",method="POST",route="/api/v1/jobs"} 0.0
+gen3d_http_request_duration_seconds_bucket{le="0.1",method="POST",route="/api/v1/jobs"} 0.0
+gen3d_http_request_duration_seconds_bucket{le="0.25",method="POST",route="/api/v1/jobs"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.5",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="1.0",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="2.5",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="5.0",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="10.0",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="30.0",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="120.0",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="300.0",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_bucket{le="+Inf",method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_count{method="POST",route="/api/v1/jobs"} 16.0
+gen3d_http_request_duration_seconds_sum{method="POST",route="/api/v1/jobs"} 3.84001127933152
+gen3d_http_request_duration_seconds_bucket{le="0.002",method="GET",route="/api/v1/jobs/{job_id}"} 925.0
+gen3d_http_request_duration_seconds_bucket{le="0.005",method="GET",route="/api/v1/jobs/{job_id}"} 1090.0
+gen3d_http_request_duration_seconds_bucket{le="0.01",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="0.025",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="0.05",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="0.1",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="0.25",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="0.5",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="1.0",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="2.5",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="5.0",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="10.0",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="30.0",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="120.0",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="300.0",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_bucket{le="+Inf",method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_count{method="GET",route="/api/v1/jobs/{job_id}"} 1091.0
+gen3d_http_request_duration_seconds_sum{method="GET",route="/api/v1/jobs/{job_id}"} 1.4775022650137544
+gen3d_http_request_duration_seconds_bucket{le="0.002",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 8.0
+gen3d_http_request_duration_seconds_bucket{le="0.005",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.01",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.025",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.05",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.1",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.25",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="0.5",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="1.0",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="2.5",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="5.0",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="10.0",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="30.0",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="120.0",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="300.0",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_bucket{le="+Inf",method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_count{method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 9.0
+gen3d_http_request_duration_seconds_sum{method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 0.011474262457340956
+# HELP gen3d_http_request_duration_seconds_created Latencia HTTP (s)
+# TYPE gen3d_http_request_duration_seconds_created gauge
+gen3d_http_request_duration_seconds_created{method="GET",route="/api/v1/health"} 1.7930153488527193e+09
+gen3d_http_request_duration_seconds_created{method="POST",route="/api/v1/jobs"} 1.7930153489885569e+09
+gen3d_http_request_duration_seconds_created{method="GET",route="/api/v1/jobs/{job_id}"} 1.7930153489926157e+09
+gen3d_http_request_duration_seconds_created{method="GET",route="/api/v1/jobs/{job_id}/model.glb"} 1.7930153610740771e+09
+# HELP gen3d_rejected_total Pedidos recusados
+# TYPE gen3d_rejected_total counter
+gen3d_rejected_total{reason="queue_full"} 7.0
+# HELP gen3d_rejected_created Pedidos recusados
+# TYPE gen3d_rejected_created gauge
+gen3d_rejected_created{reason="queue_full"} 1.7930153491031137e+09
+# HELP gen3d_queue_length Jobs aguardando na fila (sem contar seguidores identicos)
+# TYPE gen3d_queue_length gauge
+gen3d_queue_length 0.0
+# HELP gen3d_jobs_running Jobs em execucao
+# TYPE gen3d_jobs_running gauge
+gen3d_jobs_running 0.0
+# HELP gen3d_jobs_coalesced_waiting Jobs identicos aguardando o lider
+# TYPE gen3d_jobs_coalesced_waiting gauge
+gen3d_jobs_coalesced_waiting 0.0
+# HELP gen3d_workers_alive Workers com heartbeat recente
+# TYPE gen3d_workers_alive gauge
+gen3d_workers_alive 1.0
+# HELP gen3d_worker_slots Slots de execucao por worker
+# TYPE gen3d_worker_slots gauge
+gen3d_worker_slots{state="busy",worker="worker1"} 1.0
+# HELP gen3d_worker_busy_slots Slots ocupados
+# TYPE gen3d_worker_busy_slots gauge
+gen3d_worker_busy_slots{worker="worker1"} 1.0
+# HELP gen3d_worker_gpu_memory_gigabytes Memoria de GPU do worker (GB)
+# TYPE gen3d_worker_gpu_memory_gigabytes gauge
+gen3d_worker_gpu_memory_gigabytes{kind="allocated",worker="worker1"} 16.06
+gen3d_worker_gpu_memory_gigabytes{kind="reserved",worker="worker1"} 22.488
+gen3d_worker_gpu_memory_gigabytes{kind="peak_allocated",worker="worker1"} 18.093
+gen3d_worker_gpu_memory_gigabytes{kind="peak_reserved",worker="worker1"} 22.488
+# HELP gen3d_host_memory_available_gigabytes MemAvailable do host visto pelo worker
+# TYPE gen3d_host_memory_available_gigabytes gauge
+gen3d_host_memory_available_gigabytes{worker="worker1"} 28.5
+# HELP gen3d_estimated_job_seconds Estimativa atual (EMA) da duracao do job
+# TYPE gen3d_estimated_job_seconds gauge
+gen3d_estimated_job_seconds{preset="rapido",texture="1"} 12.15926580786279
+gen3d_estimated_job_seconds{preset="padrao",texture="1"} 18.28004887790039
+# HELP gen3d_jobs_submitted_total contador persistente jobs_submitted_total
+# TYPE gen3d_jobs_submitted_total counter
+gen3d_jobs_submitted_total{legacy="0",preset="rapido"} 9.0
+# HELP gen3d_jobs_total contador persistente jobs_total
+# TYPE gen3d_jobs_total counter
+gen3d_jobs_total{origin="computed",preset="rapido",status="done"} 9.0
+# HELP gen3d_job_run_seconds histograma persistente job_run_seconds
+# TYPE gen3d_job_run_seconds histogram
+gen3d_job_run_seconds_bucket{le="20",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="30",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="45",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="60",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="90",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="120",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="180",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="300",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="600",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="1200",preset="rapido"} 9.0
+gen3d_job_run_seconds_bucket{le="+Inf",preset="rapido"} 9.0
+gen3d_job_run_seconds_count{preset="rapido"} 9.0
+gen3d_job_run_seconds_sum{preset="rapido"} 108.15760350227356
+# HELP gen3d_job_queue_wait_seconds histograma persistente job_queue_wait_seconds
+# TYPE gen3d_job_queue_wait_seconds histogram
+gen3d_job_queue_wait_seconds_bucket{le="5",preset="rapido"} 1.0
+gen3d_job_queue_wait_seconds_bucket{le="10",preset="rapido"} 1.0
+gen3d_job_queue_wait_seconds_bucket{le="20",preset="rapido"} 2.0
+gen3d_job_queue_wait_seconds_bucket{le="30",preset="rapido"} 3.0
+gen3d_job_queue_wait_seconds_bucket{le="45",preset="rapido"} 4.0
+gen3d_job_queue_wait_seconds_bucket{le="60",preset="rapido"} 6.0
+gen3d_job_queue_wait_seconds_bucket{le="90",preset="rapido"} 8.0
+gen3d_job_queue_wait_seconds_bucket{le="120",preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_bucket{le="180",preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_bucket{le="300",preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_bucket{le="600",preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_bucket{le="1200",preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_bucket{le="+Inf",preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_count{preset="rapido"} 9.0
+gen3d_job_queue_wait_seconds_sum{preset="rapido"} 430.9458613395691
+# HELP gen3d_job_latency_seconds histograma persistente job_latency_seconds
+# TYPE gen3d_job_latency_seconds histogram
+gen3d_job_latency_seconds_bucket{le="20",preset="rapido"} 1.0
+gen3d_job_latency_seconds_bucket{le="30",preset="rapido"} 2.0
+gen3d_job_latency_seconds_bucket{le="45",preset="rapido"} 3.0
+gen3d_job_latency_seconds_bucket{le="60",preset="rapido"} 5.0
+gen3d_job_latency_seconds_bucket{le="90",preset="rapido"} 7.0
+gen3d_job_latency_seconds_bucket{le="120",preset="rapido"} 9.0
+gen3d_job_latency_seconds_bucket{le="180",preset="rapido"} 9.0
+gen3d_job_latency_seconds_bucket{le="300",preset="rapido"} 9.0
+gen3d_job_latency_seconds_bucket{le="600",preset="rapido"} 9.0
+gen3d_job_latency_seconds_bucket{le="1200",preset="rapido"} 9.0
+gen3d_job_latency_seconds_bucket{le="+Inf",preset="rapido"} 9.0
+gen3d_job_latency_seconds_count{preset="rapido"} 9.0
+gen3d_job_latency_seconds_sum{preset="rapido"} 539.1034648418427
+# HELP gen3d_scrape_timestamp_seconds Momento da coleta
+# TYPE gen3d_scrape_timestamp_seconds gauge
+gen3d_scrape_timestamp_seconds 1.7930154578429713e+09

@@ -1,0 +1,24 @@
+============================================ test session starts =============================================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /usr/bin/python
+rootdir: /opt/gen3d/server
+plugins: jaxtyping-0.3.11, typeguard-4.5.1, anyio-4.13.0
+collecting ... collected 18 items
+tests/test_api.py::test_health_contract PASSED                                                         [  5%]
+tests/test_api.py::test_job_lifecycle_and_downloads PASSED                                             [ 11%]
+tests/test_api.py::test_progress_and_stage_while_running PASSED                                        [ 16%]
+tests/test_api.py::test_invalid_uploads PASSED                                                         [ 22%]
+tests/test_api.py::test_exif_orientation_and_metadata_removed PASSED                                   [ 27%]
+tests/test_api.py::test_cache_hit_is_instant PASSED                                                    [ 33%]
+tests/test_api.py::test_coalescing_identical_inflight PASSED                                           [ 38%]
+tests/test_api.py::test_priority_order_by_preset PASSED                                                [ 44%]
+tests/test_api.py::test_backpressure_queue_full PASSED                                                 [ 50%]
+tests/test_api.py::test_per_client_cap_and_rate_limit PASSED                                           [ 55%]
+tests/test_api.py::test_cancel_and_delete PASSED                                                       [ 61%]
+tests/test_api.py::test_engine_error_reported PASSED                                                   [ 66%]
+tests/test_api.py::test_texture_false_option PASSED                                                    [ 72%]
+tests/test_api.py::test_restart_recovery_requeues_running_job PASSED                                   [ 77%]
+tests/test_api.py::test_retention_ttl_and_queue_timeout PASSED                                         [ 83%]
+tests/test_api.py::test_legacy_endpoint_2025 PASSED                                                    [ 88%]
+tests/test_api.py::test_metrics_endpoint PASSED                                                        [ 94%]
+tests/test_api.py::test_docs_and_openapi PASSED                                                        [100%]
+============================================ 18 passed in 15.54s =============================================

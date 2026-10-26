@@ -1,0 +1,121 @@
+{
+ "job": {
+  "job_id": "5555cec43a554cf2aa0a016887c9c753",
+  "status": "done",
+  "progress": 100,
+  "stage": "concluido",
+  "position": 0,
+  "eta_seconds": 0.0,
+  "error": null,
+  "result": {
+   "glb_url": "/api/v1/jobs/5555cec43a554cf2aa0a016887c9c753/model.glb",
+   "thumbnail_url": "/api/v1/jobs/5555cec43a554cf2aa0a016887c9c753/thumbnail.png",
+   "stats": {
+    "preset": "padrao",
+    "texture": true,
+    "remove_background": true,
+    "seconds": 15.22,
+    "total_s": 15.222,
+    "times": {
+     "bg_removal": 0.327,
+     "shape_diffusion": 1.6799,
+     "shape_decode_mc": 1.0173,
+     "mesh_postproc": 0.5305,
+     "tex_delight": 1.9846,
+     "tex_uv_unwrap": 1.2363,
+     "tex_render_cond": 0.2752,
+     "tex_multiview_diffusion": 4.2014,
+     "tex_bake": 0.4724,
+     "tex_inpaint": 0.7255,
+     "tex_export": 0.026,
+     "export_glb": 0.9115,
+     "mobile_postproc": 1.6409,
+     "thumbnail": 0.1892
+    },
+    "lock_waits": {
+     "shape_diffusion": 0.0,
+     "shape_decode_mc": 0.0,
+     "tex_delight": 0.0,
+     "tex_multiview_diffusion": 0.0,
+     "thumbnail": 0.0
+    },
+    "faces_raw": 495676,
+    "faces": 20000,
+    "dims_m": [
+     0.25126873192759785,
+     0.29999999999999993,
+     0.11746144116341259
+    ],
+    "peak_gpu_gb": 18.835,
+    "peak_gpu_scope": "job",
+    "slot": 0,
+    "vertices": 12551,
+    "triangles": 20000,
+    "materials": 1,
+    "textures": 1,
+    "gltf_extensions": [],
+    "glb_bytes": 2974392,
+    "params": {
+     "shape": "dit-v2-0-turbo",
+     "paint": "hunyuan3d-paint-v2-0-turbo",
+     "steps": 5,
+     "octree": 384,
+     "max_faces": 20000,
+     "texture_size": 2048,
+     "mobile_texture": 1024,
+     "target_size_m": 0.3
+    },
+    "worker": "worker1",
+    "queue_wait_s": 0.431,
+    "cached": false
+   }
+  },
+  "preset": "padrao",
+  "options": {
+   "preset": "padrao",
+   "texture": true,
+   "remove_background": true
+  },
+  "cached": false,
+  "timings": {
+   "created_at": 1793017402.3009682,
+   "started_at": 1793017402.7322824,
+   "finished_at": 1793017417.9585733,
+   "queue_s": 0.431,
+   "run_s": 15.226
+  }
+ },
+ "glb": {
+  "magic": "glTF",
+  "version": 2,
+  "bytes": 2974392,
+  "triangles": 20000,
+  "extensionsUsed": [],
+  "images": [
+   "image/png"
+  ],
+  "materials": 1,
+  "pos_min": [
+   -0.8391461968421936,
+   -1.0000338554382324,
+   -0.39908555150032043
+  ],
+  "pos_max": [
+   0.8140270113945007,
+   0.9737571477890015,
+   0.3737289011478424
+  ]
+ },
+ "cache": {
+  "job_id": "1feefe6c64b749fcb3a55a18b1e876f7",
+  "status": "done",
+  "position": 0,
+  "eta_seconds": 0.0,
+  "cached": true
+ },
+ "legado": {
+  "status": 200,
+  "bytes": 2600560,
+  "job": "a1eb6f3956ac4a4586ed934ae17cc899"
+ }
+}

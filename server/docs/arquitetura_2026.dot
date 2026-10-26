@@ -1,0 +1,33 @@
+digraph A2026 {
+  graph [rankdir=LR, fontname="DejaVu Sans", fontsize=13, labelloc=t, pad=0.3, nodesep=0.45, ranksep=0.7, compound=true,
+         label="Arquitetura de 2026: API assíncrona + fila persistente + worker de GPU com modelo quente (DGX Spark)"];
+  node  [fontname="DejaVu Sans", fontsize=10.5, shape=box, style="rounded,filled", fillcolor="#f4f6f7", color="#7f8c8d"];
+  edge  [fontname="DejaVu Sans", fontsize=9.5, color="#555555"];
+
+  subgraph cluster_clients {
+    label="Clientes"; style="rounded,dashed"; color="#2471a3"; fontsize=11;
+    app  [label="App CERISE AR 2026\n(Expo/React Native, Android e iOS)\npolling 1,5–2 s, retomada de jobs", fillcolor="#eaf2f8"];
+    app25 [label="App Android 2025\n(POST / legado, síncrono)", fillcolor="#eaf2f8"];
+    dev  [label="Windows / emulador\n(ssh -N -L 127.0.0.1:18095)", fillcolor="#eaf2f8"];
+  }
+  net [shape=box, style="rounded,dashed", color="#b7950b", fillcolor="#fef9e7",
+       label="Hoje: só loopback do Spark (127.0.0.1:8095)\n+ encaminhamento LOCAL de SSH\nProposta (pendente): Caddy cerise.wenfur.com.br/gen3d\nTLS + X-API-Key + limites (ver README)"];
+
+  subgraph cluster_spark {
+    label="DGX Spark (GB10, memória unificada compartilhada com a produção vLLM)"; labelloc=b; style="rounded"; color="#17a589"; fontsize=11;
+    api [label=<<B>cerise26_gen3d_api</B><BR/>FastAPI + uvicorn (assíncrono)<BR/>validação + normalização (EXIF, sem GPS, ≤2048 px)<BR/>rate limit por cliente · backpressure (fila máx. → 429)<BR/>cache SHA-256 · coalescência de pedidos iguais<BR/>/docs (Swagger) · /metrics (Prometheus) · CORS<BR/>limpeza TTL 7 dias · endpoint legado POST />, fillcolor="#e8f8f5"];
+    db  [shape=cylinder, label="SQLite (WAL)\njobs · workers · contadores\n(fila FIFO + prioridade por preset)", fillcolor="#fdfefe"];
+    vol [shape=folder, label="volume /data/jobs/<id>\ninput.png (apagada após gerar)\nmodel.glb · thumbnail.png", fillcolor="#fdfefe"];
+    wk  [label=<<B>cerise26_gen3d_worker1</B> (sem rede)<BR/>Gen3DPipeline carregado 1 vez (~16 GB)<BR/>forma: DiT v2-0 turbo + FlashVDM<BR/>textura: paint turbo · alto: paint completo<BR/>1–2 slots, travas por componente<BR/>heartbeat · timeout · guarda de memória · retomada>, fillcolor="#e8f8f5"];
+    gpu [shape=box3d, label="GPU GB10\nteto da frente: 24 GB", fillcolor="#d5f5e3"];
+    prom [label="Prometheus/Grafana\n(opcional)", style="rounded,dashed", fillcolor="#ffffff"];
+  }
+  app -> net; app25 -> net; dev -> net;
+  net -> api [label="HTTP /api/v1"];
+  api -> db [label="INSERT job (202)\nposição/ETA"];
+  api -> vol [label="grava foto\nlê GLB"];
+  wk -> db [label="claim atômico\nprogresso/estado"];
+  wk -> vol [label="lê foto\ngrava GLB"];
+  wk -> gpu;
+  prom -> api [label="scrape /metrics", style=dashed];
+}
