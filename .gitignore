@@ -41,6 +41,7 @@ data/real/*.jpg
 server/data/
 server/results/
 server/loadtest/pool/
+server/results_baseline_run.log
 server/e2e_out*/
 *.sqlite3*
 

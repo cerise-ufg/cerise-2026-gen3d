@@ -18,7 +18,7 @@ Resultados do teste de carga, teste ponta a ponta e análise dos gargalos: [`../
   `cerise26_gen3d_worker1` (1 slot, presets `rapido`, `padrao`, `alto`), `restart: unless-stopped`, imagem
   `cerise26_gen3d_server:latest` reconstruída com o código deste repositório (18/18 testes aprovados).
 * **Sem acesso pela internet.** Para testar de outro computador, usar o encaminhamento LOCAL de SSH (abaixo).
-  A exposição pública em `https://cerise.wenfur.com.br/gen3d` é decisão pendente do Eduardo (proposta no fim).
+  A exposição pública em `https://cerise.wenfur.com.br/gen3d` é decisão pendente do bolsista (proposta no fim).
 * Correções feitas no fechamento (26/10): (1) a textura do GLB passou a ser **JPEG de fato** — o
   `gltf-transform jpeg` 4.5 só recomprime texturas que já são JPEG (`--formats jpeg` é o padrão), então a textura
   PNG do Hunyuan3D passava intacta; agora o motor usa `--formats "*"` (GLB do preset padrão no teste ponta a ponta:
@@ -162,8 +162,10 @@ servidor). Swagger: `http://127.0.0.1:18095/docs`.
 | `GEN3D_PIPELINE_VERSION` | `hy2turbo-a3-v2-jpeg` | entra na chave do cache; **trocar sempre que a saída do pipeline mudar** |
 | `NUMBA_CACHE_DIR` | `/tmp/numba_cache` (tmpfs do compose) | cache do numba fora do `dist-packages`, recriado limpo a cada start |
 
-Arquivos que **não** vão para o git: `data/` (banco e jobs), `models/u2net/u2net.onnx` (modelo do rembg, 176 MB,
-copiado do container de desenvolvimento), `loadtest/pool/`, `results/` brutos grandes e GLBs.
+Arquivos que **não** vão para o git: `data/` (banco e jobs), `loadtest/pool/`, `results/` brutos e GLBs — estão no
+pacote `gen3d_servidor_brutos.tar.gz` dos Releases (`../RELEASES.md`); `models/u2net/u2net.onnx` (modelo do rembg,
+176 MB, copiado do container de desenvolvimento) é de terceiros (`../TERCEIROS.md`). Cópias em git dos registros
+de `data/` (`jobs_q*.json` e `jobs/*/out/stats.json`) ficam em `resultados/data/`.
 
 ## Retenção de dados (7 dias) e privacidade
 
@@ -204,7 +206,7 @@ bash loadtest/run_suite_new.sh
 python loadtest/analyze.py resultados/loadtest resultados/tabelas ../evidencias
 ```
 
-## PROPOSTA de exposição pública (para decisão do Eduardo — nada disto foi feito)
+## PROPOSTA de exposição pública (para decisão do bolsista — nada disto foi feito)
 
 Objetivo: o app em produção usar `https://cerise.wenfur.com.br/gen3d` (URL padrão já configurada no app).
 

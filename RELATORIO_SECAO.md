@@ -2,7 +2,7 @@
 
 **Frente:** Realidade Aumentada — Geração 3D (modelos) · **Bolsista:** Eduardo Martins de Carvalho Caixeta ·
 **Coordenação:** Prof. Dr. Carlos Galvão Pinheiro Junior · **Execução:** 26/10/2026 ·
-**Repositório:** <https://github.com/EduardoCaixeta/cerise-2026-gen3d> (privado)
+**Repositório:** `cerise-2026-gen3d` na organização do CERISE no GitHub (privado; versão consolidada do repositório original `EduardoCaixeta/cerise-2026-gen3d`)
 
 ## 1. Objetivo
 
@@ -174,7 +174,7 @@ decodificação volumétrica sem FlashVDM (77–80 s).
   (`microsoft/TRELLIS-image-large`, MIT) já estão no cache.
 * **TRELLIS.2 (Microsoft, 4B):** além das extensões CUDA próprias (o-voxel, CuMesh, FlexGEMM, nvdiffrec), o
   condicionamento usa o DINOv3 (`facebook/dinov3-vitl16-pretrain-lvd1689m`), repositório com acesso restrito
-  (*gated*, aprovação manual) — **pendente**: login no Hugging Face e aceite da licença pelo Eduardo.
+  (*gated*, aprovação manual) — **pendente**: login no Hugging Face e aceite da licença pelo bolsista.
 * **Stable Fast 3D e SPAR3D (Stability AI):** repositórios *gated* (licença Stability AI Community) — **pendente** o
   mesmo passo (login HF + aceite). O código (`third_party/stable-fast-3d`) já está clonado.
 
@@ -395,13 +395,16 @@ do cavalo, cadarços, asas da águia). Nas fotos reais, a remoção de fundo fun
 
 ## 6. Repositório e reprodutibilidade
 
-Código, tabelas e figuras: <https://github.com/EduardoCaixeta/cerise-2026-gen3d> (privado; criado e enviado em
-26/10/2026; espelho local em `E:\CERISE\FRENTES\REALIDADE AUMENTADA\GERACAO_3D`). Estrutura: `models/`
+Código, tabelas e figuras: repositório `cerise-2026-gen3d` (privado; criado e enviado em 26/10/2026 como
+`EduardoCaixeta/cerise-2026-gen3d` e consolidado na organização do CERISE; espelho local em
+`E:\CERISE\FRENTES\REALIDADE AUMENTADA\GERACAO_3D`). Estrutura: `models/`
 (executores instrumentados e preparo dos pesos), `benchmark/` (conjunto GSO, renderizador, métricas, execução,
 agregação), `pipeline/` (pacote do servidor, presets, pós-processamento, `write_ready.py`), `validation/` (pytest,
 visualizador, grades, fotos CC0), `docker/` (Dockerfile e scripts de instalação), `evidencias/` e `resultados/`
-(CSV/JSON/Markdown de todas as medições, logs das rodadas, relatório do pytest e o `READY.json`). Pesos, dados GSO e
-GLBs gerados ficam no Spark (`~/cerise2026/hf_cache` e `~/cerise2026/gen3d/{data,results}`).
+(CSV/JSON/Markdown de todas as medições, logs das rodadas, relatório do pytest e o `READY.json`). As métricas brutas
+de cada rodada estão em `results/` e os logs completos em `logs/`; os dados GSO e os GLBs gerados estão nos
+Releases do repositório (`RELEASES.md`); os pesos de terceiros ficam no Spark (`~/cerise2026/hf_cache`), com
+fonte e revisão em `TERCEIROS.md`.
 
 ## 7. Limitações e próximos passos
 
@@ -410,7 +413,7 @@ GLBs gerados ficam no Spark (`~/cerise2026/hf_cache` e `~/cerise2026/gen3d/{data
   ociosa para fixar os tempos de referência do servidor.
 * **Subconjuntos:** Hunyuan3D-2.0 padrão e 2.1 foram medidos em 4 e 2 objetos, por custo de tempo; a comparação
   justa está na Tabela 3.
-* **Pendências que dependem do Eduardo:** login no Hugging Face e
+* **Pendências que dependem de ação manual do bolsista:** login no Hugging Face e
   aceite das licenças de Stable Fast 3D, SPAR3D e DINOv3 (TRELLIS.2) para completar o benchmark; a decisão de expor
   publicamente o servidor 3D (nada do Spark foi exposto à internet).
 * **TRELLIS:** compilar `spconv`/`cumm` para aarch64/CUDA 13 (ou portar para `torchsparse`) num trabalho dedicado.

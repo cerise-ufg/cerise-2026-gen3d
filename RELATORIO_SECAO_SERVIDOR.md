@@ -2,7 +2,7 @@
 
 **Frente:** Realidade Aumentada — Servidor 3D · **Bolsista:** Eduardo Martins de Carvalho Caixeta ·
 **Coordenação:** Prof. Dr. Carlos Galvão Pinheiro Junior · **Execução:** 26/10/2026 ·
-**Repositório:** <https://github.com/EduardoCaixeta/cerise-2026-gen3d> (privado), pasta `server/`
+**Repositório:** `cerise-2026-gen3d` na organização do CERISE no GitHub (privado; versão consolidada do repositório original `EduardoCaixeta/cerise-2026-gen3d`), pasta `server/`
 
 ## 1. Objetivo
 
@@ -299,7 +299,7 @@ métricas e documentação; todos passaram com o código final (Figura 15).
   SQLite com WAL, sobrevive a esses reinícios e o worker devolve à fila o job que estava em execução.
 * **Convivência com a produção**: durante todos os testes e implantações os serviços de produção do Spark (vLLM,
   Qdrant) permaneceram ativos; nenhuma porta, contêiner ou configuração da produção foi alterada.
-* **Exposição pública**: **não realizada** (decisão pendente do Eduardo). O `server/README.md` contém uma proposta
+* **Exposição pública**: **não realizada** (decisão pendente do bolsista). O `server/README.md` contém uma proposta
   com três opções (VPN entre o servidor público e o Spark, recomendada; túnel SSH reverso; túnel de terceiros), os
   riscos de cada uma, o endurecimento necessário (TLS no Caddy, chave de API, `X-Forwarded-For` sobrescrito pelo
   *proxy*, limites, bloqueio de `/metrics` e `/docs`, tempos limite) e os passos de implantação.
@@ -326,12 +326,13 @@ disso o *backpressure* e a ETA informam o usuário. A arquitetura foi preparada 
 
 ## 9. Repositório e reprodutibilidade
 
-Código em <https://github.com/EduardoCaixeta/cerise-2026-gen3d>, pasta `server/`: `cerise_gen3d_server/` (API,
+Código no repositório `cerise-2026-gen3d` (originalmente `EduardoCaixeta/cerise-2026-gen3d`), pasta `server/`: `cerise_gen3d_server/` (API,
 worker, motor, banco, métricas, gerência), `baseline_2025/` (reprodução medida do servidor de 2025), `loadtest/`
 (cliente de carga, amostrador de GPU, suítes e análise), `tests/` (18 testes), `scripts/` (iniciar, parar, estado,
 reimplantar, teste ponta a ponta, conferência de GLB, captura do Swagger), `compose.yaml`, `gen3d.env`, `Dockerfile`.
-Dados medidos em `server/resultados/` (carga, tabelas, ponta a ponta, pytest). Não versionados: banco e arquivos de
-jobs (`data/`), modelo do `rembg` (`models/u2net/u2net.onnx`, 176 MB) e GLBs.
+Dados medidos em `server/resultados/` (carga, tabelas, ponta a ponta, pytest). Fora do git: banco, arquivos de
+jobs (`data/`), *pool* de imagens da carga e GLBs, publicados nos Releases (`RELEASES.md`); o modelo do `rembg`
+(`models/u2net/u2net.onnx`, 176 MB) é de terceiros (fonte em `TERCEIROS.md`).
 
 ## 10. Limitações e próximos passos
 
@@ -346,7 +347,7 @@ jobs (`data/`), modelo do `rembg` (`models/u2net/u2net.onnx`, 176 MB) e GLBs.
   diretamente comparável à configuração de produção.
 * **Baseline de 2025**: o `sleep(67)` original não exercita a GPU; a comparação usa a reprodução da arquitetura de
   2025 com o modelo real, que é a hipótese relevante (o que aconteceria se o modelo fosse ligado àquele servidor).
-* **Pendências que dependem do Eduardo**: (1) decidir a exposição pública (proposta no `server/README.md`); até lá o
+* **Pendências que dependem de decisão do bolsista**: (1) decidir a exposição pública (proposta no `server/README.md`); até lá o
   acesso é só por `ssh -L`; (2) se exposto, definir a chave de API (`GEN3D_API_KEYS`, arquivo fora do git) e
   publicar a versão do app que a envia.
 * **Próximos passos técnicos**: refazer a rodada de presets da seção de geração 3D com a textura JPEG corrigida
