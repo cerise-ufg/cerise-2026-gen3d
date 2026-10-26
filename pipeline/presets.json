@@ -1,0 +1,20 @@
+{
+ "rapido": {
+  "shape": "dit-v2-0-turbo", "flashvdm": true, "paint": "hunyuan3d-paint-v2-0-turbo",
+  "steps": 5, "octree": 256, "num_chunks": 20000, "max_faces": 10000, "fast_post": true,
+  "texture_size": 1024, "mobile_texture": 1024, "target_size_m": 0.30,
+  "time_limit_s": 60, "size_limit_bytes": 3000000
+ },
+ "padrao": {
+  "shape": "dit-v2-0-turbo", "flashvdm": true, "paint": "hunyuan3d-paint-v2-0-turbo",
+  "steps": 5, "octree": 384, "num_chunks": 20000, "max_faces": 20000, "fast_post": true,
+  "texture_size": 2048, "mobile_texture": 1024, "target_size_m": 0.30,
+  "time_limit_s": 90, "size_limit_bytes": 4000000
+ },
+ "alto": {
+  "shape": "dit-v2-0-turbo", "flashvdm": true, "paint": "hunyuan3d-paint-v2-0",
+  "steps": 5, "octree": 384, "num_chunks": 20000, "max_faces": 40000, "fast_post": true,
+  "texture_size": 2048, "mobile_texture": 2048, "target_size_m": 0.30,
+  "time_limit_s": 180, "size_limit_bytes": 10000000
+ }
+}

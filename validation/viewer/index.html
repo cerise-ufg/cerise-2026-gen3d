@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visualizador GLB</title>
+<style>
+  :root { --bg: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --line: #e1e0d9; --ok: #006300; --bad: #d03b3b; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { display: grid; grid-template-columns: 560px 300px; gap: 12px; padding: 12px; }
+  model-viewer { width: 560px; height: 560px; background: #ffffff; border: 1px solid var(--line); border-radius: 8px; }
+  .info { font-size: 13px; line-height: 1.5; }
+  .info h1 { font-size: 15px; margin: 0 0 8px; }
+  .ok { color: var(--ok); font-weight: 600; } .bad { color: var(--bad); font-weight: 600; }
+  code { font-size: 12px; color: var(--ink2); word-break: break-all; }
+</style>
+<script type="importmap">{ "imports": { "three": "./lib/three.module.js" } }</script>
+<script type="module" src="./lib/model-viewer.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <model-viewer id="mv" camera-controls shadow-intensity="1" exposure="1.0" environment-image="neutral"
+                camera-orbit="30deg 70deg auto" interaction-prompt="none"></model-viewer>
+  <div class="info">
+    <h1>Teste de carregamento</h1>
+    <div>Arquivo: <code id="src"></code></div>
+    <div>&lt;model-viewer&gt;: <span id="mvst">carregando…</span></div>
+    <div>three.js GLTFLoader: <span id="thst">carregando…</span></div>
+    <div id="stats"></div>
+  </div>
+</div>
+<script type="module">
+  import * as THREE from './lib/three.module.js';
+  import { GLTFLoader } from './lib/jsm/loaders/GLTFLoader.js';
+  import { DRACOLoader } from './lib/jsm/loaders/DRACOLoader.js';
+  import { MeshoptDecoder } from './lib/jsm/libs/meshopt_decoder.module.js';
+  const src = new URLSearchParams(location.search).get('src');
+  document.getElementById('src').textContent = src;
+  const mv = document.getElementById('mv');
+  customElements.whenDefined('model-viewer').then(() => {
+    const MV = customElements.get('model-viewer');
+    MV.dracoDecoderLocation = './lib/jsm/libs/draco/gltf/';
+    MV.meshoptDecoderLocation = './lib/meshopt_decoder.js';
+    mv.addEventListener('load', () => { document.getElementById('mvst').innerHTML = '<span class="ok">OK</span>'; window.__mv = 'ok'; });
+    mv.addEventListener('error', (e) => {
+      const d = e.detail ? (e.detail.type + ': ' + (e.detail.sourceError || '')) : '';
+      document.getElementById('mvst').innerHTML = '<span class="bad">ERRO</span> ' + d; window.__mv = 'erro ' + d; });
+    mv.src = src;
+  });
+  const draco = new DRACOLoader(); draco.setDecoderPath('./lib/jsm/libs/draco/gltf/');
+  const loader = new GLTFLoader(); loader.setDRACOLoader(draco); loader.setMeshoptDecoder(MeshoptDecoder);
+  loader.load(src, (g) => {
+    let tris = 0, meshes = 0; const mats = new Set(); let tex = 0;
+    g.scene.traverse((o) => { if (o.isMesh) { meshes++; const geo = o.geometry;
+      tris += geo.index ? geo.index.count / 3 : geo.attributes.position.count / 3;
+      const m = o.material; mats.add(m.uuid); if (m.map) tex++; } });
+    const box = new THREE.Box3().setFromObject(g.scene); const s = box.getSize(new THREE.Vector3());
+    const r = { meshes, triangles: tris, materials: mats.size, baseColorMaps: tex,
+                size_m: [s.x, s.y, s.z].map(v => +v.toFixed(3)), min_y: +box.min.y.toFixed(4),
+                extensions: g.parser.json.extensionsUsed || [] };
+    window.__three = r;
+    document.getElementById('thst').innerHTML = '<span class="ok">OK</span>';
+    document.getElementById('stats').innerHTML = '<pre>' + JSON.stringify(r, null, 1) + '</pre>';
+  }, undefined, (e) => { window.__three = { error: String(e) }; document.getElementById('thst').innerHTML = '<span class="bad">ERRO</span> ' + e; });
+</script>
+</body>
+</html>

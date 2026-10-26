@@ -1,0 +1,15 @@
+data
+results
+logs
+evidencias
+resultados
+weights
+hy3dgen_models
+server
+third_party/*
+!third_party/Hunyuan3D-2
+!third_party/nvdiffrast
+third_party/Hunyuan3D-2/hy3dgen/texgen/custom_rasterizer/build
+third_party/Hunyuan3D-2/hy3dgen/texgen/differentiable_renderer/build
+**/__pycache__
+**/*.glb

@@ -1,0 +1,4 @@
+spconv-cu126 2.3.8 arquivos: 10 aarch64: 0 | exemplo: ['spconv_cu126-2.3.8-cp310-cp310-manylinux_2_28_x86_64.whl', 'spconv_cu126-2.3.8-cp310-cp310-win_amd64.whl']
+spconv-cu124 2.3.8 arquivos: 10 aarch64: 0 | exemplo: ['spconv_cu124-2.3.8-cp310-cp310-manylinux_2_28_x86_64.whl', 'spconv_cu124-2.3.8-cp310-cp310-win_amd64.whl']
+spconv-cu121 2.3.8 arquivos: 10 aarch64: 0 | exemplo: ['spconv_cu121-2.3.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl', 'spconv_cu121-2.3.8-cp310-cp310-win_amd64.whl']
+cumm-cu126 0.8.2 arquivos: 10 aarch64: 0 | exemplo: ['cumm_cu126-0.8.2-cp310-cp310-manylinux_2_28_x86_64.whl', 'cumm_cu126-0.8.2-cp310-cp310-win_amd64.whl']

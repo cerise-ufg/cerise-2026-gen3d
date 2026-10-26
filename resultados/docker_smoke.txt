@@ -1,0 +1,9 @@
+$ sudo docker images cerise26_gen3d
+REPOSITORY       TAG       IMAGE ID       SIZE      CREATED
+cerise26_gen3d   latest    eda57a3575fb   38GB      2 minutes ago
+$ sudo docker run --rm --gpus all cerise26_gen3d:latest <verificacoes>
+torch 2.12.0a0+5aff3928d8.nv26.05 cuda True NVIDIA GB10 cap (12, 1)
+gen3d_pipeline ok; presets: ['rapido', 'padrao', 'alto']
+v22.11.0
+4.5.1
+sha256:eda57a3575fbfc6d748153dec4bb73ea10ef2ac489ca0581e26c22884c2dd1b9

@@ -1,0 +1,22 @@
+# dados, pesos e resultados pesados ficam no Spark (~/cerise2026/gen3d, ~/cerise2026/hf_cache)
+data/
+third_party/
+hy3dgen_models/
+weights/
+results/
+logs/
+*.glb
+*.obj
+*.ply
+*.npy
+*.ckpt
+*.safetensors
+*.bin
+*.pth
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# area de trabalho local (copia bruta do Spark)
+_spark/
+

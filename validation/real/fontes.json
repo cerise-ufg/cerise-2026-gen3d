@@ -1,0 +1,50 @@
+{
+ "cc0_teapot": {
+  "arquivo": "cc0_teapot.jpg",
+  "titulo": "File:Teapot MET DP164196.jpg",
+  "licenca": "CC0",
+  "autor": "<div class=\"fn value\">\n<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/Creator:Peter_Van_Dyck?action=edit&",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Teapot_MET_DP164196.jpg",
+  "url_baixada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Teapot_MET_DP164196.jpg/1280px-Teapot_MET_DP164196.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+ },
+ "cc0_donkey": {
+  "arquivo": "cc0_donkey.jpg",
+  "titulo": "File:Donkey figurine MET DP101825.jpg",
+  "licenca": "CC0",
+  "autor": "",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Donkey_figurine_MET_DP101825.jpg",
+  "url_baixada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Donkey_figurine_MET_DP101825.jpg/1280px-Donkey_figurine_MET_DP101825.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+ },
+ "cc0_rooster": {
+  "arquivo": "cc0_rooster.jpg",
+  "titulo": "File:Rooster figurine MET DP101869.jpg",
+  "licenca": "CC0",
+  "autor": "",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Rooster_figurine_MET_DP101869.jpg",
+  "url_baixada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Rooster_figurine_MET_DP101869.jpg/1280px-Rooster_figurine_MET_DP101869.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+ },
+ "cc0_cat": {
+  "arquivo": "cc0_cat.jpg",
+  "titulo": "File:Crouching Cat Figurine MET DT226229.jpg",
+  "licenca": "CC0",
+  "autor": "",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Crouching_Cat_Figurine_MET_DT226229.jpg",
+  "url_baixada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Crouching_Cat_Figurine_MET_DT226229.jpg/1280px-Crouching_Cat_Figurine_MET_DT226229.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+ },
+ "cc0_duck": {
+  "arquivo": "cc0_duck.jpg",
+  "titulo": "File:Duck Donuts Rubber Duck.jpg",
+  "licenca": "CC0",
+  "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Julian_Lupyan\" title=\"User:Julian Lupyan\">Julian Lupyan</a>",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Duck_Donuts_Rubber_Duck.jpg",
+  "url_baixada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Duck_Donuts_Rubber_Duck.jpg/1280px-Duck_Donuts_Rubber_Duck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+ },
+ "cc0_angular_teapot": {
+  "arquivo": "cc0_angular_teapot.jpg",
+  "titulo": "File:Angular teapot by Walter Keeler, V&A London.jpg",
+  "licenca": "CC0",
+  "autor": "<a href=\"//commons.wikimedia.org/wiki/User:14GTR\" title=\"User:14GTR\">14GTR</a>",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Angular_teapot_by_Walter_Keeler,_V%26A_London.jpg",
+  "url_baixada": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Angular_teapot_by_Walter_Keeler%2C_V%26A_London.jpg/1280px-Angular_teapot_by_Walter_Keeler%2C_V%26A_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+ }
+}
