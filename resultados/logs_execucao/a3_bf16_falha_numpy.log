@@ -1,0 +1,182 @@
+[a3_bf16] limite de memoria do alocador: 0.197 da GPU
+W1026 07:20:27.364000 26725 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+2026-10-26 07:20:27,895 - hy3dgen.shapgen - INFO - Try to load model from local path: /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-dit-v2-0-turbo
+2026-10-26 07:20:27,898 - hy3dgen.shapgen - INFO - Loading model from /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-dit-v2-0-turbo/model.fp16.safetensors
+2026-10-26 07:20:47,104 - hy3dgen.shapgen - INFO - Try to load model from local path: /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-vae-v2-0-turbo
+2026-10-26 07:20:47,105 - hy3dgen.shapgen - INFO - Loading model from /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-vae-v2-0-turbo/model.fp16.safetensors
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is given, using pc_size=5120, pc_sharpedge_size=5120
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is given, using pc_size=5120, pc_sharpedge_size=5120
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:01<00:06,  1.30s/it]Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  1.95it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.53it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.19it/s]
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:07<00:39,  7.96s/it]Loading pipeline components...:  50%|█████     | 3/6 [00:09<00:07,  2.47s/it]An error occurred while trying to fetch /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-paint-v2-0-turbo/vae: Error no file named diffusion_pytorch_model.safetensors found in directory /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-paint-v2-0-turbo/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...: 100%|██████████| 6/6 [00:09<00:00,  1.03s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:09<00:00,  1.57s/it]
+[a3_bf16] carga do modelo: 55.0 s; memoria apos carga 11.46 GB
+2026-10-26 07:21:26,220 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 100, in main
+    runner.generate(os.path.join(a.data, objs[0], "input.png"), os.path.join(outdir, "_warmup.glb"), T)
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+2026-10-26 07:21:42,242 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] ACE_Coffee_Mug_Kristen_16_oz_cup: ok=False 12.0s faces=None pico=12.49GB etapas={'preprocess': 0.03, 'shape_diffusion': 6.3, 'shape_decode_mc': 5.66}
+2026-10-26 07:21:55,108 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] Schleich_African_Black_Rhino: ok=False 11.7s faces=None pico=12.32GB etapas={'preprocess': 0.02, 'shape_diffusion': 7.11, 'shape_decode_mc': 4.56}
+2026-10-26 07:22:05,473 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] Schleich_Bald_Eagle: ok=False 10.2s faces=None pico=12.38GB etapas={'preprocess': 0.01, 'shape_diffusion': 5.73, 'shape_decode_mc': 4.41}
+2026-10-26 07:22:15,900 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] Sonny_School_Bus: ok=False 11.8s faces=None pico=12.47GB etapas={'preprocess': 0.02, 'shape_diffusion': 5.94, 'shape_decode_mc': 5.85}
+2026-10-26 07:22:27,759 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] Threshold_Porcelain_Teapot_White: ok=False 10.8s faces=None pico=12.34GB etapas={'preprocess': 0.01, 'shape_diffusion': 5.91, 'shape_decode_mc': 4.9}
+2026-10-26 07:22:38,593 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure: ok=False 10.5s faces=None pico=12.33GB etapas={'preprocess': 0.02, 'shape_diffusion': 5.86, 'shape_decode_mc': 4.58}
+2026-10-26 07:22:49,290 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+Traceback (most recent call last):
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 54, in __call__
+    vertices, faces = self.run(grid_logits[i], **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/surface_extractors.py", line 70, in run
+    grid_logit.cpu().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/workspace/benchmark/run_model.py", line 114, in main
+    info = runner.generate(os.path.join(a.data, o, "input.png"), glb, T)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/benchmark/../models/hy2.py", line 131, in generate
+    faces_raw = int(len(mesh.faces))
+                        ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'faces'
+[a3_bf16] Vtech_Roll_Learn_Turtle: ok=False 8.9s faces=None pico=12.52GB etapas={'preprocess': 0.01, 'shape_diffusion': 6.03, 'shape_decode_mc': 2.82}
+[a3_bf16] FIM (loadavg inicio 16.3, fim 19.6)

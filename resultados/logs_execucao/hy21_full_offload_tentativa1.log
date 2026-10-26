@@ -1,0 +1,20 @@
+[hy21_full] limite de memoria do alocador: 0.197 da GPU
+W1026 06:12:45.399000 22746 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+2026-10-26 06:12:46,138 - hy3dgen.shapgen - INFO - Try to load model from local path: /workspace/hy3dgen_models/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1
+2026-10-26 06:12:46,157 - hy3dgen.shapgen - INFO - Loading model from /workspace/hy3dgen_models/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/model.fp16.ckpt
+using moe
+using moe
+using moe
+using moe
+using moe
+using moe
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is not given, using pc_size as pc_sharpedge_size
+Torchvision version: 0.27.0a0+6214cb20.nv26.05
+torchvision.transforms.functional_tensor not found, applying compatibility fix...
+Applied compatibility fix: created functional_tensor mock module
+Fetching 19 files:   0%|          | 0/19 [00:00<?, ?it/s]Fetching 19 files: 100%|██████████| 19/19 [00:00<00:00, 200230.59it/s]
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:01<00:02,  1.37it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:25<00:31, 10.64s/it]Loading pipeline components...:  67%|██████▋   | 4/6 [00:26<00:13,  6.93s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:26<00:00,  3.38s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:26<00:00,  4.46s/it]
+Models Loaded.
+[hy21_full] carga do modelo: 182.2 s; memoria apos carga 0.00 GB
+[hy21_full] aquecimento: 629.8 s
+[hy21_full] ACE_Coffee_Mug_Kristen_16_oz_cup: ok=True 386.0s faces=40000 pico=13.87GB etapas={'offload_swap': 47.06, 'preprocess': 0.01, 'shape_diffusion': 99.75, 'shape_decode_mc': 144.41, 'mesh_postproc': 25.09, 'export_glb': 0.93, 'tex_uv_unwrap': 2.47, 'tex_render_cond': 1.64, 'tex_multiview_diffusion_pbr': 36.88, 'tex_super_resolution': 13.45, 'tex_bake': 2.36, 'tex_inpaint': 11.89}

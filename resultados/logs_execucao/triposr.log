@@ -1,0 +1,18 @@
+[triposr] limite de memoria do alocador: 0.197 da GPU
+W1026 05:10:15.716000 12173 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[triposr] carga do modelo: 7.2 s; memoria apos carga 1.56 GB
+[triposr] aquecimento: 1.6 s
+[triposr] ACE_Coffee_Mug_Kristen_16_oz_cup: ok=True 0.9s faces=125391 pico=4.16GB etapas={'preprocess': 0.03, 'triplane_forward': 0.24, 'mesh_extract_mc': 0.59, 'export_glb': 0.0}
+[triposr] Android_Figure_Panda: ok=True 0.9s faces=120886 pico=4.16GB etapas={'preprocess': 0.04, 'triplane_forward': 0.25, 'mesh_extract_mc': 0.59, 'export_glb': 0.0}
+[triposr] Breyer_Horse_Of_The_Year_2015: ok=True 0.9s faces=76300 pico=4.16GB etapas={'preprocess': 0.03, 'triplane_forward': 0.24, 'mesh_extract_mc': 0.65, 'export_glb': 0.0}
+[triposr] Crosley_Alarm_Clock_Vintage_Metal: ok=True 0.9s faces=69075 pico=4.16GB etapas={'preprocess': 0.04, 'triplane_forward': 0.25, 'mesh_extract_mc': 0.58, 'export_glb': 0.0}
+[triposr] Reebok_ZIGLITE_RUSH: ok=True 0.9s faces=100729 pico=4.16GB etapas={'preprocess': 0.05, 'triplane_forward': 0.24, 'mesh_extract_mc': 0.65, 'export_glb': 0.0}
+[triposr] Schleich_African_Black_Rhino: ok=True 0.9s faces=75796 pico=4.16GB etapas={'preprocess': 0.05, 'triplane_forward': 0.26, 'mesh_extract_mc': 0.63, 'export_glb': 0.0}
+[triposr] Schleich_Bald_Eagle: ok=True 0.9s faces=115567 pico=4.16GB etapas={'preprocess': 0.03, 'triplane_forward': 0.24, 'mesh_extract_mc': 0.58, 'export_glb': 0.0}
+[triposr] Schleich_Lion_Action_Figure: ok=True 0.9s faces=67654 pico=4.16GB etapas={'preprocess': 0.03, 'triplane_forward': 0.26, 'mesh_extract_mc': 0.62, 'export_glb': 0.0}
+[triposr] Sonny_School_Bus: ok=True 1.2s faces=146161 pico=4.17GB etapas={'preprocess': 0.03, 'triplane_forward': 0.27, 'mesh_extract_mc': 0.9, 'export_glb': 0.0}
+[triposr] Threshold_Porcelain_Teapot_White: ok=True 9.8s faces=160953 pico=4.17GB etapas={'preprocess': 0.04, 'triplane_forward': 0.37, 'mesh_extract_mc': 9.35, 'export_glb': 0.01}
+[triposr] Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure: ok=True 5.3s faces=128600 pico=4.16GB etapas={'preprocess': 0.07, 'triplane_forward': 0.41, 'mesh_extract_mc': 4.86, 'export_glb': 0.0}
+[triposr] Vtech_Roll_Learn_Turtle: ok=True 1.2s faces=137422 pico=4.17GB etapas={'preprocess': 0.03, 'triplane_forward': 0.33, 'mesh_extract_mc': 0.82, 'export_glb': 0.0}
+[triposr] Vtech_Stack_Sing_Rings_636_Months: ok=True 1.5s faces=98242 pico=4.16GB etapas={'preprocess': 0.05, 'triplane_forward': 0.39, 'mesh_extract_mc': 1.1, 'export_glb': 0.0}
+[triposr] FIM

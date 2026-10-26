@@ -1,0 +1,20 @@
+=== 2026-10-26T06:33:31Z inicio a3_base {}
+=== 2026-10-26T06:38:23Z fim a3_base rc=0
+=== 2026-10-26T06:38:23Z inicio a3_fastpost {"remove_floaters": false, "decimator": "fast"}
+=== 2026-10-26T06:41:06Z fim a3_fastpost rc=0
+=== 2026-10-26T06:41:06Z inicio a3_oct256 {"octree": 256}
+=== 2026-10-26T06:44:24Z fim a3_oct256 rc=0
+=== 2026-10-26T06:44:24Z inicio a3_faces20k {"max_faces": 20000}
+=== 2026-10-26T06:48:47Z fim a3_faces20k rc=0
+=== 2026-10-26T06:48:47Z inicio a3_faces10k {"max_faces": 10000}
+=== 2026-10-26T06:54:34Z fim a3_faces10k rc=0
+=== 2026-10-26T06:54:34Z inicio a3_tex1024 {"texture_size": 1024, "render_size": 1024}
+=== 2026-10-26T07:02:15Z fim a3_tex1024 rc=0
+=== 2026-10-26T07:02:15Z inicio a3_paintfull {"paint": "hunyuan3d-paint-v2-0"}
+=== 2026-10-26T07:14:52Z fim a3_paintfull rc=0
+=== 2026-10-26T07:14:52Z inicio a3_steps10 {"steps": 10}
+=== 2026-10-26T07:20:24Z fim a3_steps10 rc=0
+=== 2026-10-26T07:20:24Z inicio a3_bf16 {"shape_dtype": "bf16"}
+=== 2026-10-26T07:22:53Z fim a3_bf16 rc=0
+=== 2026-10-26T07:22:53Z inicio a3_noflashvdm {"flashvdm": false}
+=== 2026-10-26T07:34:41Z a3_noflashvdm INTERROMPIDO (producao religou; memoria)

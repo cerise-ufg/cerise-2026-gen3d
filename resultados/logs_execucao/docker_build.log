@@ -1,0 +1,52 @@
+inicio 2026-10-26T07:38:40Z
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  369.5MB
+Step 1/15 : FROM nvcr.io/nvidia/pytorch:26.05-py3
+ ---> 222d8b18e671
+Step 2/15 : ENV DEBIAN_FRONTEND=noninteractive     TORCH_CUDA_ARCH_LIST="12.1"     MAX_JOBS=4     HY3DGEN_MODELS=/opt/gen3d/hy3dgen_models     HY2_ROOT=/opt/gen3d/third_party/Hunyuan3D-2     TP=/opt/gen3d/third_party     GLTF_TOOLS=/opt/gltf-tools/node_modules/.bin     PYTHONUNBUFFERED=1
+ ---> Using cache
+ ---> cf190dbdfe21
+Step 3/15 : RUN apt-get update && apt-get install -y --no-install-recommends       libgl1 libglib2.0-0 libegl1 libgles2 libopengl0 libxrender1 libxext6 libsm6 unzip       libharfbuzz0b libfontconfig1 libfreetype6 libxkbcommon0 libdbus-1-3 libx11-6 libxcb1 libgomp1 libtbb12       xz-utils curl     && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> 8be45b1ee86b
+Step 4/15 : RUN curl -sL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-arm64.tar.xz | tar xJ -C /opt &&     ln -sf /opt/node-v22.11.0-linux-arm64/bin/node /usr/local/bin/node &&     ln -sf /opt/node-v22.11.0-linux-arm64/bin/npm /usr/local/bin/npm &&     ln -sf /opt/node-v22.11.0-linux-arm64/bin/npx /usr/local/bin/npx
+ ---> Using cache
+ ---> d060a4bb7504
+Step 5/15 : RUN pip install --no-cache-dir "transformers==4.46.3" "diffusers==0.31.0" "accelerate>=1.1" "huggingface_hub<1.0"       safetensors omegaconf einops tqdm trimesh pygltflib xatlas opencv-python-headless scikit-image imageio       "rembg==2.0.65" onnxruntime pytest matplotlib pandas jaxtyping plyfile timm open_clip_torch       fast-simplification rtree pillow pymeshlab scikit-build-core cmake "pytorch-lightning>=2.1,<2.6" PyMCubes       flask waitress
+ ---> Using cache
+ ---> 3eeb70a8adf8
+Step 6/15 : RUN mkdir -p /opt/gltf-tools && cd /opt/gltf-tools && npm init -y >/dev/null &&     npm install --no-audit --no-fund --include=optional @gltf-transform/cli@4 gltfpack gltf-validator &&     node -e "require('sharp'); console.log('sharp ok')"
+ ---> Using cache
+ ---> c94cd67fe141
+Step 7/15 : COPY third_party/Hunyuan3D-2 /opt/gen3d/third_party/Hunyuan3D-2
+ ---> Using cache
+ ---> 0945edf5d082
+Step 8/15 : COPY third_party/nvdiffrast /opt/gen3d/third_party/nvdiffrast
+ ---> Using cache
+ ---> 8ed3b1cca27b
+Step 9/15 : RUN cd /opt/gen3d/third_party/Hunyuan3D-2/hy3dgen/texgen/custom_rasterizer &&       rm -rf build *.egg-info && pip install --no-build-isolation --no-cache-dir . &&     cd ../differentiable_renderer && rm -rf build && python setup.py build_ext --inplace &&     cd /opt/gen3d/third_party/nvdiffrast && pip install --no-build-isolation --no-cache-dir .
+ ---> Using cache
+ ---> db9de619866a
+Step 10/15 : COPY pipeline /opt/gen3d/pipeline
+ ---> dbee3dc88dca
+Step 11/15 : COPY models /opt/gen3d/models
+ ---> 38ce9583ab52
+Step 12/15 : COPY benchmark /opt/gen3d/benchmark
+ ---> 17e4a04418eb
+Step 13/15 : COPY validation /opt/gen3d/validation
+ ---> e8d3a05c0d2d
+Step 14/15 : WORKDIR /opt/gen3d
+ ---> Running in a59745c7587a
+ ---> Removed intermediate container a59745c7587a
+ ---> f81445957392
+Step 15/15 : CMD ["python", "-c", "import sys; sys.path.insert(0,'pipeline'); import gen3d_pipeline; print('cerise26_gen3d ok')"]
+ ---> Running in 535569811fa2
+ ---> Removed intermediate container 535569811fa2
+ ---> c5db530e09b9
+Successfully built c5db530e09b9
+Successfully tagged cerise26_gen3d:latest
+RC=0 fim 2026-10-26T07:50:31Z
+cerise26_gen3d:latest 38GB 2026-10-26 04:50:30 -0300 -03
