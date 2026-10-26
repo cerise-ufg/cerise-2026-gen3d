@@ -1,0 +1,168 @@
++ export MAX_JOBS=4 TORCH_CUDA_ARCH_LIST=12.1
++ MAX_JOBS=4
++ TORCH_CUDA_ARCH_LIST=12.1
++ PIP='nice -n 19 pip install --no-cache-dir'
++ nice -n 19 pip install --no-cache-dir 'pytorch-lightning>=2.1,<2.6' PyMCubes torchmetrics
+Collecting pytorch-lightning<2.6,>=2.1
+  Downloading pytorch_lightning-2.5.6-py3-none-any.whl.metadata (20 kB)
+Collecting PyMCubes
+  Downloading pymcubes-0.1.6.tar.gz (109 kB)
+  DEPRECATION: Setting PIP_CONSTRAINT will not affect build constraints in the future, pip 26.2 will enforce this behaviour change. A possible replacement is to specify build constraints using --build-constraint or PIP_BUILD_CONSTRAINT. To disable this warning without any build constraints set --use-feature=build-constraint or PIP_USE_FEATURE="build-constraint".
+  Installing build dependencies: started
+  Installing build dependencies: still running...
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting torchmetrics
+  Downloading torchmetrics-1.9.0-py3-none-any.whl.metadata (23 kB)
+Requirement already satisfied: torch>=2.1.0 in /usr/local/lib/python3.12/dist-packages (from pytorch-lightning<2.6,>=2.1) (2.12.0a0+5aff3928d8.nv26.5.50603568)
+Requirement already satisfied: tqdm>=4.57.0 in /usr/local/lib/python3.12/dist-packages (from pytorch-lightning<2.6,>=2.1) (4.67.3)
+Requirement already satisfied: PyYAML>5.4 in /usr/lib/python3/dist-packages (from pytorch-lightning<2.6,>=2.1) (6.0.1)
+Requirement already satisfied: fsspec>=2022.5.0 in /usr/local/lib/python3.12/dist-packages (from fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (2026.2.0)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from pytorch-lightning<2.6,>=2.1) (26.0)
+Requirement already satisfied: typing-extensions>4.5.0 in /usr/local/lib/python3.12/dist-packages (from pytorch-lightning<2.6,>=2.1) (4.15.0)
+Collecting lightning-utilities>=0.10.0 (from pytorch-lightning<2.6,>=2.1)
+  Downloading lightning_utilities-0.15.3-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: numpy>=1.21 in /usr/local/lib/python3.12/dist-packages (from PyMCubes) (2.1.0)
+Requirement already satisfied: scipy>=1.0.0 in /usr/local/lib/python3.12/dist-packages (from PyMCubes) (1.17.1)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /usr/local/lib/python3.12/dist-packages (from fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (3.13.5)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (2.6.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (6.7.1)
+Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (0.4.1)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (1.23.0)
+Requirement already satisfied: idna>=2.0 in /usr/local/lib/python3.12/dist-packages (from yarl<2.0,>=1.17.0->aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>=2022.5.0->pytorch-lightning<2.6,>=2.1) (3.13)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (3.29.0)
+Requirement already satisfied: setuptools<82 in /usr/local/lib/python3.12/dist-packages (from torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/dist-packages (from torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/dist-packages (from torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (3.6.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (3.1.6)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy>=1.13.3->torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2->torch>=2.1.0->pytorch-lightning<2.6,>=2.1) (3.0.3)
+Downloading pytorch_lightning-2.5.6-py3-none-any.whl (831 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 831.6/831.6 kB 344.5 kB/s  0:00:01
+Downloading torchmetrics-1.9.0-py3-none-any.whl (983 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 983.4/983.4 kB 196.9 kB/s  0:00:04
+Downloading lightning_utilities-0.15.3-py3-none-any.whl (31 kB)
+Building wheels for collected packages: PyMCubes
+  Building wheel for PyMCubes (pyproject.toml): started
+  Building wheel for PyMCubes (pyproject.toml): finished with status 'done'
+  Created wheel for PyMCubes: filename=pymcubes-0.1.6-cp312-cp312-linux_aarch64.whl size=294661 sha256=adc76fb4b008757b68caeba6e17c612f42049fad8df7270cea0fccb5a2e8f011
+  Stored in directory: /tmp/pip-ephem-wheel-cache-203ent1m/wheels/0e/4a/81/f3c3d7143680d22e899d22246d9166c31a7b2dacdae428b69a
+Successfully built PyMCubes
+Installing collected packages: lightning-utilities, PyMCubes, torchmetrics, pytorch-lightning
+
+Successfully installed PyMCubes-0.1.6 lightning-utilities-0.15.3 pytorch-lightning-2.5.6 torchmetrics-1.9.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ nice -n 19 pip install --no-cache-dir --no-deps basicsr==1.4.2 realesrgan==0.3.0 facexlib gfpgan
+Collecting basicsr==1.4.2
+  Downloading basicsr-1.4.2.tar.gz (172 kB)
+  DEPRECATION: Setting PIP_CONSTRAINT will not affect build constraints in the future, pip 26.2 will enforce this behaviour change. A possible replacement is to specify build constraints using --build-constraint or PIP_BUILD_CONSTRAINT. To disable this warning without any build constraints set --use-feature=build-constraint or PIP_USE_FEATURE="build-constraint".
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: still running...
+  Installing backend dependencies: still running...
+  Installing backend dependencies: still running...
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting realesrgan==0.3.0
+  Downloading realesrgan-0.3.0-py3-none-any.whl.metadata (17 kB)
+Collecting facexlib
+  Downloading facexlib-0.3.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting gfpgan
+  Downloading gfpgan-1.3.8-py3-none-any.whl.metadata (12 kB)
+Downloading realesrgan-0.3.0-py3-none-any.whl (26 kB)
+Downloading facexlib-0.3.0-py3-none-any.whl (59 kB)
+Downloading gfpgan-1.3.8-py3-none-any.whl (52 kB)
+Building wheels for collected packages: basicsr
+  Building wheel for basicsr (pyproject.toml): started
+  Building wheel for basicsr (pyproject.toml): finished with status 'done'
+  Created wheel for basicsr: filename=basicsr-1.4.2-py3-none-any.whl size=214908 sha256=8494084641b1cf4013c485be0c8436ba18b57a28cfbda3c70cc2f46a5546cb3b
+  Stored in directory: /tmp/pip-ephem-wheel-cache-763gfe45/wheels/9a/e3/e4/58f29bfabb622dd40b6d9839318ce5bf092062b81ca3aa19ea
+Successfully built basicsr
+Installing collected packages: realesrgan, gfpgan, facexlib, basicsr
+
+Successfully installed basicsr-1.4.2 facexlib-0.3.0 gfpgan-1.3.8 realesrgan-0.3.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ nice -n 19 pip install --no-cache-dir addict future lmdb yapf tb-nightly configargparse filterpy numba
+Collecting addict
+  Downloading addict-2.4.0-py3-none-any.whl.metadata (1.0 kB)
+Collecting future
+  Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting lmdb
+  Downloading lmdb-3.0.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (1.2 kB)
+Collecting yapf
+  Downloading yapf-0.43.0-py3-none-any.whl.metadata (46 kB)
+Collecting tb-nightly
+  Downloading tb_nightly-2.21.0a20251023-py3-none-any.whl.metadata (1.9 kB)
+Collecting configargparse
+  Downloading configargparse-1.8.0-py3-none-any.whl.metadata (23 kB)
+Collecting filterpy
+  Downloading filterpy-1.4.5.zip (177 kB)
+  DEPRECATION: Setting PIP_CONSTRAINT will not affect build constraints in the future, pip 26.2 will enforce this behaviour change. A possible replacement is to specify build constraints using --build-constraint or PIP_BUILD_CONSTRAINT. To disable this warning without any build constraints set --use-feature=build-constraint or PIP_USE_FEATURE="build-constraint".
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numba in /usr/local/lib/python3.12/dist-packages (0.64.0)
+Requirement already satisfied: platformdirs>=3.5.1 in /usr/local/lib/python3.12/dist-packages (from yapf) (4.9.6)
+Requirement already satisfied: absl-py>=0.4 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (2.4.0)
+Requirement already satisfied: grpcio>=1.48.2 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (1.80.0)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (3.10.2)
+Requirement already satisfied: numpy>=1.12.0 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (2.1.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (26.0)
+Requirement already satisfied: pillow in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (12.2.0)
+Requirement already satisfied: protobuf!=4.24.0,>=3.19.6 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (7.34.1)
+Requirement already satisfied: setuptools>=41.0.0 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (81.0.0)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from tb-nightly) (3.1.8)
+Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from filterpy) (1.17.1)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from filterpy) (3.10.9)
+Requirement already satisfied: llvmlite<0.47,>=0.46.0dev0 in /usr/local/lib/python3.12/dist-packages (from numba) (0.46.0)
+Requirement already satisfied: typing-extensions~=4.12 in /usr/local/lib/python3.12/dist-packages (from grpcio>=1.48.2->tb-nightly) (4.15.0)
+Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.12/dist-packages (from werkzeug>=1.0.1->tb-nightly) (3.0.3)
+Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->filterpy) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib->filterpy) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib->filterpy) (4.62.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib->filterpy) (1.5.0)
+Requirement already satisfied: pyparsing>=3 in /usr/local/lib/python3.12/dist-packages (from matplotlib->filterpy) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib->filterpy) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib->filterpy) (1.16.0)
+Downloading addict-2.4.0-py3-none-any.whl (3.8 kB)
+Downloading future-1.0.0-py3-none-any.whl (491 kB)
+Downloading lmdb-3.0.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (565 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 565.1/565.1 kB 38.5 MB/s  0:00:00
+Downloading yapf-0.43.0-py3-none-any.whl (256 kB)
+Downloading tb_nightly-2.21.0a20251023-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 26.3 MB/s  0:00:00
+Downloading configargparse-1.8.0-py3-none-any.whl (34 kB)
+Building wheels for collected packages: filterpy
+  Building wheel for filterpy (pyproject.toml): started
+  Building wheel for filterpy (pyproject.toml): finished with status 'done'
+  Created wheel for filterpy: filename=filterpy-1.4.5-py3-none-any.whl size=110546 sha256=14c3371a0fca91151e309846ad5e9701d1dc7895e74a0e1c82e950196e58bf95
+  Stored in directory: /tmp/pip-ephem-wheel-cache-c0fm1gch/wheels/77/bf/4c/b0c3f4798a0166668752312a67118b27a3cd341e13ac0ae6ee
+Successfully built filterpy
+Installing collected packages: addict, yapf, lmdb, future, configargparse, tb-nightly, filterpy
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+gfpgan 1.3.8 requires opencv-python, which is not installed.
+realesrgan 0.3.0 requires opencv-python, which is not installed.
+basicsr 1.4.2 requires opencv-python, which is not installed.
+facexlib 0.3.0 requires opencv-python, which is not installed.
+Successfully installed addict-2.4.0 configargparse-1.8.0 filterpy-1.4.5 future-1.0.0 lmdb-3.0.0 tb-nightly-2.21.0a20251023 yapf-0.43.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ python -
+OK  pytorch_lightning
+OK  mcubes
+ERR basicsr ModuleNotFoundError("No module named 'torchvision.transforms.functional_tensor'")
+ERR realesrgan ModuleNotFoundError("No module named 'torchvision.transforms.functional_tensor'")

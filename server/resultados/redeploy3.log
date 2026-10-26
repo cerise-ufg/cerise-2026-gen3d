@@ -1,0 +1,26 @@
+[redeploy 09:40:27] memoria antes:
+               total        used        free      shared  buff/cache   available
+Mem:             121          72          10           0          40          49
+[redeploy 09:40:27] build da imagem cerise26_gen3d_server:latest
+sha256:fc663463e4d4c2da0f94056913bc0045bab90163d3f6431ad3fcabd22af2062a
+[redeploy 09:40:28] recriando containers (1 slot, trust_proxy=0)
+ Container cerise26_gen3d_api Starting 
+ Container cerise26_gen3d_worker1 Starting 
+ Container cerise26_gen3d_api Started 
+ Container cerise26_gen3d_worker1 Started 
+health ok
+[redeploy 09:42:11] conferindo tmpfs do numba
+NUMBA_CACHE_DIR=/tmp/numba_cache
+tmpfs on /tmp/numba_cache type tmpfs (rw,nosuid,nodev,noexec,relatime,size=262144k,inode64)
+alpha_af76f04dde6265dd917a5650452563f69254df44
+foreground_939a6a1feb038ae1505a4f01ab372848569fba45
+laplacian_afcdcfc30120d97c5fe84f8faea6c95cdb1bd842
+preconditioner_df14e7b9d430073fc8a15b9d05d729efd523fe95
+util_1a279048acca819ce46a4ff0ac02a6f4cddcedfa
+NUMBA_CACHE_DIR=/tmp/numba_cache
+tmpfs on /tmp/numba_cache type tmpfs (rw,nosuid,nodev,noexec,relatime,size=262144k,inode64)
+{"status":"ok","model":"Hunyuan3D-2 Turbo (dit-v2-0-turbo + FlashVDM, paint-v2-0-turbo; alto: paint-v2-0)","gpu":"NVIDIA GB10","queue_length":0,"workers":1,"presets":["rapido","padrao","alto"],"running":0,"max_queue":32,"version":"1.0.0","retention_days":7.0,"worker_detail":[{"id":"worker1","state":"ready","slots":1,"busy":0,"gpu_mem":{"allocated_gb":15.781,"reserved_gb":16.389,"peak_allocated_gb":18.756,"peak_reserved_gb":22.326},"mem_available_gb":38.04,"mem_paused":false,"load_s":54.7,"jobs_done":0}]}
+[redeploy 09:42:11] memoria depois:
+               total        used        free      shared  buff/cache   available
+Mem:             121          83           8           0          31          38
+[redeploy 09:42:11] fim

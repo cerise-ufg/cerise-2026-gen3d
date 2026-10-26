@@ -1,0 +1,19 @@
+Step 1/15 : FROM nvcr.io/nvidia/pytorch:26.05-py3
+Step 2/15 : ENV DEBIAN_FRONTEND=noninteractive     TORCH_CUDA_ARCH_LIST="12.1"     MAX_JOBS=4     HY3DGEN_MODELS=/opt/gen3d/hy3dgen_models  
+Step 3/15 : RUN apt-get update && apt-get install -y --no-install-recommends       libgl1 libglib2.0-0 libegl1 libgles2 libopengl0 libxrende
+Step 4/15 : RUN curl -sL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-arm64.tar.xz | tar xJ -C /opt &&     ln -sf /opt/node-v22.11.0
+Step 5/15 : RUN pip install --no-cache-dir "transformers==4.46.3" "diffusers==0.31.0" "accelerate>=1.1" "huggingface_hub<1.0"       safetens
+Step 6/15 : RUN mkdir -p /opt/gltf-tools && cd /opt/gltf-tools && npm init -y >/dev/null &&     npm install --no-audit --no-fund --include=o
+Step 7/15 : COPY third_party/Hunyuan3D-2 /opt/gen3d/third_party/Hunyuan3D-2
+Step 8/15 : COPY third_party/nvdiffrast /opt/gen3d/third_party/nvdiffrast
+Step 9/15 : RUN cd /opt/gen3d/third_party/Hunyuan3D-2/hy3dgen/texgen/custom_rasterizer &&       rm -rf build *.egg-info && pip install --no-
+Step 10/15 : COPY pipeline /opt/gen3d/pipeline
+Step 11/15 : COPY models /opt/gen3d/models
+Step 12/15 : COPY benchmark /opt/gen3d/benchmark
+Step 13/15 : COPY validation /opt/gen3d/validation
+Step 14/15 : WORKDIR /opt/gen3d
+Step 15/15 : CMD ["python", "-c", "import sys; sys.path.insert(0,'pipeline'); import gen3d_pipeline; print('cerise26_gen3d ok')"]
+Successfully built eda57a3575fb
+Successfully tagged cerise26_gen3d:latest
+RC=0 fim 2026-10-26T10:20:41Z
+cerise26_gen3d:latest 38GB 2026-10-26 07:20:41 -0300 -03

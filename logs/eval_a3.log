@@ -1,0 +1,20 @@
+W1026 07:20:52.432000 26839 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+a3_base Android_Figure_Panda {'ok': False, 'total_s': None}
+a3_base Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+a3_base Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+a3_base Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+a3_base Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+a3_base Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}
+a3_steps10 ACE_Coffee_Mug_Kristen_16_oz_cup {'ok': True, 'total_s': 42.9076, 'chamfer': 0.0228, 'fscore@0.05': 0.9794, 'fscore@0.1': 1.0, 'clip_input': 0.9169, 'clip_novel': 0.8704}
+a3_steps10 Android_Figure_Panda {'ok': False, 'total_s': None}
+a3_steps10 Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+a3_steps10 Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+a3_steps10 Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+a3_steps10 Schleich_African_Black_Rhino {'ok': True, 'total_s': 28.9294, 'chamfer': 0.0495, 'fscore@0.05': 0.8816, 'fscore@0.1': 0.9784, 'clip_input': 0.9357, 'clip_novel': 0.9118}
+a3_steps10 Schleich_Bald_Eagle {'ok': True, 'total_s': 32.8089, 'chamfer': 0.0374, 'fscore@0.05': 0.9415, 'fscore@0.1': 0.9848, 'clip_input': 0.8814, 'clip_novel': 0.8747}
+a3_steps10 Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+a3_steps10 Sonny_School_Bus {'ok': True, 'total_s': 43.2035, 'chamfer': 0.046, 'fscore@0.05': 0.8955, 'fscore@0.1': 0.985, 'clip_input': 0.9373, 'clip_novel': 0.8669}
+a3_steps10 Threshold_Porcelain_Teapot_White {'ok': True, 'total_s': 36.1019, 'chamfer': 0.0387, 'fscore@0.05': 0.9211, 'fscore@0.1': 0.9616, 'clip_input': 0.9058, 'clip_novel': 0.9228}
+a3_steps10 Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': True, 'total_s': 34.1069, 'chamfer': 0.0271, 'fscore@0.05': 0.9814, 'fscore@0.1': 0.9998, 'clip_input': 0.8858, 'clip_novel': 0.7619}
+a3_steps10 Vtech_Roll_Learn_Turtle {'ok': True, 'total_s': 33.2684, 'chamfer': 0.0298, 'fscore@0.05': 0.9752, 'fscore@0.1': 1.0, 'clip_input': 0.9167, 'clip_novel': 0.8429}
+a3_steps10 Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}

@@ -1,0 +1,14 @@
+appearance,chamfer,clip_input,clip_novel,conv,faces,fscore@0.05,fscore@0.1,object,ok,peak_alloc_gb,peak_reserved_gb,size_bytes,t_export_glb,t_mesh_postproc,t_offload_swap,t_preprocess,t_shape_decode_mc,t_shape_diffusion,t_tex_bake,t_tex_inpaint,t_tex_multiview_diffusion_pbr,t_tex_render_cond,t_tex_super_resolution,t_tex_uv_unwrap,tag,total_s,vertices,yaw
+textura_uv,0.01803006047550168,0.8738009333610535,0.8794334332148234,id,40000,0.9863602055919385,1.0,ACE_Coffee_Mug_Kristen_16_oz_cup,True,13.866156101226807,21.43359375,3643640,0.9339820090681314,25.089969022898003,47.05558666004799,0.014155200915411115,144.41314831213094,99.7470057439059,2.3632849659770727,11.892683098092675,36.881287954049185,1.6443809908814728,13.45130152697675,2.4746674180496484,hy21_full_offload_t1,385.96251997887157,21553,0
+,,,,,,,,Android_Figure_Panda,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Breyer_Horse_Of_The_Year_2015,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Crosley_Alarm_Clock_Vintage_Metal,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Reebok_ZIGLITE_RUSH,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Schleich_African_Black_Rhino,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Schleich_Bald_Eagle,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Schleich_Lion_Action_Figure,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Sonny_School_Bus,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Threshold_Porcelain_Teapot_White,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Vtech_Roll_Learn_Turtle,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,
+,,,,,,,,Vtech_Stack_Sing_Rings_636_Months,False,,,,,,,,,,,,,,,,hy21_full_offload_t1,,,

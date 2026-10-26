@@ -1,0 +1,83 @@
+{
+ "tag": "a3_noflashvdm",
+ "partial": true,
+ "note": "rodada interrompida; so objetos concluidos",
+ "load_s": null,
+ "objects": {
+  "ACE_Coffee_Mug_Kristen_16_oz_cup": {
+   "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+   "ok": true,
+   "total_s": 116.37542910687625,
+   "times": {
+    "preprocess": 0.017165064811706543,
+    "shape_diffusion": 2.0839474520180374,
+    "shape_decode_mc": 54.66022967477329,
+    "mesh_postproc": 37.21679681399837,
+    "tex_delight": 5.464437186950818,
+    "tex_uv_unwrap": 2.471320000011474,
+    "tex_render_cond": 0.8216807988937944,
+    "tex_multiview_diffusion": 9.643498264020309,
+    "tex_bake": 1.6069205049425364,
+    "tex_inpaint": 1.9162175471428782,
+    "tex_export": 0.0623697170522064,
+    "export_glb": 0.4093061010353267
+   },
+   "faces_raw": 1483744,
+   "faces": 40000,
+   "vertices": 21478,
+   "size_bytes": 2351208,
+   "peak_alloc_gb": 14.599382400512695,
+   "peak_reserved_gb": 17.984375
+  },
+  "Schleich_African_Black_Rhino": {
+   "object": "Schleich_African_Black_Rhino",
+   "ok": true,
+   "total_s": 191.61925417091697,
+   "times": {
+    "preprocess": 0.017133562127128243,
+    "shape_diffusion": 4.609779519960284,
+    "shape_decode_mc": 132.8193665209692,
+    "mesh_postproc": 20.715640892041847,
+    "tex_delight": 8.413941590115428,
+    "tex_uv_unwrap": 5.053862639935687,
+    "tex_render_cond": 1.5488434340804815,
+    "tex_multiview_diffusion": 13.840319246985018,
+    "tex_bake": 2.3580829091370106,
+    "tex_inpaint": 1.3848661321680993,
+    "tex_export": 0.10416666697710752,
+    "export_glb": 0.7487551351077855
+   },
+   "faces_raw": 781968,
+   "faces": 40000,
+   "vertices": 23028,
+   "size_bytes": 3064060,
+   "peak_alloc_gb": 14.599411010742188,
+   "peak_reserved_gb": 17.984375
+  },
+  "Schleich_Bald_Eagle": {
+   "object": "Schleich_Bald_Eagle",
+   "ok": true,
+   "total_s": 159.3595054030884,
+   "times": {
+    "preprocess": 0.016164171043783426,
+    "shape_diffusion": 6.0579155390150845,
+    "shape_decode_mc": 109.66429864894599,
+    "mesh_postproc": 20.986115931067616,
+    "tex_delight": 4.250776149099693,
+    "tex_uv_unwrap": 4.579289540881291,
+    "tex_render_cond": 0.7750895260833204,
+    "tex_multiview_diffusion": 8.877560768043622,
+    "tex_bake": 1.64231312321499,
+    "tex_inpaint": 1.5276497050654143,
+    "tex_export": 0.047872100956737995,
+    "export_glb": 0.9335522199980915
+   },
+   "faces_raw": 840064,
+   "faces": 40000,
+   "vertices": 24248,
+   "size_bytes": 4002544,
+   "peak_alloc_gb": 14.599433898925781,
+   "peak_reserved_gb": 17.984375
+  }
+ }
+}

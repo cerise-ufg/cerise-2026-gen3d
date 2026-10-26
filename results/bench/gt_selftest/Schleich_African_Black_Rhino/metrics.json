@@ -1,0 +1,10 @@
+{
+ "chamfer": 0.0009377553173720361,
+ "fscore@0.05": 1.0,
+ "fscore@0.1": 1.0,
+ "conv": "zup",
+ "yaw": 60,
+ "appearance": "nenhuma",
+ "clip_input": 0.8168710470199585,
+ "clip_novel": 0.7988526622454325
+}

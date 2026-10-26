@@ -1,0 +1,27 @@
+{
+ "object": "cc0_angular_teapot",
+ "ok": true,
+ "total_s": 78.287,
+ "times": {
+  "bg_removal": 0.592,
+  "shape_diffusion": 5.8183,
+  "shape_decode_mc": 4.5896,
+  "mesh_postproc": 1.8163,
+  "tex_delight": 6.2714,
+  "tex_uv_unwrap": 2.328,
+  "tex_render_cond": 1.3783,
+  "tex_multiview_diffusion": 49.4396,
+  "tex_bake": 2.1018,
+  "tex_inpaint": 1.1469,
+  "tex_export": 0.0872,
+  "export_glb": 0.8161,
+  "mobile_postproc": 1.598,
+  "thumbnail": 0.3031
+ },
+ "faces": 40000,
+ "faces_raw": 729440,
+ "size_bytes": 6131060,
+ "size_raw_bytes": 3747396,
+ "peak_alloc_gb": 14.489,
+ "real_photo": true
+}

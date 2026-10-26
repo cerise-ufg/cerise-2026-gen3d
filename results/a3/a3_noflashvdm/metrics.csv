@@ -1,0 +1,14 @@
+appearance,chamfer,clip_input,clip_novel,conv,faces,fscore@0.05,fscore@0.1,object,ok,peak_alloc_gb,peak_reserved_gb,size_bytes,t_export_glb,t_mesh_postproc,t_preprocess,t_shape_decode_mc,t_shape_diffusion,t_tex_bake,t_tex_delight,t_tex_export,t_tex_inpaint,t_tex_multiview_diffusion,t_tex_render_cond,t_tex_uv_unwrap,tag,total_s,vertices,yaw
+textura_uv,0.022583358574912442,0.9369912147521973,0.8734205762545267,id,40000,0.9750438439054409,1.0,ACE_Coffee_Mug_Kristen_16_oz_cup,True,14.599382400512695,17.984375,2351208,0.4093061010353267,37.21679681399837,0.017165064811706543,54.66022967477329,2.0839474520180374,1.6069205049425364,5.464437186950818,0.0623697170522064,1.9162175471428782,9.643498264020309,0.8216807988937944,2.471320000011474,a3_noflashvdm,116.37542910687625,21478,0
+,,,,,,,,Android_Figure_Panda,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Breyer_Horse_Of_The_Year_2015,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Crosley_Alarm_Clock_Vintage_Metal,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Reebok_ZIGLITE_RUSH,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+textura_uv,0.04991796624000404,0.9296478033065796,0.9097915887832642,id,40000,0.8783289593459005,0.976999255614098,Schleich_African_Black_Rhino,True,14.599411010742188,17.984375,3064060,0.7487551351077855,20.715640892041847,0.017133562127128243,132.8193665209692,4.609779519960284,2.3580829091370106,8.413941590115428,0.10416666697710752,1.3848661321680993,13.840319246985018,1.5488434340804815,5.053862639935687,a3_noflashvdm,191.61925417091697,23028,60
+textura_uv,0.037689793719853745,0.8764718770980835,0.8381434281667074,id,40000,0.9452589062995622,0.9831030677841972,Schleich_Bald_Eagle,True,14.599433898925781,17.984375,4002544,0.9335522199980915,20.986115931067616,0.016164171043783426,109.66429864894599,6.0579155390150845,1.64231312321499,4.250776149099693,0.047872100956737995,1.5276497050654143,8.877560768043622,0.7750895260833204,4.579289540881291,a3_noflashvdm,159.3595054030884,24248,60
+,,,,,,,,Schleich_Lion_Action_Figure,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Sonny_School_Bus,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Threshold_Porcelain_Teapot_White,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Vtech_Roll_Learn_Turtle,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,
+,,,,,,,,Vtech_Stack_Sing_Rings_636_Months,False,,,,,,,,,,,,,,,,a3_noflashvdm,,,

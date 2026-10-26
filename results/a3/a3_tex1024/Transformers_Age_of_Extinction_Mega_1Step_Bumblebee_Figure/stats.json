@@ -1,0 +1,25 @@
+{
+ "object": "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure",
+ "ok": true,
+ "total_s": 37.343000440858305,
+ "times": {
+  "preprocess": 0.013440555892884731,
+  "shape_diffusion": 3.4509426248259842,
+  "shape_decode_mc": 3.439447802025825,
+  "mesh_postproc": 13.982745953835547,
+  "tex_delight": 2.611249211942777,
+  "tex_uv_unwrap": 1.8605737329926342,
+  "tex_render_cond": 1.6363316371571273,
+  "tex_multiview_diffusion": 8.347617803141475,
+  "tex_bake": 1.0991347380913794,
+  "tex_inpaint": 0.6953838209155947,
+  "tex_export": 0.01856206892989576,
+  "export_glb": 0.1871757109183818
+ },
+ "faces_raw": 895824,
+ "faces": 40000,
+ "vertices": 27180,
+ "size_bytes": 1859424,
+ "peak_alloc_gb": 14.55963945388794,
+ "peak_reserved_gb": 17.931640625
+}

@@ -1,0 +1,210 @@
+{
+ "tag": "a3_fastpost",
+ "config": "hy2_turbo",
+ "kind": "hy2",
+ "kwargs": {
+  "shape": "dit-v2-0-turbo",
+  "paint": "hunyuan3d-paint-v2-0-turbo",
+  "flashvdm": true,
+  "steps": 5,
+  "octree": 384,
+  "num_chunks": 20000,
+  "remove_floaters": false,
+  "decimator": "fast"
+ },
+ "load_s": 25.900799435097724,
+ "load_peak_gb": 11.460989952087402,
+ "load_times": {
+  "load_shape": 14.081415755907074,
+  "load_paint": 10.199994437862188
+ },
+ "objects": {
+  "ACE_Coffee_Mug_Kristen_16_oz_cup": {
+   "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+   "ok": true,
+   "total_s": 17.69675539806485,
+   "times": {
+    "preprocess": 0.012725044041872025,
+    "shape_diffusion": 1.850519577972591,
+    "shape_decode_mc": 2.1150951548479497,
+    "mesh_postproc": 1.7001884190831333,
+    "tex_delight": 2.13197423517704,
+    "tex_uv_unwrap": 2.750369424931705,
+    "tex_render_cond": 0.2916125161573291,
+    "tex_multiview_diffusion": 4.553245380986482,
+    "tex_bake": 0.5032717098947614,
+    "tex_inpaint": 1.2786931300070137,
+    "tex_export": 0.02647144510410726,
+    "export_glb": 0.4735145370941609
+   },
+   "faces_raw": 1458412,
+   "faces": 40000,
+   "vertices": 24465,
+   "size_bytes": 2976540,
+   "peak_alloc_gb": 14.591098308563232,
+   "peak_reserved_gb": 17.923828125
+  },
+  "Schleich_African_Black_Rhino": {
+   "object": "Schleich_African_Black_Rhino",
+   "ok": true,
+   "total_s": 16.439666692866012,
+   "times": {
+    "preprocess": 0.013628514017909765,
+    "shape_diffusion": 1.8399575219955295,
+    "shape_decode_mc": 1.3071448158007115,
+    "mesh_postproc": 0.8873106900136918,
+    "tex_delight": 2.1534670209512115,
+    "tex_uv_unwrap": 3.167878227075562,
+    "tex_render_cond": 0.2981046380009502,
+    "tex_multiview_diffusion": 4.5494860908947885,
+    "tex_bake": 0.5147410489153117,
+    "tex_inpaint": 0.9193337631877512,
+    "tex_export": 0.03306551789864898,
+    "export_glb": 0.755250956164673
+   },
+   "faces_raw": 765944,
+   "faces": 40000,
+   "vertices": 24185,
+   "size_bytes": 3375792,
+   "peak_alloc_gb": 14.591092586517334,
+   "peak_reserved_gb": 17.923828125
+  },
+  "Schleich_Bald_Eagle": {
+   "object": "Schleich_Bald_Eagle",
+   "ok": true,
+   "total_s": 16.739340210100636,
+   "times": {
+    "preprocess": 0.012250419007614255,
+    "shape_diffusion": 1.8412095590028912,
+    "shape_decode_mc": 1.3113711010664701,
+    "mesh_postproc": 0.9561708308756351,
+    "tex_delight": 2.1393223251216114,
+    "tex_uv_unwrap": 3.320288152899593,
+    "tex_render_cond": 0.26067980006337166,
+    "tex_multiview_diffusion": 4.54479069611989,
+    "tex_bake": 0.4819465158507228,
+    "tex_inpaint": 0.9231099719181657,
+    "tex_export": 0.024962643859907985,
+    "export_glb": 0.919223542092368
+   },
+   "faces_raw": 822992,
+   "faces": 39998,
+   "vertices": 24263,
+   "size_bytes": 4120204,
+   "peak_alloc_gb": 14.591094493865967,
+   "peak_reserved_gb": 17.923828125
+  },
+  "Sonny_School_Bus": {
+   "object": "Sonny_School_Bus",
+   "ok": true,
+   "total_s": 16.683525730855763,
+   "times": {
+    "preprocess": 0.012672515120357275,
+    "shape_diffusion": 1.8330734490882605,
+    "shape_decode_mc": 2.0744262139778584,
+    "mesh_postproc": 1.571197222918272,
+    "tex_delight": 2.169755879091099,
+    "tex_uv_unwrap": 1.802409779978916,
+    "tex_render_cond": 0.26259077899158,
+    "tex_multiview_diffusion": 4.550117439823225,
+    "tex_bake": 0.5073348968289793,
+    "tex_inpaint": 1.1634197370149195,
+    "tex_export": 0.025961201870813966,
+    "export_glb": 0.7102851918898523
+   },
+   "faces_raw": 1350812,
+   "faces": 40000,
+   "vertices": 25785,
+   "size_bytes": 3633812,
+   "peak_alloc_gb": 14.5911226272583,
+   "peak_reserved_gb": 17.923828125
+  },
+  "Threshold_Porcelain_Teapot_White": {
+   "object": "Threshold_Porcelain_Teapot_White",
+   "ok": true,
+   "total_s": 16.250232595019042,
+   "times": {
+    "preprocess": 0.009299812838435173,
+    "shape_diffusion": 1.8493633151520044,
+    "shape_decode_mc": 1.549590562004596,
+    "mesh_postproc": 0.9627441100310534,
+    "tex_delight": 2.157266312977299,
+    "tex_uv_unwrap": 2.88828940410167,
+    "tex_render_cond": 0.27314672200009227,
+    "tex_multiview_diffusion": 4.555671438807622,
+    "tex_bake": 0.5917059588246047,
+    "tex_inpaint": 0.7401854479685426,
+    "tex_export": 0.033279591938480735,
+    "export_glb": 0.639402077998966
+   },
+   "faces_raw": 980716,
+   "faces": 40000,
+   "vertices": 24884,
+   "size_bytes": 3331604,
+   "peak_alloc_gb": 14.591105937957764,
+   "peak_reserved_gb": 17.923828125
+  },
+  "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure": {
+   "object": "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure",
+   "ok": true,
+   "total_s": 15.256495052948594,
+   "times": {
+    "preprocess": 0.012959375977516174,
+    "shape_diffusion": 1.8161476580426097,
+    "shape_decode_mc": 1.5755083209369332,
+    "mesh_postproc": 0.963664883049205,
+    "tex_delight": 2.1458817708771676,
+    "tex_uv_unwrap": 1.3981820030603558,
+    "tex_render_cond": 0.26775982207618654,
+    "tex_multiview_diffusion": 4.551221748813987,
+    "tex_bake": 0.4994151049759239,
+    "tex_inpaint": 1.3582218349911273,
+    "tex_export": 0.03287676000036299,
+    "export_glb": 0.63437321013771
+   },
+   "faces_raw": 895824,
+   "faces": 39998,
+   "vertices": 27227,
+   "size_bytes": 3656448,
+   "peak_alloc_gb": 14.591149806976318,
+   "peak_reserved_gb": 17.923828125
+  },
+  "Vtech_Roll_Learn_Turtle": {
+   "object": "Vtech_Roll_Learn_Turtle",
+   "ok": true,
+   "total_s": 16.168821536935866,
+   "times": {
+    "preprocess": 0.012057394022122025,
+    "shape_diffusion": 1.8356506030540913,
+    "shape_decode_mc": 1.8014192290138453,
+    "mesh_postproc": 1.3206766771618277,
+    "tex_delight": 2.1321234449278563,
+    "tex_uv_unwrap": 1.8154017159249634,
+    "tex_render_cond": 0.264258038951084,
+    "tex_multiview_diffusion": 4.560473054880276,
+    "tex_bake": 0.5034148881677538,
+    "tex_inpaint": 1.157949215034023,
+    "tex_export": 0.02697988599538803,
+    "export_glb": 0.7344219218939543
+   },
+   "faces_raw": 1147592,
+   "faces": 39998,
+   "vertices": 26799,
+   "size_bytes": 4112648,
+   "peak_alloc_gb": 14.591141700744629,
+   "peak_reserved_gb": 17.923828125
+  }
+ },
+ "loadavg_start": [
+  4.63232421875,
+  14.9814453125,
+  26.9501953125
+ ],
+ "started_utc": "2026-10-26T06:38:50Z",
+ "warmup_s": 19.936707793036476,
+ "loadavg_end": [
+  2.89013671875,
+  10.67236328125,
+  23.736328125
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+ "ok": true,
+ "total_s": 0.8691649411339313,
+ "times": {
+  "preprocess": 0.03214779100380838,
+  "triplane_forward": 0.2408071318641305,
+  "mesh_extract_mc": 0.5920213179197162,
+  "export_glb": 0.004059627884998918
+ },
+ "faces_raw": 125391,
+ "faces": 125391,
+ "vertices": 62808,
+ "size_bytes": 2510616,
+ "peak_alloc_gb": 4.164482593536377,
+ "peak_reserved_gb": 5.2265625
+}

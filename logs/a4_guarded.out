@@ -1,0 +1,14 @@
+2026-10-26T10:00:02Z fila protegida terminou; iniciando A4
+2026-10-26T10:00:02Z pytest rapido+padrao (available=64GB)
+A4_FIM
+2026-10-26T10:03:23Z pytest alto (available=64GB)
+A4_FIM
+2026-10-26T10:05:41Z viewer + grades + compressao
+A4_FIM
+python: can't open file '/workspace/validation/qual_grid.py': [Errno 2] No such file or directory
+python: can't open file '/workspace/validation/qual_grid.py': [Errno 2] No such file or directory
+python: can't open file '/workspace/validation/qual_grid.py': [Errno 2] No such file or directory
+A4_FIM
+A4_FIM
+2026-10-26T10:06:58Z agregacao final
+2026-10-26T10:07:18Z A4_GUARDED_FIM

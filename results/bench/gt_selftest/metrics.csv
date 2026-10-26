@@ -1,0 +1,14 @@
+appearance,chamfer,clip_input,clip_novel,conv,faces,fscore@0.05,fscore@0.1,object,ok,peak_alloc_gb,peak_reserved_gb,size_bytes,tag,total_s,vertices,yaw
+nenhuma,0.01473036447957287,0.6961264610290527,0.770826538403829,zup,,0.9759998360655738,0.9991099878892215,ACE_Coffee_Mug_Kristen_16_oz_cup,True,,,,gt_selftest,0.0,,120
+nenhuma,0.008250888474712241,0.7484121322631836,0.7448359131813049,zup,,1.0,1.0,Android_Figure_Panda,True,,,,gt_selftest,0.0,,270
+nenhuma,0.0004183340979447488,0.8554505109786987,0.8492529590924581,zup,,1.0,1.0,Breyer_Horse_Of_The_Year_2015,True,,,,gt_selftest,0.0,,330
+nenhuma,0.0005497095638750502,0.704038143157959,0.7017048199971517,zup,,1.0,1.0,Crosley_Alarm_Clock_Vintage_Metal,True,,,,gt_selftest,0.0,,0
+nenhuma,0.0004250075578982103,0.7035555839538574,0.711219867070516,zup,,1.0,1.0,Reebok_ZIGLITE_RUSH,True,,,,gt_selftest,0.0,,60
+nenhuma,0.0009377553173720361,0.8168710470199585,0.7988526622454325,zup,,1.0,1.0,Schleich_African_Black_Rhino,True,,,,gt_selftest,0.0,,60
+nenhuma,0.000640286315149334,0.8091444373130798,0.8053205211957296,zup,,1.0,1.0,Schleich_Bald_Eagle,True,,,,gt_selftest,0.0,,150
+nenhuma,0.0008157881859464262,0.7981346845626831,0.8255010445912679,zup,,1.0,1.0,Schleich_Lion_Action_Figure,True,,,,gt_selftest,0.0,,90
+nenhuma,0.00538402470668807,0.7392939329147339,0.7249600092569987,zup,,1.0,1.0,Sonny_School_Bus,True,,,,gt_selftest,0.0,,150
+nenhuma,0.012322141591977878,0.8978531360626221,0.8956340352694193,zup,,0.9971899637982732,1.0,Threshold_Porcelain_Teapot_White,True,,,,gt_selftest,0.0,,30
+nenhuma,0.0010581906682772947,0.7682697176933289,0.7688828508059183,zup,,1.0,1.0,Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure,True,,,,gt_selftest,0.0,,90
+nenhuma,0.0006694580249975925,0.7106636166572571,0.7394338647524515,zup,,1.0,1.0,Vtech_Roll_Learn_Turtle,True,,,,gt_selftest,0.0,,0
+nenhuma,0.008244103731100844,0.6396862268447876,0.7269015113512675,zup,,1.0,1.0,Vtech_Stack_Sing_Rings_636_Months,True,,,,gt_selftest,0.0,,60

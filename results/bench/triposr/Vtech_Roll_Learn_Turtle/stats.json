@@ -1,0 +1,17 @@
+{
+ "object": "Vtech_Roll_Learn_Turtle",
+ "ok": true,
+ "total_s": 1.1872464348562062,
+ "times": {
+  "preprocess": 0.03321609413251281,
+  "triplane_forward": 0.33222407614812255,
+  "mesh_extract_mc": 0.8177900449372828,
+  "export_glb": 0.0038700599689036608
+ },
+ "faces_raw": 137422,
+ "faces": 137422,
+ "vertices": 68835,
+ "size_bytes": 2751416,
+ "peak_alloc_gb": 4.165184020996094,
+ "peak_reserved_gb": 5.2265625
+}

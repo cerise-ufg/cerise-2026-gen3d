@@ -1,0 +1,189 @@
++ export MAX_JOBS=4 TORCH_CUDA_ARCH_LIST=12.1
++ MAX_JOBS=4
++ TORCH_CUDA_ARCH_LIST=12.1
++ H=/workspace/third_party/Hunyuan3D-2.1/hy3dpaint
++ cd /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer
++ nice -n 19 python setup.py build_ext --inplace
+running build_ext
+building 'custom_rasterizer_kernel' extension
+creating /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel
+[1/3] c++ -MMD -MF /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/rasterizer.o.d -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/usr/local/lib/python3.12/dist-packages/torch/include -I/usr/local/lib/python3.12/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda/include -I/usr/include/python3.12 -c -c /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.cpp -o /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/rasterizer.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=custom_rasterizer_kernel -std=c++20
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.cpp: In function ‘void rasterizeTriangleCPU(int, float*, float*, float*, int, int, long long unsigned int*, float*, float)’:
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.cpp:15:31: warning: narrowing conversion of ‘((double)px + 5.0e-1)’ from ‘double’ to ‘float’ [-Wnarrowing]
+   15 |             float vt[2] = {px + 0.5, py + 0.5};
+      |                            ~~~^~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.cpp:15:41: warning: narrowing conversion of ‘((double)py + 5.0e-1)’ from ‘double’ to ‘float’ [-Wnarrowing]
+   15 |             float vt[2] = {px + 0.5, py + 0.5};
+      |                                      ~~~^~~~~
+[2/3] c++ -MMD -MF /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/grid_neighbor.o.d -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/usr/local/lib/python3.12/dist-packages/torch/include -I/usr/local/lib/python3.12/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda/include -I/usr/include/python3.12 -c -c /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp -o /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/grid_neighbor.o -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=custom_rasterizer_kernel -std=c++20
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp: In function ‘void DownsampleGrid(Grid&, Grid&)’:
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:164:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  164 |     for (int i = 0; i < src.seq2grid.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:182:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  182 |     for (int i = 0; i < seq2normal_count.size(); i += 3) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp: In function ‘void NeighborGrid(Grid&, std::vector<at::Tensor>, int)’:
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:203:13: warning: unused variable ‘num_view_layers’ [-Wunused-variable]
+  203 |         int num_view_layers = t0.size(0);
+      |             ^~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp: In function ‘void PadGrid(Grid&, Grid&, std::vector<at::Tensor>&)’:
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:271:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  271 |     for (int i = 0; i < downsample_seq.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:281:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  281 |     for (int i = 0; i < tar_seq2grid.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp: In function ‘std::vector<std::vector<at::Tensor> > build_hierarchy(std::vector<at::Tensor>, std::vector<at::Tensor>, int, int)’:
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:315:68: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<at::Tensor>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  315 |         printf("Alert! We require 3 layers and at least 1 level! (%d %d)\n", view_layer_positions.size(), num_level);
+      |                                                                   ~^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                    |                                  |
+      |                                                                    int                                std::vector<at::Tensor>::size_type {aka long unsigned int}
+      |                                                                   %ld
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:382:45: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  382 |     for (int i = grids[0].num_origin_seq; i < grids[0].seq2grid.size(); ++i) {
+      |                                           ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:397:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  397 |     texture_positions[0] = torch::zeros({seq2pos.size() / 3, 3}, float_options);
+      |                                          ~~~~~~~~~~~~~~~^~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:397:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:398:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  398 |     texture_positions[1] = torch::zeros({seq2pos.size() / 3}, float_options);
+      |                                          ~~~~~~~~~~~~~~~^~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:398:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:402:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  402 |     for (int i = 0; i < grids[0].seq2grid.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:406:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Grid>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  406 |     for (int i = 0; i < grids.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:407:65: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2grid.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  407 |         grid_neighbors[i] = torch::zeros({grids[i].seq2grid.size(), 9}, int64_options);
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:407:65: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2grid.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:409:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  409 |         for (int j = 0; j < grids[i].seq2neighbor.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:413:73: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2evencorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  413 |         grid_evencorners[i] = torch::zeros({grids[i].seq2evencorner.size()}, int64_options);
+      |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:413:73: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2evencorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:414:71: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2oddcorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  414 |         grid_oddcorners[i] = torch::zeros({grids[i].seq2oddcorner.size()}, int64_options);
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:414:71: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2oddcorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:416:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  416 |         for (int j = 0; j < grids[i].seq2evencorner.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:420:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  420 |         for (int j = 0; j < grids[i].seq2oddcorner.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:423:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Grid>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  423 |         if (i + 1 < grids.size()) {
+      |             ~~~~~~^~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:424:77: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::downsample_seq.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  424 |             grid_downsamples[i] = torch::zeros({grids[i].downsample_seq.size()}, int64_options);
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:424:77: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::downsample_seq.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:426:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  426 |             for (int j = 0; j < grids[i].downsample_seq.size(); ++j) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp: In function ‘std::vector<std::vector<at::Tensor> > build_hierarchy_with_feat(std::vector<at::Tensor>, std::vector<at::Tensor>, std::vector<at::Tensor>, int, int)’:
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:442:68: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<at::Tensor>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+  442 |         printf("Alert! We require 3 layers and at least 1 level! (%d %d)\n", view_layer_positions.size(), num_level);
+      |                                                                   ~^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                    |                                  |
+      |                                                                    int                                std::vector<at::Tensor>::size_type {aka long unsigned int}
+      |                                                                   %ld
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:518:45: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  518 |     for (int i = grids[0].num_origin_seq; i < grids[0].seq2grid.size(); ++i) {
+      |                                           ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:537:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  537 |     texture_positions[0] = torch::zeros({seq2pos.size() / 3, 3}, float_options);
+      |                                          ~~~~~~~~~~~~~~~^~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:537:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:538:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  538 |     texture_positions[1] = torch::zeros({seq2pos.size() / 3}, float_options);
+      |                                          ~~~~~~~~~~~~~~~^~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:538:57: warning: narrowing conversion of ‘(seq2pos.std::vector<float, std::allocator<float> >::size() / 3)’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:539:54: warning: narrowing conversion of ‘(seq2feat.std::vector<float, std::allocator<float> >::size() / ((std::vector<float, std::allocator<float> >::size_type)feat_channel))’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  539 |     texture_feats[0] = torch::zeros({seq2feat.size() / feat_channel, feat_channel}, float_options);
+      |                                      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:539:54: warning: narrowing conversion of ‘(seq2feat.std::vector<float, std::allocator<float> >::size() / ((std::vector<float, std::allocator<float> >::size_type)feat_channel))’ from ‘std::vector<float, std::allocator<float> >::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:543:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  543 |     for (int i = 0; i < grids[0].seq2grid.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:549:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Grid>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  549 |     for (int i = 0; i < grids.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:550:65: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2grid.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  550 |         grid_neighbors[i] = torch::zeros({grids[i].seq2grid.size(), 9}, int64_options);
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:550:65: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2grid.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:552:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  552 |         for (int j = 0; j < grids[i].seq2neighbor.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:555:73: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2evencorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  555 |         grid_evencorners[i] = torch::zeros({grids[i].seq2evencorner.size()}, int64_options);
+      |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:555:73: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2evencorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:556:71: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2oddcorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  556 |         grid_oddcorners[i] = torch::zeros({grids[i].seq2oddcorner.size()}, int64_options);
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:556:71: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::seq2oddcorner.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:558:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  558 |         for (int j = 0; j < grids[i].seq2evencorner.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:562:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  562 |         for (int j = 0; j < grids[i].seq2oddcorner.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:565:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<Grid>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  565 |         if (i + 1 < grids.size()) {
+      |             ~~~~~~^~~~~~~~~~~~~~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:566:77: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::downsample_seq.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+  566 |             grid_downsamples[i] = torch::zeros({grids[i].downsample_seq.size()}, int64_options);
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:566:77: warning: narrowing conversion of ‘grids.std::vector<Grid>::operator[](((std::vector<Grid>::size_type)i)).Grid::downsample_seq.std::vector<int>::size()’ from ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} to ‘long int’ [-Wnarrowing]
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/grid_neighbor.cpp:568:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  568 |             for (int j = 0; j < grids[i].downsample_seq.size(); ++j) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[3/3] /usr/local/cuda/bin/nvcc -MD -MF /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/rasterizer_gpu.o.d -I/usr/local/lib/python3.12/dist-packages/torch/include -I/usr/local/lib/python3.12/dist-packages/torch/include/torch/csrc/api/include -I/usr/local/cuda/include -I/usr/include/python3.12 -c -c /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer_gpu.cu -o /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/rasterizer_gpu.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=custom_rasterizer_kernel -gencode=arch=compute_121,code=sm_121 -std=c++20
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer_gpu.cu(57): warning #186-D: pointless comparison of unsigned integer with zero
+      if (f >= 0) {
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer_gpu.cu(57): warning #186-D: pointless comparison of unsigned integer with zero
+      if (f >= 0) {
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+creating build/lib.linux-aarch64-cpython-312
+aarch64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -shared -Wl,-O1 -Wl,-Bsymbolic-functions /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/grid_neighbor.o /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/rasterizer.o /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/build/temp.linux-aarch64-cpython-312/lib/custom_rasterizer_kernel/rasterizer_gpu.o -L/usr/local/lib/python3.12/dist-packages/torch/lib -L/usr/local/cuda/lib64 -L/usr/lib/aarch64-linux-gnu -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-aarch64-cpython-312/custom_rasterizer_kernel.cpython-312-aarch64-linux-gnu.so
+copying build/lib.linux-aarch64-cpython-312/custom_rasterizer_kernel.cpython-312-aarch64-linux-gnu.so -> .
++ echo CR21_RC=0
+CR21_RC=0
++ ls /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/custom_rasterizer_kernel.cpython-312-aarch64-linux-gnu.so
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/custom_rasterizer/custom_rasterizer_kernel.cpython-312-aarch64-linux-gnu.so
++ cd /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/DifferentiableRenderer
++ nice -n 19 bash compile_mesh_painter.sh
++ echo MIP_RC=0
+MIP_RC=0
++ ls /workspace/third_party/Hunyuan3D-2.1/hy3dpaint/DifferentiableRenderer/mesh_inpaint_processor.cpython-312-aarch64-linux-gnu.so
+/workspace/third_party/Hunyuan3D-2.1/hy3dpaint/DifferentiableRenderer/mesh_inpaint_processor.cpython-312-aarch64-linux-gnu.so
++ mkdir -p /workspace/weights
++ '[' -f /workspace/weights/RealESRGAN_x4plus.pth ']'
++ curl -sL -o /workspace/weights/RealESRGAN_x4plus.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
++ ls -la /workspace/weights
+total 65480
+drwxr-xr-x  2 root   root       4096 Oct 26 05:18 .
+drwxrwxr-x 12 ubuntu ubuntu     4096 Oct 26 05:18 ..
+-rw-r--r--  1 root   root   67040989 Oct 26 05:18 RealESRGAN_x4plus.pth
++ python -c '
+from huggingface_hub import snapshot_download
+print(snapshot_download('\''facebook/dinov2-giant'\'', allow_patterns=['\''config.json'\'','\''preprocessor_config.json'\'','\''model.safetensors'\'']))'
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files:  33%|███▎      | 1/3 [00:00<00:00,  3.20it/s]Fetching 3 files:  67%|██████▋   | 2/3 [01:57<01:09, 69.16s/it]Fetching 3 files: 100%|██████████| 3/3 [01:57<00:00, 39.22s/it]
+/root/.cache/huggingface/hub/models--facebook--dinov2-giant/snapshots/611a9d42f2335e0f921f1e313ad3c1b7178d206d

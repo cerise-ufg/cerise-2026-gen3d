@@ -1,0 +1,18 @@
+{
+ "object": "Breyer_Horse_Of_The_Year_2015",
+ "ok": true,
+ "total_s": 51.553334821015596,
+ "times": {
+  "preprocess": 0.019189940067008138,
+  "multiview_diffusion": 47.221152687910944,
+  "lrm_planes": 1.8532360580284148,
+  "mesh_extract_flexicubes": 2.453015502076596,
+  "export_glb": 0.003852030960842967
+ },
+ "faces_raw": 40972,
+ "faces": 40972,
+ "vertices": 20488,
+ "size_bytes": 820448,
+ "peak_alloc_gb": 23.249619960784912,
+ "peak_reserved_gb": 23.50390625
+}

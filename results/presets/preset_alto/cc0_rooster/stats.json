@@ -1,0 +1,27 @@
+{
+ "object": "cc0_rooster",
+ "ok": true,
+ "total_s": 53.889,
+ "times": {
+  "bg_removal": 0.4128,
+  "shape_diffusion": 3.4956,
+  "shape_decode_mc": 1.5738,
+  "mesh_postproc": 1.5459,
+  "tex_delight": 4.5014,
+  "tex_uv_unwrap": 3.3388,
+  "tex_render_cond": 0.6267,
+  "tex_multiview_diffusion": 32.7049,
+  "tex_bake": 1.4322,
+  "tex_inpaint": 1.149,
+  "tex_export": 0.0776,
+  "export_glb": 0.8544,
+  "mobile_postproc": 1.8263,
+  "thumbnail": 0.3489
+ },
+ "faces": 40000,
+ "faces_raw": 495676,
+ "size_bytes": 8818488,
+ "size_raw_bytes": 4693852,
+ "peak_alloc_gb": 14.489,
+ "real_photo": true
+}

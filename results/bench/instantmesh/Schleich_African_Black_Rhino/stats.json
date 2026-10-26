@@ -1,0 +1,18 @@
+{
+ "object": "Schleich_African_Black_Rhino",
+ "ok": true,
+ "total_s": 16.53928664396517,
+ "times": {
+  "preprocess": 0.028847227804362774,
+  "multiview_diffusion": 15.155233473982662,
+  "lrm_planes": 0.6242032099980861,
+  "mesh_extract_flexicubes": 0.7287775590084493,
+  "export_glb": 0.002062693005427718
+ },
+ "faces_raw": 62156,
+ "faces": 62156,
+ "vertices": 31080,
+ "size_bytes": 1244124,
+ "peak_alloc_gb": 23.229607582092285,
+ "peak_reserved_gb": 23.7578125
+}

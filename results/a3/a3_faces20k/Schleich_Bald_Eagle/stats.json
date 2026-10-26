@@ -1,0 +1,25 @@
+{
+ "object": "Schleich_Bald_Eagle",
+ "ok": true,
+ "total_s": 24.204575598007068,
+ "times": {
+  "preprocess": 0.012249494902789593,
+  "shape_diffusion": 1.8336878980044276,
+  "shape_decode_mc": 1.286645924905315,
+  "mesh_postproc": 10.688213303918019,
+  "tex_delight": 2.147210906026885,
+  "tex_uv_unwrap": 1.2262097208295017,
+  "tex_render_cond": 0.23240070207975805,
+  "tex_multiview_diffusion": 4.586278123781085,
+  "tex_bake": 0.47970040584914386,
+  "tex_inpaint": 0.7860443990211934,
+  "tex_export": 0.024376722052693367,
+  "export_glb": 0.9012791889254004
+ },
+ "faces_raw": 822992,
+ "faces": 20000,
+ "vertices": 12407,
+ "size_bytes": 3446964,
+ "peak_alloc_gb": 14.587969303131104,
+ "peak_reserved_gb": 17.91015625
+}

@@ -1,0 +1,319 @@
+{
+ "frente": "gen3d",
+ "gerado_em": "2026-10-26T10:07:18Z",
+ "imagem_docker": "cerise26_gen3d:latest",
+ "imagem_id": "sha256:c5db530e09b9370beb0546a04647f8c87cada7e016d737d00d3b951861ce031f",
+ "modelo": {
+  "forma": "tencent/Hunyuan3D-2 hunyuan3d-dit-v2-0-turbo + FlashVDM (VAE turbo)",
+  "textura": "tencent/Hunyuan3D-2 hunyuan3d-paint-v2-0-turbo (+ hunyuan3d-delight-v2-0); preset 'alto' usa hunyuan3d-paint-v2-0",
+  "licenca": "Tencent Hunyuan 3D 2.0 Community License (nao vale na UE/Reino Unido/Coreia do Sul)"
+ },
+ "modulo": {
+  "caminho_no_spark": "~/cerise2026/gen3d/pipeline/gen3d_pipeline.py",
+  "caminho_na_imagem": "/opt/gen3d/pipeline/gen3d_pipeline.py",
+  "classe": "Gen3DPipeline",
+  "metodo": "generate(image_path, out_dir, preset='padrao') -> {glb_path, thumb_path, stats{times, total_s, faces, size_bytes, geometry, peak_gpu_gb, gltf_extensions}}"
+ },
+ "requisitos_do_app": {
+  "glb_sem_compressao_geometrica": true,
+  "motivo": "o <model-viewer> embutido (offline) e o ViroReact nao tem decodificadores Draco/meshopt/KTX2",
+  "texturas": "JPEG (glTF-Transform), lado <= mobile_texture do preset",
+  "escala": "metros; maior dimensao = target_size_m (0,30 m); objeto apoiado em y=0 e centralizado em x/z (o app normaliza para ~35 cm)"
+ },
+ "como_instanciar": {
+  "docker_run": "sudo docker run -d --name cerise26_gen3d_srv --gpus all --ipc=host -v ~/cerise2026/hf_cache:/root/.cache/huggingface -v ~/cerise2026/gen3d/hy3dgen_models:/opt/gen3d/hy3dgen_models -p 127.0.0.1:8095:8095 cerise26_gen3d:latest <comando do servidor>",
+  "python": "import sys; sys.path.insert(0, '/opt/gen3d/pipeline'); from gen3d_pipeline import Gen3DPipeline; pipe = Gen3DPipeline(); out = pipe.generate('/caminho/foto.jpg', '/tmp/saida', preset='padrao')",
+  "observacoes": [
+   "HY3DGEN_MODELS=/opt/gen3d/hy3dgen_models (arvore de links para o cache HF + UNet do paint convertido para .bin)",
+   "carregar so os presets necessarios: Gen3DPipeline(presets={k: DEFAULT_PRESETS[k] for k in ['rapido','padrao']}) evita carregar o paint completo do 'alto'",
+   "a imagem limita o alocador a 24 GB (gpu_cap_gb); conferir free -g (>= 10 GB livres alem do modelo) antes de subir, pois a producao (vLLM) divide a memoria unificada",
+   "nao expor a porta fora do loopback: exposicao publica e decisao pendente do Eduardo"
+  ]
+ },
+ "carga_medida": {
+  "rapido_padrao": {
+   "load_s": 114.96847865381278,
+   "warmup_s": 78.60796687589027,
+   "mem_after_load_gb": 11.387604713439941,
+   "init_total_s": 199.67394157894887,
+   "loadavg": [
+    8.91357421875,
+    12.712890625,
+    13.99658203125
+   ],
+   "presets": [
+    "rapido",
+    "padrao"
+   ]
+  },
+  "alto": {
+   "load_s": 106.55081194615923,
+   "warmup_s": 118.14492465485819,
+   "mem_after_load_gb": 11.387604713439941,
+   "init_total_s": 228.47070120600984,
+   "loadavg": [
+    10.9775390625,
+    14.62548828125,
+    14.66748046875
+   ],
+   "presets": [
+    "alto"
+   ]
+  }
+ },
+ "presets": {
+  "rapido": {
+   "parametros": {
+    "shape": "dit-v2-0-turbo",
+    "flashvdm": true,
+    "paint": "hunyuan3d-paint-v2-0-turbo",
+    "steps": 5,
+    "octree": 256,
+    "num_chunks": 20000,
+    "max_faces": 10000,
+    "fast_post": true,
+    "texture_size": 1024,
+    "mobile_texture": 1024,
+    "target_size_m": 0.3,
+    "time_limit_s": 60,
+    "size_limit_bytes": 3000000
+   },
+   "medido": {
+    "objetos_ok": 19,
+    "objetos_total": 19,
+    "tempo_total_s": {
+     "mediana": 23.86,
+     "min": 21.93,
+     "max": 27.33,
+     "n": 19
+    },
+    "tempo_total_s_gso": {
+     "mediana": 23.86,
+     "min": 21.93,
+     "max": 27.33,
+     "n": 13
+    },
+    "tempo_total_s_fotos_reais": {
+     "mediana": 23.98,
+     "min": 22.17,
+     "max": 26.69,
+     "n": 6
+    },
+    "tempo_mediano_por_etapa_s": {
+     "bg_removal": 0.028,
+     "shape_diffusion": 3.641,
+     "shape_decode_mc": 1.78,
+     "mesh_postproc": 0.904,
+     "tex_delight": 4.212,
+     "tex_uv_unwrap": 0.376,
+     "tex_render_cond": 0.471,
+     "tex_multiview_diffusion": 8.769,
+     "tex_bake": 0.86,
+     "tex_inpaint": 0.276,
+     "tex_export": 0.022,
+     "export_glb": 0.215,
+     "mobile_postproc": 0.919,
+     "thumbnail": 0.153
+    },
+    "faces": {
+     "mediana": 9998,
+     "min": 9998,
+     "max": 10000,
+     "n": 19
+    },
+    "glb_final_bytes": {
+     "mediana": 1652360,
+     "min": 972728,
+     "max": 2600560,
+     "n": 19
+    },
+    "pico_gpu_gb": {
+     "mediana": 14.48,
+     "min": 14.47,
+     "max": 14.48,
+     "n": 19
+    },
+    "loadavg_inicio": [
+     8.91357421875,
+     12.712890625,
+     13.99658203125
+    ],
+    "loadavg_fim": [
+     6.96142578125,
+     12.37744140625,
+     13.763671875
+    ]
+   }
+  },
+  "padrao": {
+   "parametros": {
+    "shape": "dit-v2-0-turbo",
+    "flashvdm": true,
+    "paint": "hunyuan3d-paint-v2-0-turbo",
+    "steps": 5,
+    "octree": 384,
+    "num_chunks": 20000,
+    "max_faces": 20000,
+    "fast_post": true,
+    "texture_size": 2048,
+    "mobile_texture": 1024,
+    "target_size_m": 0.3,
+    "time_limit_s": 90,
+    "size_limit_bytes": 4000000
+   },
+   "medido": {
+    "objetos_ok": 19,
+    "objetos_total": 19,
+    "tempo_total_s": {
+     "mediana": 30.07,
+     "min": 26.83,
+     "max": 76.61,
+     "n": 19
+    },
+    "tempo_total_s_gso": {
+     "mediana": 30.38,
+     "min": 26.83,
+     "max": 76.61,
+     "n": 13
+    },
+    "tempo_total_s_fotos_reais": {
+     "mediana": 29.81,
+     "min": 29.42,
+     "max": 33.31,
+     "n": 6
+    },
+    "tempo_mediano_por_etapa_s": {
+     "bg_removal": 0.022,
+     "shape_diffusion": 3.671,
+     "shape_decode_mc": 3.182,
+     "mesh_postproc": 2.218,
+     "tex_delight": 4.162,
+     "tex_uv_unwrap": 1.023,
+     "tex_render_cond": 0.685,
+     "tex_multiview_diffusion": 8.797,
+     "tex_bake": 1.522,
+     "tex_inpaint": 2.066,
+     "tex_export": 0.074,
+     "export_glb": 0.733,
+     "mobile_postproc": 1.507,
+     "thumbnail": 0.333
+    },
+    "faces": {
+     "mediana": 19998,
+     "min": 19998,
+     "max": 20000,
+     "n": 19
+    },
+    "glb_final_bytes": {
+     "mediana": 2005548,
+     "min": 1171548,
+     "max": 2974400,
+     "n": 19
+    },
+    "pico_gpu_gb": {
+     "mediana": 14.52,
+     "min": 14.47,
+     "max": 14.52,
+     "n": 19
+    },
+    "loadavg_inicio": [
+     6.96142578125,
+     12.37744140625,
+     13.763671875
+    ],
+    "loadavg_fim": [
+     16.22607421875,
+     13.47607421875,
+     14.017578125
+    ]
+   }
+  },
+  "alto": {
+   "parametros": {
+    "shape": "dit-v2-0-turbo",
+    "flashvdm": true,
+    "paint": "hunyuan3d-paint-v2-0",
+    "steps": 5,
+    "octree": 384,
+    "num_chunks": 20000,
+    "max_faces": 40000,
+    "fast_post": true,
+    "texture_size": 2048,
+    "mobile_texture": 2048,
+    "target_size_m": 0.3,
+    "time_limit_s": 180,
+    "size_limit_bytes": 10000000
+   },
+   "medido": {
+    "objetos_ok": 19,
+    "objetos_total": 19,
+    "tempo_total_s": {
+     "mediana": 81.85,
+     "min": 53.51,
+     "max": 104.48,
+     "n": 19
+    },
+    "tempo_total_s_gso": {
+     "mediana": 82.08,
+     "min": 78.75,
+     "max": 104.48,
+     "n": 13
+    },
+    "tempo_total_s_fotos_reais": {
+     "mediana": 56.68,
+     "min": 53.51,
+     "max": 78.29,
+     "n": 6
+    },
+    "tempo_mediano_por_etapa_s": {
+     "bg_removal": 0.022,
+     "shape_diffusion": 5.491,
+     "shape_decode_mc": 4.624,
+     "mesh_postproc": 1.99,
+     "tex_delight": 6.294,
+     "tex_uv_unwrap": 2.545,
+     "tex_render_cond": 0.924,
+     "tex_multiview_diffusion": 51.886,
+     "tex_bake": 2.279,
+     "tex_inpaint": 1.568,
+     "tex_export": 0.073,
+     "export_glb": 0.77,
+     "mobile_postproc": 1.598,
+     "thumbnail": 0.348
+    },
+    "faces": {
+     "mediana": 40000,
+     "min": 39998,
+     "max": 40000,
+     "n": 19
+    },
+    "glb_final_bytes": {
+     "mediana": 6140320,
+     "min": 3903372,
+     "max": 9505164,
+     "n": 19
+    },
+    "pico_gpu_gb": {
+     "mediana": 14.49,
+     "min": 14.49,
+     "max": 14.49,
+     "n": 19
+    },
+    "loadavg_inicio": [
+     10.9775390625,
+     14.62548828125,
+     14.66748046875
+    ],
+    "loadavg_fim": [
+     3.8701171875,
+     4.46533203125,
+     7.08984375
+    ]
+   }
+  }
+ },
+ "pytest": {
+  "junit_rapido_padrao.xml": "<testsuites name=\"pytest tests\">",
+  "junit_alto.xml": "<testsuites name=\"pytest tests\">"
+ }
+}

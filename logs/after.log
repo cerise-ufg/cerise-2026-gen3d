@@ -1,0 +1,4 @@
+=== 2026-10-26T06:00:39Z inicio: python run_model.py --config instantmesh --out /workspace/results/bench > /workspace/logs/a1/instantmesh.log 2>&1
+=== 2026-10-26T06:12:41Z inicio: python run_model.py --config hy21_full --objects Schleich_Bald_Eagle,Schleich_African_Black_Rhino,Sonny_School_Bus,Threshold_Porcelain_Teapot_White,ACE_Coffee_Mug_Kristen_16_oz_cup,Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure,Vtech_Roll_Learn_Turtle --out /workspace/results/bench > /workspace/logs/a1/hy21_full.log 2>&1
+=== 2026-10-26T06:33:31Z fim rc=0: python run_model.py --config hy21_full --objects Schleich_Bald_Eagle,Schleich_African_Black_Rhino,Sonny_School_Bus,Threshold_Porcelain_Teapot_White,ACE_Coffee_Mug_Kristen_16_oz_cup,Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure,Vtech_Roll_Learn_Turtle --out /workspace/results/bench > /workspace/logs/a1/hy21_full.log 2>&1
+=== 2026-10-26T06:33:31Z inicio: bash /workspace/benchmark/queue_a3.sh hy2_turbo

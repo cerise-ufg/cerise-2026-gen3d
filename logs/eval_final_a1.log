@@ -1,0 +1,40 @@
+W1026 09:55:40.816000 32329 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+hy2_full ACE_Coffee_Mug_Kristen_16_oz_cup {'ok': True, 'total_s': 234.4499, 'chamfer': 0.0171, 'fscore@0.05': 1.0, 'fscore@0.1': 1.0, 'clip_input': 0.903, 'clip_novel': 0.8985}
+hy2_full Android_Figure_Panda {'ok': False, 'total_s': None}
+hy2_full Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+hy2_full Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+hy2_full Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+hy2_full Schleich_African_Black_Rhino {'ok': False, 'total_s': None}
+hy2_full Schleich_Bald_Eagle {'ok': True, 'total_s': 219.6204, 'chamfer': 0.038, 'fscore@0.05': 0.9356, 'fscore@0.1': 0.9866, 'clip_input': 0.9099, 'clip_novel': 0.9048}
+hy2_full Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+hy2_full Sonny_School_Bus {'ok': True, 'total_s': 246.1456, 'chamfer': 0.0478, 'fscore@0.05': 0.8924, 'fscore@0.1': 0.983, 'clip_input': 0.9624, 'clip_novel': 0.9109}
+hy2_full Threshold_Porcelain_Teapot_White {'ok': False, 'total_s': None}
+hy2_full Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': False, 'total_s': None}
+hy2_full Vtech_Roll_Learn_Turtle {'ok': True, 'total_s': 224.6455, 'chamfer': 0.0541, 'fscore@0.05': 0.843, 'fscore@0.1': 0.9486, 'clip_input': 0.9555, 'clip_novel': 0.8236}
+hy2_full Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}
+hy21_full ACE_Coffee_Mug_Kristen_16_oz_cup {'ok': True, 'total_s': 241.1436, 'chamfer': 0.018, 'fscore@0.05': 0.9864, 'fscore@0.1': 1.0, 'clip_input': 0.8738, 'clip_novel': 0.8794}
+hy21_full Android_Figure_Panda {'ok': False, 'total_s': None}
+hy21_full Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+hy21_full Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+hy21_full Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+hy21_full Schleich_African_Black_Rhino {'ok': False, 'total_s': None}
+hy21_full Schleich_Bald_Eagle {'ok': False, 'total_s': None}
+hy21_full Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+hy21_full Sonny_School_Bus {'ok': True, 'total_s': 244.6712, 'chamfer': 0.0452, 'fscore@0.05': 0.912, 'fscore@0.1': 0.9875, 'clip_input': 0.8915, 'clip_novel': 0.8762}
+hy21_full Threshold_Porcelain_Teapot_White {'ok': False, 'total_s': None}
+hy21_full Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': False, 'total_s': None}
+hy21_full Vtech_Roll_Learn_Turtle {'ok': False, 'total_s': None}
+hy21_full Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}
+instantmesh ACE_Coffee_Mug_Kristen_16_oz_cup {'ok': True, 'total_s': 16.4119, 'chamfer': 0.0386, 'fscore@0.05': 0.9394, 'fscore@0.1': 0.9754, 'clip_input': 0.8301, 'clip_novel': 0.8309}
+instantmesh Android_Figure_Panda {'ok': True, 'total_s': 16.4457, 'chamfer': 0.0345, 'fscore@0.05': 0.9585, 'fscore@0.1': 0.9958, 'clip_input': 0.7313, 'clip_novel': 0.7653}
+instantmesh Breyer_Horse_Of_The_Year_2015 {'ok': True, 'total_s': 16.5039, 'chamfer': 0.0366, 'fscore@0.05': 0.9234, 'fscore@0.1': 0.9857, 'clip_input': 0.8783, 'clip_novel': 0.8889}
+instantmesh Crosley_Alarm_Clock_Vintage_Metal {'ok': True, 'total_s': 16.5092, 'chamfer': 0.0299, 'fscore@0.05': 0.9938, 'fscore@0.1': 1.0, 'clip_input': 0.8636, 'clip_novel': 0.8319}
+instantmesh Reebok_ZIGLITE_RUSH {'ok': True, 'total_s': 16.5338, 'chamfer': 0.0394, 'fscore@0.05': 0.9288, 'fscore@0.1': 0.9999, 'clip_input': 0.6739, 'clip_novel': 0.7322}
+instantmesh Schleich_African_Black_Rhino {'ok': True, 'total_s': 16.5393, 'chamfer': 0.0395, 'fscore@0.05': 0.9255, 'fscore@0.1': 0.9835, 'clip_input': 0.9496, 'clip_novel': 0.9481}
+instantmesh Schleich_Bald_Eagle {'ok': True, 'total_s': 16.4614, 'chamfer': 0.1426, 'fscore@0.05': 0.4225, 'fscore@0.1': 0.6662, 'clip_input': 0.9043, 'clip_novel': 0.7481}
+instantmesh Schleich_Lion_Action_Figure {'ok': True, 'total_s': 16.4302, 'chamfer': 0.0353, 'fscore@0.05': 0.955, 'fscore@0.1': 0.9982, 'clip_input': 0.8867, 'clip_novel': 0.8974}
+instantmesh Sonny_School_Bus {'ok': True, 'total_s': 16.5239, 'chamfer': 0.0497, 'fscore@0.05': 0.8859, 'fscore@0.1': 0.9927, 'clip_input': 0.8144, 'clip_novel': 0.815}
+instantmesh Threshold_Porcelain_Teapot_White {'ok': True, 'total_s': 17.645, 'chamfer': 0.0316, 'fscore@0.05': 0.9281, 'fscore@0.1': 0.9856, 'clip_input': 0.9348, 'clip_novel': 0.8997}
+instantmesh Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': True, 'total_s': 16.346, 'chamfer': 0.035, 'fscore@0.05': 0.9595, 'fscore@0.1': 1.0, 'clip_input': 0.8124, 'clip_novel': 0.8402}
+instantmesh Vtech_Roll_Learn_Turtle {'ok': True, 'total_s': 17.2019, 'chamfer': 0.0618, 'fscore@0.05': 0.8175, 'fscore@0.1': 0.9425, 'clip_input': 0.8695, 'clip_novel': 0.7945}
+instantmesh Vtech_Stack_Sing_Rings_636_Months {'ok': True, 'total_s': 16.7445, 'chamfer': 0.0273, 'fscore@0.05': 0.973, 'fscore@0.1': 0.9945, 'clip_input': 0.8217, 'clip_novel': 0.88}

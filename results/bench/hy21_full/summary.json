@@ -1,0 +1,76 @@
+{
+ "tag": "hy21_full",
+ "config": "hy21_full",
+ "kind": "hy21",
+ "kwargs": {},
+ "load_s": 156.5702031699475,
+ "load_peak_gb": 6.859945297241211,
+ "load_times": {
+  "load_shape": 75.20026754983701,
+  "load_paint_pbr": 48.189015503041446
+ },
+ "objects": {
+  "ACE_Coffee_Mug_Kristen_16_oz_cup": {
+   "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+   "ok": true,
+   "total_s": 241.1436493359506,
+   "times": {
+    "offload_swap": 35.47701794002205,
+    "preprocess": 0.01271768007427454,
+    "shape_diffusion": 45.11346068093553,
+    "shape_decode_mc": 80.6667237309739,
+    "mesh_postproc": 21.73208365100436,
+    "export_glb": 0.8781162640079856,
+    "tex_uv_unwrap": 2.3512783551122993,
+    "tex_render_cond": 1.101561832940206,
+    "tex_multiview_diffusion_pbr": 30.544278885005042,
+    "tex_super_resolution": 11.68530600098893,
+    "tex_bake": 2.102964262943715,
+    "tex_inpaint": 9.477345946012065
+   },
+   "faces_raw": 1573320,
+   "faces": 40000,
+   "vertices": 21553,
+   "size_bytes": 3643640,
+   "peak_alloc_gb": 13.83281660079956,
+   "peak_reserved_gb": 16.58203125
+  },
+  "Sonny_School_Bus": {
+   "object": "Sonny_School_Bus",
+   "ok": true,
+   "total_s": 244.6712055238895,
+   "times": {
+    "offload_swap": 37.48411894007586,
+    "preprocess": 0.013980891089886427,
+    "shape_diffusion": 44.54380093514919,
+    "shape_decode_mc": 80.37966026295908,
+    "mesh_postproc": 20.38305431813933,
+    "export_glb": 1.6141857558395714,
+    "tex_uv_unwrap": 1.5947027341462672,
+    "tex_render_cond": 1.3613898979965597,
+    "tex_multiview_diffusion_pbr": 32.45936888293363,
+    "tex_super_resolution": 11.752493369858712,
+    "tex_bake": 2.031870024977252,
+    "tex_inpaint": 11.051438736962155
+   },
+   "faces_raw": 1426392,
+   "faces": 40000,
+   "vertices": 25464,
+   "size_bytes": 6498312,
+   "peak_alloc_gb": 13.793862342834473,
+   "peak_reserved_gb": 16.423828125
+  }
+ },
+ "loadavg_start": [
+  3.22119140625,
+  3.451171875,
+  3.83642578125
+ ],
+ "started_utc": "2026-10-26T09:36:52Z",
+ "warmup_s": 249.81536143599078,
+ "loadavg_end": [
+  2.36962890625,
+  2.546875,
+  3.10400390625
+ ]
+}

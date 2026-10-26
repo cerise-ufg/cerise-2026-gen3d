@@ -1,0 +1,18 @@
+{
+ "object": "Crosley_Alarm_Clock_Vintage_Metal",
+ "ok": true,
+ "total_s": 16.509242615895346,
+ "times": {
+  "preprocess": 0.027494498062878847,
+  "multiview_diffusion": 15.141403246903792,
+  "lrm_planes": 0.6268556439317763,
+  "mesh_extract_flexicubes": 0.711173539981246,
+  "export_glb": 0.002178469905629754
+ },
+ "faces_raw": 52516,
+ "faces": 52516,
+ "vertices": 26270,
+ "size_bytes": 1051484,
+ "peak_alloc_gb": 23.229607582092285,
+ "peak_reserved_gb": 23.75390625
+}

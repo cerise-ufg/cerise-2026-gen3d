@@ -1,0 +1,27 @@
+{
+ "object": "cc0_cat",
+ "ok": true,
+ "total_s": 63.173,
+ "times": {
+  "bg_removal": 0.3908,
+  "shape_diffusion": 4.3847,
+  "shape_decode_mc": 3.8102,
+  "mesh_postproc": 2.9597,
+  "tex_delight": 4.1772,
+  "tex_uv_unwrap": 2.5454,
+  "tex_render_cond": 0.6948,
+  "tex_multiview_diffusion": 37.8991,
+  "tex_bake": 1.3947,
+  "tex_inpaint": 1.6731,
+  "tex_export": 0.0651,
+  "export_glb": 1.0256,
+  "mobile_postproc": 1.9384,
+  "thumbnail": 0.2056
+ },
+ "faces": 39998,
+ "faces_raw": 1123032,
+ "size_bytes": 9505164,
+ "size_raw_bytes": 5292248,
+ "peak_alloc_gb": 14.489,
+ "real_photo": true
+}

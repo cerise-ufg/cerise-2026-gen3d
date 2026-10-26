@@ -1,0 +1,27 @@
+{
+ "object": "Android_Figure_Panda",
+ "ok": true,
+ "total_s": 45.403,
+ "times": {
+  "bg_removal": 0.0166,
+  "shape_diffusion": 3.6926,
+  "shape_decode_mc": 4.3701,
+  "mesh_postproc": 3.4936,
+  "tex_delight": 5.7075,
+  "tex_uv_unwrap": 0.9097,
+  "tex_render_cond": 1.274,
+  "tex_multiview_diffusion": 8.8394,
+  "tex_bake": 11.3871,
+  "tex_inpaint": 3.3956,
+  "tex_export": 0.0892,
+  "export_glb": 0.586,
+  "mobile_postproc": 1.3077,
+  "thumbnail": 0.333
+ },
+ "faces": 19998,
+ "faces_raw": 834676,
+ "size_bytes": 1384332,
+ "size_raw_bytes": 2614080,
+ "peak_alloc_gb": 14.517,
+ "real_photo": false
+}

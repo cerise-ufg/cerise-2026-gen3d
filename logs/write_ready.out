@@ -1,0 +1,68 @@
+{
+ "frente": "gen3d",
+ "gerado_em": "2026-10-26T10:07:18Z",
+ "imagem_docker": "cerise26_gen3d:latest",
+ "imagem_id": "sha256:c5db530e09b9370beb0546a04647f8c87cada7e016d737d00d3b951861ce031f",
+ "modelo": {
+  "forma": "tencent/Hunyuan3D-2 hunyuan3d-dit-v2-0-turbo + FlashVDM (VAE turbo)",
+  "textura": "tencent/Hunyuan3D-2 hunyuan3d-paint-v2-0-turbo (+ hunyuan3d-delight-v2-0); preset 'alto' usa hunyuan3d-paint-v2-0",
+  "licenca": "Tencent Hunyuan 3D 2.0 Community License (nao vale na UE/Reino Unido/Coreia do Sul)"
+ },
+ "modulo": {
+  "caminho_no_spark": "~/cerise2026/gen3d/pipeline/gen3d_pipeline.py",
+  "caminho_na_imagem": "/opt/gen3d/pipeline/gen3d_pipeline.py",
+  "classe": "Gen3DPipeline",
+  "metodo": "generate(image_path, out_dir, preset='padrao') -> {glb_path, thumb_path, stats{times, total_s, faces, size_bytes, geometry, peak_gpu_gb, gltf_extensions}}"
+ },
+ "requisitos_do_app": {
+  "glb_sem_compressao_geometrica": true,
+  "motivo": "o <model-viewer> embutido (offline) e o ViroReact nao tem decodificadores Draco/meshopt/KTX2",
+  "texturas": "JPEG (glTF-Transform), lado <= mobile_texture do preset",
+  "escala": "metros; maior dimensao = target_size_m (0,30 m); objeto apoiado em y=0 e centralizado em x/z (o app normaliza para ~35 cm)"
+ },
+ "como_instanciar": {
+  "docker_run": "sudo docker run -d --name cerise26_gen3d_srv --gpus all --ipc=host -v ~/cerise2026/hf_cache:/root/.cache/huggingface -v ~/cerise2026/gen3d/hy3dgen_models:/opt/gen3d/hy3dgen_models -p 127.0.0.1:8095:8095 cerise26_gen3d:latest <comando do servidor>",
+  "python": "import sys; sys.path.insert(0, '/opt/gen3d/pipeline'); from gen3d_pipeline import Gen3DPipeline; pipe = Gen3DPipeline(); out = pipe.generate('/caminho/foto.jpg', '/tmp/saida', preset='padrao')",
+  "observacoes": [
+   "HY3DGEN_MODELS=/opt/gen3d/hy3dgen_models (arvore de links para o cache HF + UNet do paint convertido para .bin)",
+   "carregar so os presets necessarios: Gen3DPipeline(presets={k: DEFAULT_PRESETS[k] for k in ['rapido','padrao']}) evita carregar o paint completo do 'alto'",
+   "a imagem limita o alocador a 24 GB (gpu_cap_gb); conferir free -g (>= 10 GB livres alem do modelo) antes de subir, pois a producao (vLLM) divide a memoria unificada",
+   "nao expor a porta fora do loopback: exposicao publica e decisao pendente do Eduardo"
+  ]
+ },
+ "carga_medida": {
+  "rapido_padrao": {
+   "load_s": 114.96847865381278,
+   "warmup_s": 78.60796687589027,
+   "mem_after_load_gb": 11.387604713439941,
+   "init_total_s": 199.67394157894887,
+   "loadavg": [
+    8.91357421875,
+    12.712890625,
+    13.99658203125
+   ],
+   "presets": [
+    "rapido",
+    "padrao"
+   ]
+  },
+  "alto": {
+   "load_s": 106.55081194615923,
+   "warmup_s": 118.14492465485819,
+   "mem_after_load_gb": 11.387604713439941,
+   "init_total_s": 228.47070120600984,
+   "loadavg": [
+    10.9775390625,
+    14.62548828125,
+    14.66748046875
+   ],
+   "presets": [
+    "alto"
+   ]
+  }
+ },
+ "presets": {
+  "rapido": {
+   "parametros": {
+    "shape": "dit-v2-0-turbo",
+

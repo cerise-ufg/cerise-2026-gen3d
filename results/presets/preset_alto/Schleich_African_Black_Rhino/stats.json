@@ -1,0 +1,27 @@
+{
+ "object": "Schleich_African_Black_Rhino",
+ "ok": true,
+ "total_s": 82.263,
+ "times": {
+  "bg_removal": 0.0282,
+  "shape_diffusion": 5.5779,
+  "shape_decode_mc": 5.1209,
+  "mesh_postproc": 1.99,
+  "tex_delight": 6.3207,
+  "tex_uv_unwrap": 3.1789,
+  "tex_render_cond": 0.9095,
+  "tex_multiview_diffusion": 52.7327,
+  "tex_bake": 2.2785,
+  "tex_inpaint": 1.1314,
+  "tex_export": 0.071,
+  "export_glb": 0.8664,
+  "mobile_postproc": 1.6576,
+  "thumbnail": 0.399
+ },
+ "faces": 40000,
+ "faces_raw": 765944,
+ "size_bytes": 6586460,
+ "size_raw_bytes": 3811504,
+ "peak_alloc_gb": 14.489,
+ "real_photo": false
+}

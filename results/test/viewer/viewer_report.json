@@ -1,0 +1,44 @@
+[
+ {
+  "glb": "/workspace/results/test/pp_bus/model_draco_1024.glb",
+  "model_viewer": "ok",
+  "three": {
+   "meshes": 1,
+   "triangles": 40000,
+   "materials": 1,
+   "baseColorMaps": 1,
+   "size_m": [
+    0.194,
+    0.3,
+    0.299
+   ],
+   "min_y": 0,
+   "extensions": [
+    "KHR_draco_mesh_compression"
+   ]
+  },
+  "screenshot": "/workspace/results/test/viewer/00_test_pp_bus_model_draco_1024.png",
+  "size_bytes": 1492704,
+  "console": []
+ },
+ {
+  "glb": "/workspace/results/test/pp_bus/model_none_1024.glb",
+  "model_viewer": "ok",
+  "three": {
+   "meshes": 1,
+   "triangles": 40000,
+   "materials": 1,
+   "baseColorMaps": 1,
+   "size_m": [
+    0.194,
+    0.3,
+    0.299
+   ],
+   "min_y": 0,
+   "extensions": []
+  },
+  "screenshot": "/workspace/results/test/viewer/01_test_pp_bus_model_none_1024.png",
+  "size_bytes": 2371840,
+  "console": []
+ }
+]

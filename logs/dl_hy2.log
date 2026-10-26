@@ -1,0 +1,10 @@
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]Fetching 50 files:   2%|▏         | 1/50 [00:00<00:20,  2.35it/s]Fetching 50 files:  10%|█         | 5/50 [07:16<1:09:42, 92.94s/it]Fetching 50 files:  22%|██▏       | 11/50 [09:28<30:37, 47.12s/it] Fetching 50 files:  30%|███       | 15/50 [10:40<21:00, 36.02s/it]Fetching 50 files:  90%|█████████ | 45/50 [10:48<00:36,  7.28s/it]Fetching 50 files: 100%|██████████| 50/50 [10:48<00:00, 12.96s/it]
+OK tencent/Hunyuan3D-2 -> /root/.cache/huggingface/hub/models--tencent--Hunyuan3D-2/snapshots/9cd649ba6913f7a852e3286bad86bfa9a2d83dcf
+   link /workspace/hy3dgen_models/tencent/Hunyuan3D-2 -> /root/.cache/huggingface/hub/models--tencent--Hunyuan3D-2/snapshots/9cd649ba6913f7a852e3286bad86bfa9a2d83dcf
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:01,  1.89it/s]Fetching 4 files:  50%|█████     | 2/4 [01:52<02:11, 65.99s/it]Fetching 4 files: 100%|██████████| 4/4 [01:52<00:00, 28.08s/it]
+OK tencent/Hunyuan3D-2mini -> /root/.cache/huggingface/hub/models--tencent--Hunyuan3D-2mini/snapshots/f90a0f7df7d5e6f71109cf333f6a95a0ae3194a6
+   link /workspace/hy3dgen_models/tencent/Hunyuan3D-2mini -> /root/.cache/huggingface/hub/models--tencent--Hunyuan3D-2mini/snapshots/f90a0f7df7d5e6f71109cf333f6a95a0ae3194a6
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files: 100%|██████████| 8/8 [00:00<00:00, 204600.20it/s]
+OK openai/clip-vit-large-patch14 -> /root/.cache/huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 15978.30it/s]
+OK stabilityai/TripoSR -> /root/.cache/huggingface/hub/models--stabilityai--TripoSR/snapshots/5b521936b01fbe1890f6f9baed0254ab6351c04a

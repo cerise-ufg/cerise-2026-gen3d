@@ -1,0 +1,27 @@
+{
+ "object": "cc0_teapot",
+ "ok": true,
+ "total_s": 53.926,
+ "times": {
+  "bg_removal": 0.4142,
+  "shape_diffusion": 3.5441,
+  "shape_decode_mc": 2.5001,
+  "mesh_postproc": 1.4096,
+  "tex_delight": 4.0973,
+  "tex_uv_unwrap": 2.2835,
+  "tex_render_cond": 0.6343,
+  "tex_multiview_diffusion": 33.0766,
+  "tex_bake": 1.5263,
+  "tex_inpaint": 1.5796,
+  "tex_export": 0.0803,
+  "export_glb": 0.7787,
+  "mobile_postproc": 1.6611,
+  "thumbnail": 0.3397
+ },
+ "faces": 40000,
+ "faces_raw": 557188,
+ "size_bytes": 6141460,
+ "size_raw_bytes": 4109848,
+ "peak_alloc_gb": 14.489,
+ "real_photo": true
+}

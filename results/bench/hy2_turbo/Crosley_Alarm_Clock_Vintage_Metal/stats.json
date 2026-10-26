@@ -1,0 +1,25 @@
+{
+ "object": "Crosley_Alarm_Clock_Vintage_Metal",
+ "ok": true,
+ "total_s": 45.97684144298546,
+ "times": {
+  "preprocess": 0.015911355847492814,
+  "shape_diffusion": 4.260959504870698,
+  "shape_decode_mc": 3.0497511809226125,
+  "mesh_postproc": 12.576604709029198,
+  "tex_delight": 4.8075165001209825,
+  "tex_uv_unwrap": 5.621999408118427,
+  "tex_render_cond": 0.7458770859520882,
+  "tex_multiview_diffusion": 10.23433151608333,
+  "tex_bake": 1.6632003101985902,
+  "tex_inpaint": 2.198203596053645,
+  "tex_export": 0.09653337299823761,
+  "export_glb": 0.7053359770216048
+ },
+ "faces_raw": 438152,
+ "faces": 40000,
+ "vertices": 24630,
+ "size_bytes": 3278012,
+ "peak_alloc_gb": 14.583563327789307,
+ "peak_reserved_gb": 17.9375
+}

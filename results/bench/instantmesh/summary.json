@@ -1,0 +1,260 @@
+{
+ "tag": "instantmesh",
+ "config": "instantmesh",
+ "kind": "instantmesh",
+ "kwargs": {},
+ "load_s": 21.600525880930945,
+ "load_peak_gb": 5.897139549255371,
+ "load_times": {
+  "load_zero123plus": 15.764162563020363,
+  "load_lrm": 3.834890623111278
+ },
+ "objects": {
+  "ACE_Coffee_Mug_Kristen_16_oz_cup": {
+   "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+   "ok": true,
+   "total_s": 16.41193128703162,
+   "times": {
+    "preprocess": 0.01873334706760943,
+    "multiview_diffusion": 15.055073563940823,
+    "lrm_planes": 0.624786855885759,
+    "mesh_extract_flexicubes": 0.7095314429607242,
+    "export_glb": 0.0036587968934327364
+   },
+   "faces_raw": 98088,
+   "faces": 98088,
+   "vertices": 49048,
+   "size_bytes": 1962800,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.75390625
+  },
+  "Android_Figure_Panda": {
+   "object": "Android_Figure_Panda",
+   "ok": true,
+   "total_s": 16.44566751900129,
+   "times": {
+    "preprocess": 0.02583591197617352,
+    "multiview_diffusion": 15.083308250177652,
+    "lrm_planes": 0.6262824349105358,
+    "mesh_extract_flexicubes": 0.7070794079918414,
+    "export_glb": 0.003009833861142397
+   },
+   "faces_raw": 87356,
+   "faces": 87356,
+   "vertices": 43694,
+   "size_bytes": 1748348,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.75390625
+  },
+  "Breyer_Horse_Of_The_Year_2015": {
+   "object": "Breyer_Horse_Of_The_Year_2015",
+   "ok": true,
+   "total_s": 16.503852694062516,
+   "times": {
+    "preprocess": 0.025435568997636437,
+    "multiview_diffusion": 15.135815551970154,
+    "lrm_planes": 0.6209174690302461,
+    "mesh_extract_flexicubes": 0.7188897600863129,
+    "export_glb": 0.0015782280825078487
+   },
+   "faces_raw": 36972,
+   "faces": 36972,
+   "vertices": 18486,
+   "size_bytes": 740412,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.75390625
+  },
+  "Crosley_Alarm_Clock_Vintage_Metal": {
+   "object": "Crosley_Alarm_Clock_Vintage_Metal",
+   "ok": true,
+   "total_s": 16.509242615895346,
+   "times": {
+    "preprocess": 0.027494498062878847,
+    "multiview_diffusion": 15.141403246903792,
+    "lrm_planes": 0.6268556439317763,
+    "mesh_extract_flexicubes": 0.711173539981246,
+    "export_glb": 0.002178469905629754
+   },
+   "faces_raw": 52516,
+   "faces": 52516,
+   "vertices": 26270,
+   "size_bytes": 1051484,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.75390625
+  },
+  "Reebok_ZIGLITE_RUSH": {
+   "object": "Reebok_ZIGLITE_RUSH",
+   "ok": true,
+   "total_s": 16.533841534983367,
+   "times": {
+    "preprocess": 0.02742079715244472,
+    "multiview_diffusion": 15.162217470118776,
+    "lrm_planes": 0.6208737238775939,
+    "mesh_extract_flexicubes": 0.72080835304223,
+    "export_glb": 0.002333238022401929
+   },
+   "faces_raw": 65292,
+   "faces": 65292,
+   "vertices": 32756,
+   "size_bytes": 1308572,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Schleich_African_Black_Rhino": {
+   "object": "Schleich_African_Black_Rhino",
+   "ok": true,
+   "total_s": 16.53928664396517,
+   "times": {
+    "preprocess": 0.028847227804362774,
+    "multiview_diffusion": 15.155233473982662,
+    "lrm_planes": 0.6242032099980861,
+    "mesh_extract_flexicubes": 0.7287775590084493,
+    "export_glb": 0.002062693005427718
+   },
+   "faces_raw": 62156,
+   "faces": 62156,
+   "vertices": 31080,
+   "size_bytes": 1244124,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Schleich_Bald_Eagle": {
+   "object": "Schleich_Bald_Eagle",
+   "ok": true,
+   "total_s": 16.46144087216817,
+   "times": {
+    "preprocess": 0.026890418026596308,
+    "multiview_diffusion": 15.099809870123863,
+    "lrm_planes": 0.6262386150192469,
+    "mesh_extract_flexicubes": 0.7065969570539892,
+    "export_glb": 0.0017852520104497671
+   },
+   "faces_raw": 45880,
+   "faces": 45880,
+   "vertices": 22948,
+   "size_bytes": 918696,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Schleich_Lion_Action_Figure": {
+   "object": "Schleich_Lion_Action_Figure",
+   "ok": true,
+   "total_s": 16.430167145095766,
+   "times": {
+    "preprocess": 0.026747324969619513,
+    "multiview_diffusion": 15.067574040964246,
+    "lrm_planes": 0.6202073339372873,
+    "mesh_extract_flexicubes": 0.7039805799722672,
+    "export_glb": 0.010930342832580209
+   },
+   "faces_raw": 44576,
+   "faces": 44576,
+   "vertices": 22310,
+   "size_bytes": 892844,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Sonny_School_Bus": {
+   "object": "Sonny_School_Bus",
+   "ok": true,
+   "total_s": 16.523947306908667,
+   "times": {
+    "preprocess": 0.017027299851179123,
+    "multiview_diffusion": 15.177788303000852,
+    "lrm_planes": 0.6213942479807884,
+    "mesh_extract_flexicubes": 0.7035554950125515,
+    "export_glb": 0.004039495950564742
+   },
+   "faces_raw": 121220,
+   "faces": 121220,
+   "vertices": 60632,
+   "size_bytes": 2425724,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Threshold_Porcelain_Teapot_White": {
+   "object": "Threshold_Porcelain_Teapot_White",
+   "ok": true,
+   "total_s": 17.645041557960212,
+   "times": {
+    "preprocess": 0.025733395013958216,
+    "multiview_diffusion": 16.205917591927573,
+    "lrm_planes": 0.6380082909017801,
+    "mesh_extract_flexicubes": 0.771673649083823,
+    "export_glb": 0.0035497830249369144
+   },
+   "faces_raw": 90856,
+   "faces": 90856,
+   "vertices": 45440,
+   "size_bytes": 1818288,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure": {
+   "object": "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure",
+   "ok": true,
+   "total_s": 16.345966576831415,
+   "times": {
+    "preprocess": 0.028354146983474493,
+    "multiview_diffusion": 14.979148510145023,
+    "lrm_planes": 0.6217965700197965,
+    "mesh_extract_flexicubes": 0.7139767538756132,
+    "export_glb": 0.0024879719130694866
+   },
+   "faces_raw": 72256,
+   "faces": 72256,
+   "vertices": 36140,
+   "size_bytes": 1446284,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Vtech_Roll_Learn_Turtle": {
+   "object": "Vtech_Roll_Learn_Turtle",
+   "ok": true,
+   "total_s": 17.2018898751121,
+   "times": {
+    "preprocess": 0.027308940887451172,
+    "multiview_diffusion": 15.79198837489821,
+    "lrm_planes": 0.6329364629928023,
+    "mesh_extract_flexicubes": 0.7464525070972741,
+    "export_glb": 0.0030114930123090744
+   },
+   "faces_raw": 86876,
+   "faces": 86876,
+   "vertices": 43472,
+   "size_bytes": 1739040,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  },
+  "Vtech_Stack_Sing_Rings_636_Months": {
+   "object": "Vtech_Stack_Sing_Rings_636_Months",
+   "ok": true,
+   "total_s": 16.744520003907382,
+   "times": {
+    "preprocess": 0.02704004105180502,
+    "multiview_diffusion": 15.357556089991704,
+    "lrm_planes": 0.633424969157204,
+    "mesh_extract_flexicubes": 0.7143774628639221,
+    "export_glb": 0.011688943952322006
+   },
+   "faces_raw": 89208,
+   "faces": 89208,
+   "vertices": 44758,
+   "size_bytes": 1787600,
+   "peak_alloc_gb": 23.229607582092285,
+   "peak_reserved_gb": 23.7578125
+  }
+ },
+ "loadavg_start": [
+  2.01708984375,
+  2.34033203125,
+  2.9736328125
+ ],
+ "started_utc": "2026-10-26T09:50:40Z",
+ "warmup_s": 19.342607560101897,
+ "loadavg_end": [
+  2.53173828125,
+  2.45947265625,
+  2.8779296875
+ ]
+}

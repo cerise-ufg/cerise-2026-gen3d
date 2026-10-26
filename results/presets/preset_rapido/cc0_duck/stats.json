@@ -1,0 +1,27 @@
+{
+ "object": "cc0_duck",
+ "ok": true,
+ "total_s": 22.17,
+ "times": {
+  "bg_removal": 0.474,
+  "shape_diffusion": 3.6105,
+  "shape_decode_mc": 1.5409,
+  "mesh_postproc": 0.7503,
+  "tex_delight": 4.1483,
+  "tex_uv_unwrap": 0.4285,
+  "tex_render_cond": 0.3702,
+  "tex_multiview_diffusion": 8.5464,
+  "tex_bake": 0.7475,
+  "tex_inpaint": 0.2353,
+  "tex_export": 0.023,
+  "export_glb": 0.2243,
+  "mobile_postproc": 0.9322,
+  "thumbnail": 0.1376
+ },
+ "faces": 9998,
+ "faces_raw": 286884,
+ "size_bytes": 1782192,
+ "size_raw_bytes": 1090324,
+ "peak_alloc_gb": 14.482,
+ "real_photo": true
+}

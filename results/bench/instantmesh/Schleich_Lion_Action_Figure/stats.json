@@ -1,0 +1,18 @@
+{
+ "object": "Schleich_Lion_Action_Figure",
+ "ok": true,
+ "total_s": 16.430167145095766,
+ "times": {
+  "preprocess": 0.026747324969619513,
+  "multiview_diffusion": 15.067574040964246,
+  "lrm_planes": 0.6202073339372873,
+  "mesh_extract_flexicubes": 0.7039805799722672,
+  "export_glb": 0.010930342832580209
+ },
+ "faces_raw": 44576,
+ "faces": 44576,
+ "vertices": 22310,
+ "size_bytes": 892844,
+ "peak_alloc_gb": 23.229607582092285,
+ "peak_reserved_gb": 23.7578125
+}

@@ -1,0 +1,26 @@
+{
+ "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+ "ok": true,
+ "total_s": 69.78978242794983,
+ "times": {
+  "preprocess": 0.024765403009951115,
+  "shape_diffusion": 3.696808436885476,
+  "shape_decode_mc": 5.07047619484365,
+  "mesh_postproc": 39.38833555299789,
+  "tex_delight": 4.133740450954065,
+  "tex_uv_unwrap": 3.6416708971373737,
+  "tex_render_cond": 0.6605226520914584,
+  "tex_multiview_diffusion": 8.755160134052858,
+  "tex_bake": 1.496690298896283,
+  "tex_inpaint": 2.4176988480612636,
+  "tex_export": 0.054995750077068806,
+  "export_glb": 0.4484023558907211
+ },
+ "faces_raw": 1458412,
+ "loadavg": 6.9755859375,
+ "faces": 40000,
+ "vertices": 22441,
+ "size_bytes": 2637496,
+ "peak_alloc_gb": 14.517674922943115,
+ "peak_reserved_gb": 15.572265625
+}

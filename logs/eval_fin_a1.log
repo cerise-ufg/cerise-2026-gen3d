@@ -1,0 +1,21 @@
+W1026 10:06:59.951000 36357 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+hy2_full Android_Figure_Panda {'ok': False, 'total_s': None}
+hy2_full Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+hy2_full Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+hy2_full Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+hy2_full Schleich_African_Black_Rhino {'ok': False, 'total_s': None}
+hy2_full Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+hy2_full Threshold_Porcelain_Teapot_White {'ok': False, 'total_s': None}
+hy2_full Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': False, 'total_s': None}
+hy2_full Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}
+hy21_full Android_Figure_Panda {'ok': False, 'total_s': None}
+hy21_full Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+hy21_full Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+hy21_full Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+hy21_full Schleich_African_Black_Rhino {'ok': False, 'total_s': None}
+hy21_full Schleich_Bald_Eagle {'ok': False, 'total_s': None}
+hy21_full Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+hy21_full Threshold_Porcelain_Teapot_White {'ok': False, 'total_s': None}
+hy21_full Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': False, 'total_s': None}
+hy21_full Vtech_Roll_Learn_Turtle {'ok': False, 'total_s': None}
+hy21_full Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}

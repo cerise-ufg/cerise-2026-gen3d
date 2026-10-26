@@ -1,0 +1,18 @@
+{
+ "object": "Android_Figure_Panda",
+ "ok": true,
+ "total_s": 39.71764060598798,
+ "times": {
+  "preprocess": 0.017960096010938287,
+  "multiview_diffusion": 35.60453843208961,
+  "lrm_planes": 1.7633281650487334,
+  "mesh_extract_flexicubes": 2.3266289092134684,
+  "export_glb": 0.004854464204981923
+ },
+ "faces_raw": 90304,
+ "faces": 90304,
+ "vertices": 45156,
+ "size_bytes": 1807124,
+ "peak_alloc_gb": 23.249619960784912,
+ "peak_reserved_gb": 23.50390625
+}

@@ -1,0 +1,66 @@
+{
+ "preset": "padrao",
+ "params": {
+  "shape": "dit-v2-0-turbo",
+  "flashvdm": true,
+  "paint": "hunyuan3d-paint-v2-0-turbo",
+  "steps": 5,
+  "octree": 384,
+  "num_chunks": 20000,
+  "max_faces": 20000,
+  "fast_post": true,
+  "texture_size": 2048,
+  "mobile_texture": 1024,
+  "target_size_m": 0.3,
+  "time_limit_s": 90,
+  "size_limit_bytes": 4000000
+ },
+ "times": {
+  "bg_removal": 0.014,
+  "shape_diffusion": 3.1802,
+  "shape_decode_mc": 3.3707,
+  "mesh_postproc": 5.2846,
+  "tex_delight": 3.6423,
+  "tex_uv_unwrap": 0.9511,
+  "tex_render_cond": 0.3099,
+  "tex_multiview_diffusion": 4.8624,
+  "tex_bake": 0.8331,
+  "tex_inpaint": 1.2346,
+  "tex_export": 0.0341,
+  "export_glb": 0.4287,
+  "mobile_postproc": 0.9116,
+  "thumbnail": 0.1962
+ },
+ "total_s": 25.254,
+ "faces_raw": 1458412,
+ "faces": 19998,
+ "size_bytes": 1339736,
+ "size_raw_bytes": 2262012,
+ "size_grounded_bytes": 2262228,
+ "compress": "none",
+ "gltf_extensions": {
+  "extensions": [],
+  "image_mime": [
+   "image/png"
+  ]
+ },
+ "geometry": {
+  "scale": 0.1516315980745195,
+  "bounds_min": [
+   -0.13478081937851638,
+   0.0,
+   -0.09464868097030321
+  ],
+  "bounds_max": [
+   0.13478081937851638,
+   0.30000000000000004,
+   0.0946486809703032
+  ],
+  "dims_m": [
+   0.26956163875703276,
+   0.30000000000000004,
+   0.18929736194060642
+  ]
+ },
+ "peak_gpu_gb": 14.517
+}

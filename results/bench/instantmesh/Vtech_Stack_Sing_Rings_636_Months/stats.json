@@ -1,0 +1,18 @@
+{
+ "object": "Vtech_Stack_Sing_Rings_636_Months",
+ "ok": true,
+ "total_s": 16.744520003907382,
+ "times": {
+  "preprocess": 0.02704004105180502,
+  "multiview_diffusion": 15.357556089991704,
+  "lrm_planes": 0.633424969157204,
+  "mesh_extract_flexicubes": 0.7143774628639221,
+  "export_glb": 0.011688943952322006
+ },
+ "faces_raw": 89208,
+ "faces": 89208,
+ "vertices": 44758,
+ "size_bytes": 1787600,
+ "peak_alloc_gb": 23.229607582092285,
+ "peak_reserved_gb": 23.7578125
+}

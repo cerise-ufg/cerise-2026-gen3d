@@ -1,31 +1,48 @@
-# dados, pesos e resultados pesados ficam no Spark (~/cerise2026/gen3d, ~/cerise2026/hf_cache)
-data/
+# --- artefatos regeneraveis ---
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+node_modules/
+.venv/
+
+# --- codigo e pesos de terceiros (nao redistribuidos; ver TERCEIROS.md) ---
 third_party/
 hy3dgen_models/
 weights/
-results/
-logs/
-*.glb
-*.obj
-*.ply
-*.npy
+server/models/
+*.onnx
 *.ckpt
 *.safetensors
 *.bin
 *.pth
-__pycache__/
-*.pyc
-.pytest_cache/
 
-# area de trabalho local (copia bruta do Spark)
-_spark/
+# --- segredos (nunca versionar) ---
+*.secrets.env
+*.jks
+*.keystore
+upload.properties
 
-
-# servidor (server/): banco/jobs, modelo do rembg, pool de imagens e resultados brutos ficam no Spark
+# --- saidas brutas e dados grandes (ficam nos Releases; ver RELEASES.md) ---
+# Os pacotes dos Releases, extraidos na raiz do repositorio, preenchem exatamente estes caminhos.
+*.glb
+*.obj
+*.mtl
+*.ply
+*.npy
+results/**/*.png
+results/**/*.jpg
+!results/test/*.png
+!results/test/viewer/*.png
+data/gso/
+data/eval/**/*.png
+data/real/*.jpg
 server/data/
-server/models/
-server/loadtest/pool/
 server/results/
+server/loadtest/pool/
 server/e2e_out*/
-*.onnx
 *.sqlite3*
+
+# --- area de trabalho local ---
+_spark/

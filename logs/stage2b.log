@@ -1,0 +1,52 @@
++ export MAX_JOBS=4 CMAKE_BUILD_PARALLEL_LEVEL=4
++ MAX_JOBS=4
++ CMAKE_BUILD_PARALLEL_LEVEL=4
++ export TORCH_CUDA_ARCH_LIST=12.1
++ TORCH_CUDA_ARCH_LIST=12.1
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ TP=/workspace/third_party
++ apt-get install -y -qq libharfbuzz0b libfontconfig1 libfreetype6 libxkbcommon0 libdbus-1-3 libx11-6 libxcb1 libgomp1 libtbb12
++ python -
+MISSING: []
++ python -c 'import pymeshlab; ms=pymeshlab.MeshSet(); print('\''pymeshlab OK'\'')'
+pymeshlab OK
++ nice -n 19 pip install --no-cache-dir scikit-build-core cmake
+Collecting scikit-build-core
+  Downloading scikit_build_core-1.1.1-py3-none-any.whl.metadata (19 kB)
+Requirement already satisfied: cmake in /usr/local/lib/python3.12/dist-packages (3.31.6)
+Requirement already satisfied: packaging>=23.2 in /usr/local/lib/python3.12/dist-packages (from scikit-build-core) (26.0)
+Requirement already satisfied: pathspec>=0.12.0 in /usr/local/lib/python3.12/dist-packages (from scikit-build-core) (1.1.1)
+Downloading scikit_build_core-1.1.1-py3-none-any.whl (293 kB)
+Installing collected packages: scikit-build-core
+Successfully installed scikit-build-core-1.1.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ cd /workspace/third_party/torchmcubes
++ nice -n 19 pip install --no-build-isolation --no-cache-dir .
+Processing ./.
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: torch==2.12.* in /usr/local/lib/python3.12/dist-packages (from torchmcubes==0.1.0) (2.12.0a0+5aff3928d8.nv26.5.50603568)
+Requirement already satisfied: filelock in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (3.29.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (4.15.0)
+Requirement already satisfied: setuptools<82 in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (3.6.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.12/dist-packages (from torch==2.12.*->torchmcubes==0.1.0) (2026.2.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy>=1.13.3->torch==2.12.*->torchmcubes==0.1.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2->torch==2.12.*->torchmcubes==0.1.0) (3.0.3)
+Building wheels for collected packages: torchmcubes
+  Building wheel for torchmcubes (pyproject.toml): started
+  Building wheel for torchmcubes (pyproject.toml): finished with status 'done'
+  Created wheel for torchmcubes: filename=torchmcubes-0.1.0-cp312-cp312-linux_aarch64.whl size=163872 sha256=624bc37142e8a150ff2971114f4217e0a6916b014dd9ea099d892d10ebe55108
+  Stored in directory: /tmp/pip-ephem-wheel-cache-b_9hu0qp/wheels/ea/00/29/4f70f10dfaeea943a560a2e6644401d8a4c1bf4a00a6feebdf
+Successfully built torchmcubes
+Installing collected packages: torchmcubes
+Successfully installed torchmcubes-0.1.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ echo TORCHMCUBES_RC=0
+TORCHMCUBES_RC=0
++ cd /
++ python -c 'import torch, torchmcubes; from torchmcubes import marching_cubes; v,f = marching_cubes(torch.randn(32,32,32).cuda(), 0.0); print('\''torchmcubes OK'\'', v.shape, f.shape)'
+torchmcubes OK torch.Size([273681, 3]) torch.Size([91227, 3])

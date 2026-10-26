@@ -1,0 +1,27 @@
+{
+ "object": "Reebok_ZIGLITE_RUSH",
+ "ok": true,
+ "total_s": 81.961,
+ "times": {
+  "bg_removal": 0.0168,
+  "shape_diffusion": 5.4987,
+  "shape_decode_mc": 5.257,
+  "mesh_postproc": 1.5228,
+  "tex_delight": 6.294,
+  "tex_uv_unwrap": 2.5504,
+  "tex_render_cond": 0.9621,
+  "tex_multiview_diffusion": 53.4212,
+  "tex_bake": 2.418,
+  "tex_inpaint": 1.5678,
+  "tex_export": 0.0832,
+  "export_glb": 0.6227,
+  "mobile_postproc": 1.3972,
+  "thumbnail": 0.3487
+ },
+ "faces": 40000,
+ "faces_raw": 711364,
+ "size_bytes": 5151336,
+ "size_raw_bytes": 3406008,
+ "peak_alloc_gb": 14.489,
+ "real_photo": false
+}

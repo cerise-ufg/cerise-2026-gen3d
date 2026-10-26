@@ -1,0 +1,100 @@
+{
+ "entrada_bytes": 3394024,
+ "assentado_bytes": 3394240,
+ "geo": {
+  "scale": 0.15029342090218906,
+  "bounds_min": [
+   -0.09721838621086738,
+   0.0,
+   -0.14931328338029862
+  ],
+  "bounds_max": [
+   0.0972183862108674,
+   0.3,
+   0.14931328338029862
+  ],
+  "dims_m": [
+   0.1944367724217348,
+   0.3,
+   0.29862656676059723
+  ]
+ },
+ "none_2048": {
+  "bytes": 4855528,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [],
+  "err": null
+ },
+ "none_1024": {
+  "bytes": 2371840,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [],
+  "err": null
+ },
+ "none_512": {
+  "bytes": 1453988,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [],
+  "err": null
+ },
+ "draco_2048": {
+  "bytes": 3976392,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [
+   "UNSUPPORTED_EXTENSION: Cannot validate an extension as it is not supported by the validator: 'KHR_draco_mesh_compression'.",
+   "UNUSED_OBJECT: This object may be unused."
+  ],
+  "err": null
+ },
+ "draco_1024": {
+  "bytes": 1492704,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [
+   "UNSUPPORTED_EXTENSION: Cannot validate an extension as it is not supported by the validator: 'KHR_draco_mesh_compression'.",
+   "UNUSED_OBJECT: This object may be unused."
+  ],
+  "err": null
+ },
+ "draco_512": {
+  "bytes": 574856,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [
+   "UNSUPPORTED_EXTENSION: Cannot validate an extension as it is not supported by the validator: 'KHR_draco_mesh_compression'.",
+   "UNUSED_OBJECT: This object may be unused."
+  ],
+  "err": null
+ },
+ "meshopt_2048": {
+  "bytes": 4097824,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [
+   "UNSUPPORTED_EXTENSION: Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+  ],
+  "err": null
+ },
+ "meshopt_1024": {
+  "bytes": 1614136,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [
+   "UNSUPPORTED_EXTENSION: Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+  ],
+  "err": null
+ },
+ "meshopt_512": {
+  "bytes": 696284,
+  "erros": 0,
+  "avisos": 0,
+  "msgs": [
+   "UNSUPPORTED_EXTENSION: Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'."
+  ],
+  "err": null
+ }
+}

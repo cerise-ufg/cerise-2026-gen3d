@@ -1,0 +1,145 @@
+[
+ {
+  "name": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+  "faces": 11224,
+  "vertices": 5807,
+  "size_original_m": [
+   0.12632200121879578,
+   0.13493600487709045,
+   0.09062400460243225
+  ],
+  "scale": 7.410920464933528
+ },
+ {
+  "name": "Android_Figure_Panda",
+  "faces": 10618,
+  "vertices": 5669,
+  "size_original_m": [
+   0.060760997235774994,
+   0.07573899626731873,
+   0.046282000839710236
+  ],
+  "scale": 13.203238084520255
+ },
+ {
+  "name": "Breyer_Horse_Of_The_Year_2015",
+  "faces": 13840,
+  "vertices": 7451,
+  "size_original_m": [
+   0.23114100098609924,
+   0.1531829982995987,
+   0.05769199877977371
+  ],
+  "scale": 4.326363543178303
+ },
+ {
+  "name": "Crosley_Alarm_Clock_Vintage_Metal",
+  "faces": 10248,
+  "vertices": 5650,
+  "size_original_m": [
+   0.10946399718523026,
+   0.16228701174259186,
+   0.05402299761772156
+  ],
+  "scale": 6.161922567075972
+ },
+ {
+  "name": "Reebok_ZIGLITE_RUSH",
+  "faces": 37146,
+  "vertices": 20231,
+  "size_original_m": [
+   0.10786499828100204,
+   0.1302269995212555,
+   0.2730349898338318
+  ],
+  "scale": 3.662534243719447
+ },
+ {
+  "name": "Schleich_African_Black_Rhino",
+  "faces": 12254,
+  "vertices": 6657,
+  "size_original_m": [
+   0.041110001504421234,
+   0.06012200191617012,
+   0.13750000298023224
+  ],
+  "scale": 7.272727115095158
+ },
+ {
+  "name": "Schleich_Bald_Eagle",
+  "faces": 18510,
+  "vertices": 10263,
+  "size_original_m": [
+   0.07623200118541718,
+   0.08989400416612625,
+   0.07130800187587738
+  ],
+  "scale": 11.124212446382701
+ },
+ {
+  "name": "Schleich_Lion_Action_Figure",
+  "faces": 15058,
+  "vertices": 7950,
+  "size_original_m": [
+   0.11501799523830414,
+   0.07044200599193573,
+   0.04167899861931801
+  ],
+  "scale": 8.694291688253776
+ },
+ {
+  "name": "Sonny_School_Bus",
+  "faces": 38052,
+  "vertices": 23117,
+  "size_original_m": [
+   0.16283300518989563,
+   0.2303590029478073,
+   0.23995301127433777
+  ],
+  "scale": 4.167482602903041
+ },
+ {
+  "name": "Threshold_Porcelain_Teapot_White",
+  "faces": 8324,
+  "vertices": 4431,
+  "size_original_m": [
+   0.18668599426746368,
+   0.1363449990749359,
+   0.18425899744033813
+  ],
+  "scale": 5.356588232148295
+ },
+ {
+  "name": "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure",
+  "faces": 66112,
+  "vertices": 48670,
+  "size_original_m": [
+   0.1942020058631897,
+   0.26785901188850403,
+   0.07796899974346161
+  ],
+  "scale": 3.7333072833713308
+ },
+ {
+  "name": "Vtech_Roll_Learn_Turtle",
+  "faces": 30686,
+  "vertices": 18338,
+  "size_original_m": [
+   0.16943199932575226,
+   0.11751300096511841,
+   0.23249399662017822
+  ],
+  "scale": 4.301186329699877
+ },
+ {
+  "name": "Vtech_Stack_Sing_Rings_636_Months",
+  "faces": 21056,
+  "vertices": 12084,
+  "size_original_m": [
+   0.13547000288963318,
+   0.23342099785804749,
+   0.12810400128364563
+  ],
+  "scale": 4.284104725694556
+ }
+]

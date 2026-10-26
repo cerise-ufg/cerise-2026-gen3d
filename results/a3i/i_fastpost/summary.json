@@ -1,0 +1,132 @@
+{
+ "tag": "i_fastpost",
+ "config": "hy2_turbo",
+ "kind": "hy2",
+ "kwargs": {
+  "shape": "dit-v2-0-turbo",
+  "paint": "hunyuan3d-paint-v2-0-turbo",
+  "flashvdm": true,
+  "steps": 5,
+  "octree": 384,
+  "num_chunks": 20000,
+  "remove_floaters": false,
+  "decimator": "fast"
+ },
+ "load_s": 123.91147574502975,
+ "objects": {
+  "Schleich_Bald_Eagle": {
+   "object": "Schleich_Bald_Eagle",
+   "ok": true,
+   "total_s": 36.81306470185518,
+   "times": {
+    "preprocess": 0.012640259927138686,
+    "shape_diffusion": 3.639759066980332,
+    "shape_decode_mc": 3.3752543260343373,
+    "mesh_postproc": 3.343841995112598,
+    "tex_delight": 4.747210100991651,
+    "tex_uv_unwrap": 3.5839048800989985,
+    "tex_render_cond": 2.163146049948409,
+    "tex_multiview_diffusion": 9.054791838862002,
+    "tex_bake": 2.943833851022646,
+    "tex_inpaint": 2.589037148980424,
+    "tex_export": 0.3981218079570681,
+    "export_glb": 0.9609858589246869
+   },
+   "faces_raw": 822992,
+   "loadavg": 13.69482421875,
+   "faces": 39998,
+   "vertices": 24263,
+   "size_bytes": 4120248,
+   "peak_alloc_gb": 14.517709255218506,
+   "peak_reserved_gb": 15.572265625
+  },
+  "Sonny_School_Bus": {
+   "object": "Sonny_School_Bus",
+   "ok": true,
+   "total_s": 36.81180944805965,
+   "times": {
+    "preprocess": 0.01331839500926435,
+    "shape_diffusion": 3.858747648075223,
+    "shape_decode_mc": 5.128944399999455,
+    "mesh_postproc": 5.116402011131868,
+    "tex_delight": 4.388515943195671,
+    "tex_uv_unwrap": 1.9907726140227169,
+    "tex_render_cond": 2.42512721917592,
+    "tex_multiview_diffusion": 9.211687068920583,
+    "tex_bake": 1.5253913318738341,
+    "tex_inpaint": 2.3075537581462413,
+    "tex_export": 0.09430323704145849,
+    "export_glb": 0.7366174960043281
+   },
+   "faces_raw": 1350812,
+   "loadavg": 11.28515625,
+   "faces": 40000,
+   "vertices": 25785,
+   "size_bytes": 3633152,
+   "peak_alloc_gb": 14.51773738861084,
+   "peak_reserved_gb": 15.572265625
+  },
+  "ACE_Coffee_Mug_Kristen_16_oz_cup": {
+   "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+   "ok": true,
+   "total_s": 38.134643367026,
+   "times": {
+    "preprocess": 0.013867109082639217,
+    "shape_diffusion": 3.698207479901612,
+    "shape_decode_mc": 5.371979368850589,
+    "mesh_postproc": 7.710033791139722,
+    "tex_delight": 4.344991232035682,
+    "tex_uv_unwrap": 3.0323221830185503,
+    "tex_render_cond": 0.701170118059963,
+    "tex_multiview_diffusion": 8.876568956067786,
+    "tex_bake": 1.4867977411486208,
+    "tex_inpaint": 2.334403700195253,
+    "tex_export": 0.05892716790549457,
+    "export_glb": 0.504563724854961
+   },
+   "faces_raw": 1458412,
+   "loadavg": 9.0087890625,
+   "faces": 40000,
+   "vertices": 24465,
+   "size_bytes": 2976560,
+   "peak_alloc_gb": 14.517713069915771,
+   "peak_reserved_gb": 15.572265625
+  },
+  "Vtech_Roll_Learn_Turtle": {
+   "object": "Vtech_Roll_Learn_Turtle",
+   "ok": true,
+   "total_s": 41.861386994831264,
+   "times": {
+    "preprocess": 0.012285209028050303,
+    "shape_diffusion": 4.1722210419829935,
+    "shape_decode_mc": 7.220524050993845,
+    "mesh_postproc": 7.237171133048832,
+    "tex_delight": 4.506788910832256,
+    "tex_uv_unwrap": 1.888850012095645,
+    "tex_render_cond": 0.7439105531666428,
+    "tex_multiview_diffusion": 11.698943942086771,
+    "tex_bake": 1.4480918729677796,
+    "tex_inpaint": 2.0984886959195137,
+    "tex_export": 0.0786175150424242,
+    "export_glb": 0.755048356950283
+   },
+   "faces_raw": 1147592,
+   "loadavg": 8.57177734375,
+   "faces": 39998,
+   "vertices": 26799,
+   "size_bytes": 4112352,
+   "peak_alloc_gb": 14.517756462097168,
+   "peak_reserved_gb": 15.572265625
+  }
+ },
+ "loadavg_start": [
+  8.12646484375,
+  13.0234375,
+  17.0205078125
+ ],
+ "loadavg_end": [
+  21.98388671875,
+  16.0205078125,
+  15.01220703125
+ ]
+}

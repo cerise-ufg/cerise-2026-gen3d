@@ -1,0 +1,56 @@
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /index.html?src=m/00_preset_padrao_Sonny_School_Bus_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/model-viewer.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/three.module.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/jsm/loaders/GLTFLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/jsm/loaders/DRACOLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/jsm/libs/meshopt_decoder.module.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/jsm/utils/BufferGeometryUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/jsm/utils/SkeletonUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/three.core.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /m/00_preset_padrao_Sonny_School_Bus_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /lib/meshopt_decoder.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:42] "GET /m/00_preset_padrao_Sonny_School_Bus_model.glb HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /index.html?src=m/01_preset_padrao_Schleich_Bald_Eagle_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /m/01_preset_padrao_Schleich_Bald_Eagle_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:45] "GET /m/01_preset_padrao_Schleich_Bald_Eagle_model.glb HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:48] "GET /index.html?src=m/02_preset_padrao_Vtech_Roll_Learn_Turtle_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:48] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:48] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:49] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:49] "GET /m/02_preset_padrao_Vtech_Roll_Learn_Turtle_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:49] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:52] "GET /index.html?src=m/03_preset_padrao_cc0_duck_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:52] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:52] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:52] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:52] "GET /m/03_preset_padrao_cc0_duck_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:52] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:55] "GET /index.html?src=m/04_preset_padrao_cc0_rooster_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:55] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:55] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:55] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:55] "GET /m/04_preset_padrao_cc0_rooster_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:55] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:58] "GET /index.html?src=m/05_preset_rapido_ACE_Coffee_Mug_Kristen_16_oz_cup_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:58] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:58] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:58] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:05:58] "GET /m/05_preset_rapido_ACE_Coffee_Mug_Kristen_16_oz_cup_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:05:58] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:06:01] "GET /index.html?src=m/06_preset_alto_Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:06:01] "GET /lib/model-viewer.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:06:01] "GET /lib/three.module.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:06:01] "GET /lib/three.core.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Oct/2026 10:06:01] "GET /m/06_preset_alto_Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure_model.glb HTTP/1.1" 200 -
+127.0.0.1 - - [26/Oct/2026 10:06:01] "GET /lib/meshopt_decoder.js HTTP/1.1" 304 -
+{"glb": "results/presets/preset_padrao/Sonny_School_Bus/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 20000, "materials": 1, "baseColorMaps": 1, "size_m": [0.194, 0.298, 0.3], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/00_preset_padrao_Sonny_School_Bus_model.png", "size_bytes": 1928184, "console": []}
+{"glb": "results/presets/preset_padrao/Schleich_Bald_Eagle/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 19998, "materials": 1, "baseColorMaps": 1, "size_m": [0.225, 0.3, 0.277], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/01_preset_padrao_Schleich_Bald_Eagle_model.png", "size_bytes": 2498592, "console": []}
+{"glb": "results/presets/preset_padrao/Vtech_Roll_Learn_Turtle/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 20000, "materials": 1, "baseColorMaps": 1, "size_m": [0.251, 0.176, 0.3], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/02_preset_padrao_Vtech_Roll_Learn_Turtle_model.png", "size_bytes": 2329116, "console": []}
+{"glb": "results/presets/preset_padrao/cc0_duck/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 20000, "materials": 1, "baseColorMaps": 1, "size_m": [0.3, 0.29, 0.274], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/03_preset_padrao_cc0_duck_model.png", "size_bytes": 2042068, "console": []}
+{"glb": "results/presets/preset_padrao/cc0_rooster/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 20000, "materials": 1, "baseColorMaps": 1, "size_m": [0.251, 0.3, 0.117], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/04_preset_padrao_cc0_rooster_model.png", "size_bytes": 2974400, "console": []}
+{"glb": "results/presets/preset_rapido/ACE_Coffee_Mug_Kristen_16_oz_cup/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 9998, "materials": 1, "baseColorMaps": 1, "size_m": [0.271, 0.3, 0.19], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/05_preset_rapido_ACE_Coffee_Mug_Kristen_16_oz_cup_model.png", "size_bytes": 1007180, "console": []}
+{"glb": "results/presets/preset_alto/Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure/model.glb", "model_viewer": "ok", "three": {"meshes": 1, "triangles": 39998, "materials": 1, "baseColorMaps": 1, "size_m": [0.214, 0.3, 0.099], "min_y": 0, "extensions": []}, "screenshot": "evidencias/viewer/06_preset_alto_Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure_model.png", "size_bytes": 4975580, "console": []}

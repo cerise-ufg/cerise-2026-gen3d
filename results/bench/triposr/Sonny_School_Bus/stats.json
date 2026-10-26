@@ -1,0 +1,17 @@
+{
+ "object": "Sonny_School_Bus",
+ "ok": true,
+ "total_s": 1.2124549099244177,
+ "times": {
+  "preprocess": 0.033763614017516375,
+  "triplane_forward": 0.2722192748915404,
+  "mesh_extract_mc": 0.9020500571932644,
+  "export_glb": 0.004284332040697336
+ },
+ "faces_raw": 146161,
+ "faces": 146161,
+ "vertices": 73193,
+ "size_bytes": 2926012,
+ "peak_alloc_gb": 4.166435718536377,
+ "peak_reserved_gb": 5.2265625
+}

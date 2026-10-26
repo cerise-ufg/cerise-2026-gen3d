@@ -1,0 +1,27 @@
+{
+ "object": "Schleich_Lion_Action_Figure",
+ "ok": true,
+ "total_s": 22.523,
+ "times": {
+  "bg_removal": 0.0248,
+  "shape_diffusion": 3.5334,
+  "shape_decode_mc": 1.5687,
+  "mesh_postproc": 0.6334,
+  "tex_delight": 4.1608,
+  "tex_uv_unwrap": 0.4218,
+  "tex_render_cond": 0.4692,
+  "tex_multiview_diffusion": 9.1169,
+  "tex_bake": 0.7066,
+  "tex_inpaint": 0.3407,
+  "tex_export": 0.0134,
+  "export_glb": 0.2645,
+  "mobile_postproc": 0.9632,
+  "thumbnail": 0.3051
+ },
+ "faces": 9998,
+ "faces_raw": 237604,
+ "size_bytes": 1652360,
+ "size_raw_bytes": 1062768,
+ "peak_alloc_gb": 14.482,
+ "real_photo": false
+}

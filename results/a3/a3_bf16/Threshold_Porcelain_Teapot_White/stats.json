@@ -1,0 +1,25 @@
+{
+ "object": "Threshold_Porcelain_Teapot_White",
+ "ok": true,
+ "total_s": 51.65780964284204,
+ "times": {
+  "preprocess": 0.021989278960973024,
+  "shape_diffusion": 3.8919598842039704,
+  "shape_decode_mc": 3.4731347649358213,
+  "mesh_postproc": 22.7707660140004,
+  "tex_delight": 4.5230162588413805,
+  "tex_uv_unwrap": 3.8866976220160723,
+  "tex_render_cond": 0.559505112003535,
+  "tex_multiview_diffusion": 9.48811182193458,
+  "tex_bake": 1.5024763389956206,
+  "tex_inpaint": 0.9136900431476533,
+  "tex_export": 0.0626050760038197,
+  "export_glb": 0.563334648963064
+ },
+ "faces_raw": 972604,
+ "faces": 40000,
+ "vertices": 21821,
+ "size_bytes": 2746520,
+ "peak_alloc_gb": 14.517663478851318,
+ "peak_reserved_gb": 15.572265625
+}

@@ -1,0 +1,27 @@
+{
+ "object": "Vtech_Stack_Sing_Rings_636_Months",
+ "ok": true,
+ "total_s": 81.853,
+ "times": {
+  "bg_removal": 0.0266,
+  "shape_diffusion": 5.4906,
+  "shape_decode_mc": 5.3332,
+  "mesh_postproc": 2.0223,
+  "tex_delight": 6.5293,
+  "tex_uv_unwrap": 2.6025,
+  "tex_render_cond": 0.9135,
+  "tex_multiview_diffusion": 52.3737,
+  "tex_bake": 2.2128,
+  "tex_inpaint": 1.6164,
+  "tex_export": 0.0656,
+  "export_glb": 0.7163,
+  "mobile_postproc": 1.5899,
+  "thumbnail": 0.3602
+ },
+ "faces": 40000,
+ "faces_raw": 754512,
+ "size_bytes": 6140320,
+ "size_raw_bytes": 3803640,
+ "peak_alloc_gb": 14.489,
+ "real_photo": false
+}

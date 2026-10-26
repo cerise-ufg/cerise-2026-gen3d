@@ -1,0 +1,208 @@
+{
+ "tag": "a3_oct256",
+ "config": "hy2_turbo",
+ "kind": "hy2",
+ "kwargs": {
+  "shape": "dit-v2-0-turbo",
+  "paint": "hunyuan3d-paint-v2-0-turbo",
+  "flashvdm": true,
+  "steps": 5,
+  "octree": 256,
+  "num_chunks": 20000
+ },
+ "load_s": 26.05689563602209,
+ "load_peak_gb": 11.460989952087402,
+ "load_times": {
+  "load_shape": 14.103755359072238,
+  "load_paint": 10.22998883901164
+ },
+ "objects": {
+  "ACE_Coffee_Mug_Kristen_16_oz_cup": {
+   "object": "ACE_Coffee_Mug_Kristen_16_oz_cup",
+   "ok": true,
+   "total_s": 23.37270828196779,
+   "times": {
+    "preprocess": 0.012865391094237566,
+    "shape_diffusion": 1.8260849101934582,
+    "shape_decode_mc": 0.8509386260993779,
+    "mesh_postproc": 8.471342214848846,
+    "tex_delight": 2.1428791689686477,
+    "tex_uv_unwrap": 3.3033952098339796,
+    "tex_render_cond": 0.24365893402136862,
+    "tex_multiview_diffusion": 4.5178774481173605,
+    "tex_bake": 0.5058396928943694,
+    "tex_inpaint": 1.018397965002805,
+    "tex_export": 0.033267231890931726,
+    "export_glb": 0.4458857770077884
+   },
+   "faces_raw": 639920,
+   "faces": 40000,
+   "vertices": 22535,
+   "size_bytes": 2598292,
+   "peak_alloc_gb": 14.591062545776367,
+   "peak_reserved_gb": 18.048828125
+  },
+  "Schleich_African_Black_Rhino": {
+   "object": "Schleich_African_Black_Rhino",
+   "ok": true,
+   "total_s": 19.92186854616739,
+   "times": {
+    "preprocess": 0.013591643888503313,
+    "shape_diffusion": 1.8192802190314978,
+    "shape_decode_mc": 0.5580549731384963,
+    "mesh_postproc": 4.0516735590063035,
+    "tex_delight": 2.144594409968704,
+    "tex_uv_unwrap": 4.286437115166336,
+    "tex_render_cond": 0.2436891640536487,
+    "tex_multiview_diffusion": 4.5314784911461174,
+    "tex_bake": 0.5043244410771877,
+    "tex_inpaint": 1.0325584469828755,
+    "tex_export": 0.026926808059215546,
+    "export_glb": 0.7089865549933165
+   },
+   "faces_raw": 336624,
+   "faces": 40000,
+   "vertices": 23703,
+   "size_bytes": 3201052,
+   "peak_alloc_gb": 14.591084003448486,
+   "peak_reserved_gb": 18.048828125
+  },
+  "Schleich_Bald_Eagle": {
+   "object": "Schleich_Bald_Eagle",
+   "ok": true,
+   "total_s": 20.492444309871644,
+   "times": {
+    "preprocess": 0.012214030139148235,
+    "shape_diffusion": 1.8493051710538566,
+    "shape_decode_mc": 0.5257386618759483,
+    "mesh_postproc": 4.332903324859217,
+    "tex_delight": 2.128287066007033,
+    "tex_uv_unwrap": 4.565138903912157,
+    "tex_render_cond": 0.2463435500394553,
+    "tex_multiview_diffusion": 4.493752775946632,
+    "tex_bake": 0.4892125241458416,
+    "tex_inpaint": 0.9469008380547166,
+    "tex_export": 0.03472690819762647,
+    "export_glb": 0.8676354200579226
+   },
+   "faces_raw": 361672,
+   "faces": 40000,
+   "vertices": 23948,
+   "size_bytes": 3882092,
+   "peak_alloc_gb": 14.591088771820068,
+   "peak_reserved_gb": 18.048828125
+  },
+  "Sonny_School_Bus": {
+   "object": "Sonny_School_Bus",
+   "ok": true,
+   "total_s": 21.65107979392633,
+   "times": {
+    "preprocess": 0.012849468970671296,
+    "shape_diffusion": 1.8281913029495627,
+    "shape_decode_mc": 0.8844203669577837,
+    "mesh_postproc": 7.585359341930598,
+    "tex_delight": 2.1214363349135965,
+    "tex_uv_unwrap": 2.036514698062092,
+    "tex_render_cond": 0.26689400407485664,
+    "tex_multiview_diffusion": 4.5573322819545865,
+    "tex_bake": 0.520193399162963,
+    "tex_inpaint": 1.1200567048508674,
+    "tex_export": 0.032200542045757174,
+    "export_glb": 0.6853524839971215
+   },
+   "faces_raw": 592850,
+   "faces": 40000,
+   "vertices": 25518,
+   "size_bytes": 3474212,
+   "peak_alloc_gb": 14.591117858886719,
+   "peak_reserved_gb": 18.048828125
+  },
+  "Threshold_Porcelain_Teapot_White": {
+   "object": "Threshold_Porcelain_Teapot_White",
+   "ok": true,
+   "total_s": 20.63724018004723,
+   "times": {
+    "preprocess": 0.00928718619979918,
+    "shape_diffusion": 1.8149829918984324,
+    "shape_decode_mc": 0.6384282030630857,
+    "mesh_postproc": 5.268948970828205,
+    "tex_delight": 2.1379118179902434,
+    "tex_uv_unwrap": 4.108091074042022,
+    "tex_render_cond": 0.255143532063812,
+    "tex_multiview_diffusion": 4.514360090950504,
+    "tex_bake": 0.566005497938022,
+    "tex_inpaint": 0.6881472549866885,
+    "tex_export": 0.029209056869149208,
+    "export_glb": 0.606448135804385
+   },
+   "faces_raw": 431716,
+   "faces": 40000,
+   "vertices": 23383,
+   "size_bytes": 3107512,
+   "peak_alloc_gb": 14.591078281402588,
+   "peak_reserved_gb": 18.048828125
+  },
+  "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure": {
+   "object": "Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure",
+   "ok": true,
+   "total_s": 18.779250506078824,
+   "times": {
+    "preprocess": 0.012984155910089612,
+    "shape_diffusion": 1.8283012071624398,
+    "shape_decode_mc": 0.6412764769047499,
+    "mesh_postproc": 4.957837688969448,
+    "tex_delight": 2.122124372050166,
+    "tex_uv_unwrap": 1.7815907869953662,
+    "tex_render_cond": 0.2610195940360427,
+    "tex_multiview_diffusion": 4.590711582219228,
+    "tex_bake": 0.5176656539551914,
+    "tex_inpaint": 1.4474157730583102,
+    "tex_export": 0.025594501988962293,
+    "export_glb": 0.5924593070521951
+   },
+   "faces_raw": 394050,
+   "faces": 40000,
+   "vertices": 26882,
+   "size_bytes": 3427792,
+   "peak_alloc_gb": 14.591143608093262,
+   "peak_reserved_gb": 18.048828125
+  },
+  "Vtech_Roll_Learn_Turtle": {
+   "object": "Vtech_Roll_Learn_Turtle",
+   "ok": true,
+   "total_s": 20.27584993094206,
+   "times": {
+    "preprocess": 0.012083260109648108,
+    "shape_diffusion": 1.8238284811377525,
+    "shape_decode_mc": 0.7517272362019867,
+    "mesh_postproc": 6.560841608792543,
+    "tex_delight": 2.1280139989685267,
+    "tex_uv_unwrap": 1.839646675856784,
+    "tex_render_cond": 0.26986110606230795,
+    "tex_multiview_diffusion": 4.504701896803454,
+    "tex_bake": 0.5322100610937923,
+    "tex_inpaint": 1.0954829310066998,
+    "tex_export": 0.03336034412495792,
+    "export_glb": 0.7238198360428214
+   },
+   "faces_raw": 505760,
+   "faces": 40000,
+   "vertices": 28269,
+   "size_bytes": 4062648,
+   "peak_alloc_gb": 14.591168880462646,
+   "peak_reserved_gb": 18.048828125
+  }
+ },
+ "loadavg_start": [
+  3.88623046875,
+  10.16357421875,
+  23.14990234375
+ ],
+ "started_utc": "2026-10-26T06:41:33Z",
+ "warmup_s": 24.325882263015956,
+ "loadavg_end": [
+  3.56982421875,
+  7.28466796875,
+  19.92138671875
+ ]
+}

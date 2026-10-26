@@ -1,0 +1,26 @@
+{
+ "object": "Sonny_School_Bus",
+ "ok": true,
+ "total_s": 36.81180944805965,
+ "times": {
+  "preprocess": 0.01331839500926435,
+  "shape_diffusion": 3.858747648075223,
+  "shape_decode_mc": 5.128944399999455,
+  "mesh_postproc": 5.116402011131868,
+  "tex_delight": 4.388515943195671,
+  "tex_uv_unwrap": 1.9907726140227169,
+  "tex_render_cond": 2.42512721917592,
+  "tex_multiview_diffusion": 9.211687068920583,
+  "tex_bake": 1.5253913318738341,
+  "tex_inpaint": 2.3075537581462413,
+  "tex_export": 0.09430323704145849,
+  "export_glb": 0.7366174960043281
+ },
+ "faces_raw": 1350812,
+ "loadavg": 11.28515625,
+ "faces": 40000,
+ "vertices": 25785,
+ "size_bytes": 3633152,
+ "peak_alloc_gb": 14.51773738861084,
+ "peak_reserved_gb": 15.572265625
+}

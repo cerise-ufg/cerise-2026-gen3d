@@ -1,0 +1,18 @@
+{
+ "object": "Threshold_Porcelain_Teapot_White",
+ "ok": true,
+ "total_s": 52.651597537100315,
+ "times": {
+  "preprocess": 0.03021297394298017,
+  "multiview_diffusion": 48.103689952986315,
+  "lrm_planes": 2.135486091952771,
+  "mesh_extract_flexicubes": 2.374239220051095,
+  "export_glb": 0.0073056910187006
+ },
+ "faces_raw": 91820,
+ "faces": 91820,
+ "vertices": 45922,
+ "size_bytes": 1837572,
+ "peak_alloc_gb": 23.249619960784912,
+ "peak_reserved_gb": 23.505859375
+}

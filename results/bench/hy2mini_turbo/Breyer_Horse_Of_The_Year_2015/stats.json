@@ -1,0 +1,25 @@
+{
+ "object": "Breyer_Horse_Of_The_Year_2015",
+ "ok": true,
+ "total_s": 52.93481581402011,
+ "times": {
+  "preprocess": 0.023490485036745667,
+  "shape_diffusion": 5.552965736016631,
+  "shape_decode_mc": 3.4927374159451574,
+  "mesh_postproc": 11.210944963851944,
+  "tex_delight": 6.802872843109071,
+  "tex_uv_unwrap": 4.928755575791001,
+  "tex_render_cond": 0.9028343998361379,
+  "tex_multiview_diffusion": 14.087618987075984,
+  "tex_bake": 2.2221220061182976,
+  "tex_inpaint": 2.937721992144361,
+  "tex_export": 0.07256601401604712,
+  "export_glb": 0.6995641330722719
+ },
+ "faces_raw": 429707,
+ "faces": 40000,
+ "vertices": 23158,
+ "size_bytes": 3077608,
+ "peak_alloc_gb": 13.55869436264038,
+ "peak_reserved_gb": 16.6328125
+}

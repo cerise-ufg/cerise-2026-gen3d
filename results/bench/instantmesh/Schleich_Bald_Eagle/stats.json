@@ -1,0 +1,18 @@
+{
+ "object": "Schleich_Bald_Eagle",
+ "ok": true,
+ "total_s": 16.46144087216817,
+ "times": {
+  "preprocess": 0.026890418026596308,
+  "multiview_diffusion": 15.099809870123863,
+  "lrm_planes": 0.6262386150192469,
+  "mesh_extract_flexicubes": 0.7065969570539892,
+  "export_glb": 0.0017852520104497671
+ },
+ "faces_raw": 45880,
+ "faces": 45880,
+ "vertices": 22948,
+ "size_bytes": 918696,
+ "peak_alloc_gb": 23.229607582092285,
+ "peak_reserved_gb": 23.7578125
+}

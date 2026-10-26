@@ -1,0 +1,76 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /usr/bin/python
+rootdir: /workspace
+plugins: jaxtyping-0.3.11, typeguard-4.5.1, anyio-4.13.0
+collecting ... collected 20 items
+
+validation/test_pipeline.py::test_assentar_centralizar_escalar PASSED    [  5%]
+validation/test_pipeline.py::test_reducao_textura_sem_extensoes PASSED   [ 10%]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-Schleich_Bald_Eagle] PASSED [ 15%]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-ACE_Coffee_Mug_Kristen_16_oz_cup] PASSED [ 20%]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-cc0_teapot.jpg] PASSED [ 25%]
+validation/test_pipeline.py::test_material_com_textura[alto-Schleich_Bald_Eagle] PASSED [ 30%]
+validation/test_pipeline.py::test_material_com_textura[alto-ACE_Coffee_Mug_Kristen_16_oz_cup] PASSED [ 35%]
+validation/test_pipeline.py::test_material_com_textura[alto-cc0_teapot.jpg] PASSED [ 40%]
+validation/test_pipeline.py::test_sem_draco_meshopt_ktx2[alto-Schleich_Bald_Eagle] PASSED [ 45%]
+validation/test_pipeline.py::test_sem_draco_meshopt_ktx2[alto-ACE_Coffee_Mug_Kristen_16_oz_cup] PASSED [ 50%]
+validation/test_pipeline.py::test_sem_draco_meshopt_ktx2[alto-cc0_teapot.jpg] PASSED [ 55%]
+validation/test_pipeline.py::test_orcamento_de_faces[alto-Schleich_Bald_Eagle] PASSED [ 60%]
+validation/test_pipeline.py::test_orcamento_de_faces[alto-ACE_Coffee_Mug_Kristen_16_oz_cup] PASSED [ 65%]
+validation/test_pipeline.py::test_orcamento_de_faces[alto-cc0_teapot.jpg] PASSED [ 70%]
+validation/test_pipeline.py::test_bounding_box_metrica[alto-Schleich_Bald_Eagle] PASSED [ 75%]
+validation/test_pipeline.py::test_bounding_box_metrica[alto-ACE_Coffee_Mug_Kristen_16_oz_cup] PASSED [ 80%]
+validation/test_pipeline.py::test_bounding_box_metrica[alto-cc0_teapot.jpg] PASSED [ 85%]
+validation/test_pipeline.py::test_limite_de_tempo_e_tamanho[alto-Schleich_Bald_Eagle] PASSED [ 90%]
+validation/test_pipeline.py::test_limite_de_tempo_e_tamanho[alto-ACE_Coffee_Mug_Kristen_16_oz_cup] PASSED [ 95%]
+validation/test_pipeline.py::test_limite_de_tempo_e_tamanho[alto-cc0_teapot.jpg] PASSED [100%]
+
+=============================== warnings summary ===============================
+validation/test_pipeline.py:82
+  /workspace/validation/test_pipeline.py:82: PytestUnknownMarkWarning: Unknown pytest.mark.gpu - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.gpu
+
+validation/test_pipeline.py:90
+  /workspace/validation/test_pipeline.py:90: PytestUnknownMarkWarning: Unknown pytest.mark.gpu - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.gpu
+
+validation/test_pipeline.py:101
+  /workspace/validation/test_pipeline.py:101: PytestUnknownMarkWarning: Unknown pytest.mark.gpu - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.gpu
+
+validation/test_pipeline.py:111
+  /workspace/validation/test_pipeline.py:111: PytestUnknownMarkWarning: Unknown pytest.mark.gpu - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.gpu
+
+validation/test_pipeline.py:118
+  /workspace/validation/test_pipeline.py:118: PytestUnknownMarkWarning: Unknown pytest.mark.gpu - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.gpu
+
+validation/test_pipeline.py:129
+  /workspace/validation/test_pipeline.py:129: PytestUnknownMarkWarning: Unknown pytest.mark.gpu - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.gpu
+
+validation/test_pipeline.py::test_glb_valido_khronos[alto-Schleich_Bald_Eagle]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-Schleich_Bald_Eagle]
+  /usr/local/lib/python3.12/dist-packages/diffusers/schedulers/scheduling_euler_ancestral_discrete.py:206: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments.
+    sigmas = np.array(((1 - self.alphas_cumprod) / self.alphas_cumprod) ** 0.5)
+
+validation/test_pipeline.py::test_glb_valido_khronos[alto-Schleich_Bald_Eagle]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-ACE_Coffee_Mug_Kristen_16_oz_cup]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-cc0_teapot.jpg]
+  /workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+    sliced = padded[slice_dims]
+
+validation/test_pipeline.py::test_glb_valido_khronos[alto-Schleich_Bald_Eagle]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-Schleich_Bald_Eagle]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-ACE_Coffee_Mug_Kristen_16_oz_cup]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-ACE_Coffee_Mug_Kristen_16_oz_cup]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-cc0_teapot.jpg]
+validation/test_pipeline.py::test_glb_valido_khronos[alto-cc0_teapot.jpg]
+  /usr/local/lib/python3.12/dist-packages/diffusers/schedulers/scheduling_euler_ancestral_discrete.py:311: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments.
+    sigmas = np.array(((1 - self.alphas_cumprod) / self.alphas_cumprod) ** 0.5)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+------- generated xml file: /workspace/results/a4_pytest/junit_alto.xml --------
+================= 20 passed, 17 warnings in 135.17s (0:02:15) ==================
+PYTEST_RC=0

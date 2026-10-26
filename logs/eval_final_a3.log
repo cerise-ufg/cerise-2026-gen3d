@@ -1,0 +1,27 @@
+W1026 09:57:00.935000 32392 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+a3_bf16 ACE_Coffee_Mug_Kristen_16_oz_cup {'ok': True, 'total_s': 67.273, 'chamfer': 0.0231, 'fscore@0.05': 0.9792, 'fscore@0.1': 1.0, 'clip_input': 0.9002, 'clip_novel': 0.8368}
+a3_bf16 Android_Figure_Panda {'ok': False, 'total_s': None}
+a3_bf16 Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+a3_bf16 Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+a3_bf16 Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+a3_bf16 Schleich_African_Black_Rhino {'ok': True, 'total_s': 47.261, 'chamfer': 0.0508, 'fscore@0.05': 0.8736, 'fscore@0.1': 0.9741, 'clip_input': 0.9416, 'clip_novel': 0.905}
+a3_bf16 Schleich_Bald_Eagle {'ok': True, 'total_s': 47.5159, 'chamfer': 0.0367, 'fscore@0.05': 0.9427, 'fscore@0.1': 0.9839, 'clip_input': 0.8674, 'clip_novel': 0.8564}
+a3_bf16 Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+a3_bf16 Sonny_School_Bus {'ok': True, 'total_s': 61.0581, 'chamfer': 0.0472, 'fscore@0.05': 0.8969, 'fscore@0.1': 0.9854, 'clip_input': 0.9286, 'clip_novel': 0.8671}
+a3_bf16 Threshold_Porcelain_Teapot_White {'ok': True, 'total_s': 51.6578, 'chamfer': 0.0354, 'fscore@0.05': 0.9245, 'fscore@0.1': 0.9642, 'clip_input': 0.9097, 'clip_novel': 0.9285}
+a3_bf16 Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': True, 'total_s': 42.1613, 'chamfer': 0.0264, 'fscore@0.05': 0.9841, 'fscore@0.1': 1.0, 'clip_input': 0.853, 'clip_novel': 0.7594}
+a3_bf16 Vtech_Roll_Learn_Turtle {'ok': True, 'total_s': 34.0829, 'chamfer': 0.0286, 'fscore@0.05': 0.9799, 'fscore@0.1': 1.0, 'clip_input': 0.9203, 'clip_novel': 0.8341}
+a3_bf16 Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}
+a3_noflashvdm ACE_Coffee_Mug_Kristen_16_oz_cup {'ok': True, 'total_s': 116.3754, 'chamfer': 0.0226, 'fscore@0.05': 0.975, 'fscore@0.1': 1.0, 'clip_input': 0.937, 'clip_novel': 0.8734}
+a3_noflashvdm Android_Figure_Panda {'ok': False, 'total_s': None}
+a3_noflashvdm Breyer_Horse_Of_The_Year_2015 {'ok': False, 'total_s': None}
+a3_noflashvdm Crosley_Alarm_Clock_Vintage_Metal {'ok': False, 'total_s': None}
+a3_noflashvdm Reebok_ZIGLITE_RUSH {'ok': False, 'total_s': None}
+a3_noflashvdm Schleich_African_Black_Rhino {'ok': True, 'total_s': 191.6193, 'chamfer': 0.0499, 'fscore@0.05': 0.8783, 'fscore@0.1': 0.977, 'clip_input': 0.9296, 'clip_novel': 0.9098}
+a3_noflashvdm Schleich_Bald_Eagle {'ok': True, 'total_s': 159.3595, 'chamfer': 0.0377, 'fscore@0.05': 0.9453, 'fscore@0.1': 0.9831, 'clip_input': 0.8765, 'clip_novel': 0.8381}
+a3_noflashvdm Schleich_Lion_Action_Figure {'ok': False, 'total_s': None}
+a3_noflashvdm Sonny_School_Bus {'ok': False, 'total_s': None}
+a3_noflashvdm Threshold_Porcelain_Teapot_White {'ok': False, 'total_s': None}
+a3_noflashvdm Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure {'ok': False, 'total_s': None}
+a3_noflashvdm Vtech_Roll_Learn_Turtle {'ok': False, 'total_s': None}
+a3_noflashvdm Vtech_Stack_Sing_Rings_636_Months {'ok': False, 'total_s': None}

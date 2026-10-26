@@ -1,0 +1,26 @@
+{
+ "object": "Vtech_Roll_Learn_Turtle",
+ "ok": true,
+ "total_s": 58.41888803499751,
+ "times": {
+  "preprocess": 0.012673837132751942,
+  "shape_diffusion": 5.812664282042533,
+  "shape_decode_mc": 5.630713233025745,
+  "mesh_postproc": 29.33959530107677,
+  "tex_delight": 4.200591807020828,
+  "tex_uv_unwrap": 2.1967884758487344,
+  "tex_render_cond": 0.8030921570025384,
+  "tex_multiview_diffusion": 8.925168699817732,
+  "tex_bake": 0.815347749972716,
+  "tex_inpaint": 0.4304400358814746,
+  "tex_export": 0.014308921061456203,
+  "export_glb": 0.23702001408673823
+ },
+ "faces_raw": 1147592,
+ "loadavg": 19.72021484375,
+ "faces": 40000,
+ "vertices": 27651,
+ "size_bytes": 2066672,
+ "peak_alloc_gb": 14.470897674560547,
+ "peak_reserved_gb": 15.572265625
+}

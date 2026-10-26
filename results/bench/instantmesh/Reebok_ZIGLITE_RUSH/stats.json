@@ -1,0 +1,18 @@
+{
+ "object": "Reebok_ZIGLITE_RUSH",
+ "ok": true,
+ "total_s": 16.533841534983367,
+ "times": {
+  "preprocess": 0.02742079715244472,
+  "multiview_diffusion": 15.162217470118776,
+  "lrm_planes": 0.6208737238775939,
+  "mesh_extract_flexicubes": 0.72080835304223,
+  "export_glb": 0.002333238022401929
+ },
+ "faces_raw": 65292,
+ "faces": 65292,
+ "vertices": 32756,
+ "size_bytes": 1308572,
+ "peak_alloc_gb": 23.229607582092285,
+ "peak_reserved_gb": 23.7578125
+}

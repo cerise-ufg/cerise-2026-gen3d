@@ -1,0 +1,14 @@
+appearance,chamfer,clip_input,clip_novel,conv,faces,fscore@0.05,fscore@0.1,object,ok,peak_alloc_gb,peak_reserved_gb,size_bytes,t_export_glb,t_mesh_extract_mc,t_preprocess,t_triplane_forward,tag,total_s,vertices,yaw
+,,,,,,,,ACE_Coffee_Mug_Kristen_16_oz_cup,False,,,,,,,,test_triposr,,,
+,,,,,,,,Android_Figure_Panda,False,,,,,,,,test_triposr,,,
+,,,,,,,,Breyer_Horse_Of_The_Year_2015,False,,,,,,,,test_triposr,,,
+,,,,,,,,Crosley_Alarm_Clock_Vintage_Metal,False,,,,,,,,test_triposr,,,
+,,,,,,,,Reebok_ZIGLITE_RUSH,False,,,,,,,,test_triposr,,,
+,,,,,,,,Schleich_African_Black_Rhino,False,,,,,,,,test_triposr,,,
+cor_vertice,0.056635755291885234,0.9092220664024353,0.8067953785260519,zup,115567,0.8363017704185338,0.9642178698016469,Schleich_Bald_Eagle,True,4.1644511222839355,5.2265625,2314180,0.002983422949910164,0.5851911769714206,0.032196210930123925,0.2722769489046186,test_triposr,0.8928324000444263,57899,300
+,,,,,,,,Schleich_Lion_Action_Figure,False,,,,,,,,test_triposr,,,
+cor_vertice,0.050844582734149504,0.8207815289497375,0.795588215192159,zup,146161,0.8777338669198942,0.9909589925734582,Sonny_School_Bus,True,4.166435718536377,5.2265625,2926012,0.004402014892548323,0.6376944840885699,0.040571599965915084,0.24163937591947615,test_triposr,0.9244401471223682,73193,300
+,,,,,,,,Threshold_Porcelain_Teapot_White,False,,,,,,,,test_triposr,,,
+,,,,,,,,Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure,False,,,,,,,,test_triposr,,,
+,,,,,,,,Vtech_Roll_Learn_Turtle,False,,,,,,,,test_triposr,,,
+,,,,,,,,Vtech_Stack_Sing_Rings_636_Months,False,,,,,,,,test_triposr,,,

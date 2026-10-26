@@ -1,0 +1,59 @@
+{
+ "preset": "rapido",
+ "texture": true,
+ "remove_background": true,
+ "seconds": 11.49,
+ "total_s": 11.495,
+ "times": {
+  "bg_removal": 0.3076,
+  "shape_diffusion": 1.653,
+  "shape_decode_mc": 0.4351,
+  "mesh_postproc": 0.228,
+  "tex_delight": 1.9776,
+  "tex_uv_unwrap": 0.4291,
+  "tex_render_cond": 0.8416,
+  "tex_multiview_diffusion": 4.1635,
+  "tex_bake": 0.2554,
+  "tex_inpaint": 0.1801,
+  "tex_export": 0.0073,
+  "export_glb": 0.2508,
+  "mobile_postproc": 0.6832,
+  "thumbnail": 0.0812
+ },
+ "lock_waits": {
+  "shape_diffusion": 0.0,
+  "shape_decode_mc": 0.0,
+  "tex_delight": 0.0,
+  "tex_multiview_diffusion": 0.0,
+  "thumbnail": 0.0
+ },
+ "faces_raw": 244944,
+ "faces": 9998,
+ "dims_m": [
+  0.3,
+  0.23269355952095583,
+  0.15838900159056796
+ ],
+ "peak_gpu_gb": 18.873,
+ "peak_gpu_scope": "job",
+ "slot": 0,
+ "vertices": 6545,
+ "triangles": 9998,
+ "materials": 1,
+ "textures": 1,
+ "texture_mime": [
+  "image/jpeg"
+ ],
+ "gltf_extensions": [],
+ "glb_bytes": 370328,
+ "params": {
+  "shape": "dit-v2-0-turbo",
+  "paint": "hunyuan3d-paint-v2-0-turbo",
+  "steps": 5,
+  "octree": 256,
+  "max_faces": 10000,
+  "texture_size": 1024,
+  "mobile_texture": 1024,
+  "target_size_m": 0.3
+ }
+}

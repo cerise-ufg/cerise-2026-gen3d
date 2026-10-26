@@ -1,0 +1,67 @@
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ apt-get install -y -qq nodejs npm
++ node --version
+v18.19.1
++ npm --version
+9.2.0
++ mkdir -p /opt/gltf-tools
++ cd /opt/gltf-tools
++ npm init -y
++ nice -n 19 npm install --no-audit --no-fund @gltf-transform/cli@4 gltfpack gltf-validator @google/model-viewer three
++ echo NPM_RC=0
+NPM_RC=0
++ tail -5 /tmp/npm.log
+npm WARN EBADENGINE }
+npm WARN deprecated @types/wrap-ansi@8.1.0: This is a stub types definition. wrap-ansi provides its own type definitions, so you do not need this installed.
+npm WARN deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 188 packages in 18s
++ ls node_modules/.bin
++ tr '\n' ' '
+glob gltf-transform gltfpack node-which semver + echo
+
++ ./node_modules/.bin/gltf-transform --version
+file:///opt/gltf-tools/node_modules/sharp/dist/utility.mjs:14
+import pkg from "../package.json" with { type: "json" };
+                                  ^^^^
+
+SyntaxError: Unexpected token 'with'
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:152:18)
+    at ModuleLoader.moduleProvider (node:internal/modules/esm/loader:298:14)
+
+Node.js v18.19.1
++ nice -n 19 pip install --no-cache-dir playwright pygltflib
+Collecting playwright
+  Downloading playwright-1.64.1-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.3 kB)
+Requirement already satisfied: pygltflib in /usr/local/lib/python3.12/dist-packages (1.16.5)
+Collecting pyee<15,>=13 (from playwright)
+  Downloading pyee-14.0.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting greenlet<4.0.0,>=3.1.1 (from playwright)
+  Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (3.8 kB)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.12/dist-packages (from pyee<15,>=13->playwright) (4.15.0)
+Requirement already satisfied: dataclasses-json>=0.0.25 in /usr/local/lib/python3.12/dist-packages (from pygltflib) (0.6.7)
+Requirement already satisfied: deprecated in /usr/local/lib/python3.12/dist-packages (from pygltflib) (3.0.0)
+Requirement already satisfied: marshmallow<4.0.0,>=3.18.0 in /usr/local/lib/python3.12/dist-packages (from dataclasses-json>=0.0.25->pygltflib) (3.26.2)
+Requirement already satisfied: typing-inspect<1,>=0.4.0 in /usr/local/lib/python3.12/dist-packages (from dataclasses-json>=0.0.25->pygltflib) (0.9.0)
+Requirement already satisfied: packaging>=17.0 in /usr/local/lib/python3.12/dist-packages (from marshmallow<4.0.0,>=3.18.0->dataclasses-json>=0.0.25->pygltflib) (26.0)
+Requirement already satisfied: mypy-extensions>=0.3.0 in /usr/local/lib/python3.12/dist-packages (from typing-inspect<1,>=0.4.0->dataclasses-json>=0.0.25->pygltflib) (1.1.0)
+Requirement already satisfied: wrapt<3,>=1.16 in /usr/local/lib/python3.12/dist-packages (from deprecated->pygltflib) (2.5.1)
+Downloading playwright-1.64.1-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (48.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 MB 28.4 MB/s  0:00:01
+Downloading greenlet-3.5.6-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (611 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 611.7/611.7 kB 79.2 MB/s  0:00:00
+Downloading pyee-14.0.0-py3-none-any.whl (15 kB)
+Installing collected packages: pyee, greenlet, playwright
+
+Successfully installed greenlet-3.5.6 playwright-1.64.1 pyee-14.0.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ echo PW_PIP_RC=0
+PW_PIP_RC=0
++ nice -n 19 python -m playwright install --with-deps chromium
++ echo PW_RC=0
+PW_RC=0
++ tail -3 /tmp/pw.log
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 119.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 119.9 MiB
+Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to /root/.cache/ms-playwright/chromium_headless_shell-1248

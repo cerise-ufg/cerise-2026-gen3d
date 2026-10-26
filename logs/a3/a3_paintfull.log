@@ -1,0 +1,30 @@
+[a3_paintfull] limite de memoria do alocador: 0.197 da GPU
+W1026 07:02:18.393000 25539 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+2026-10-26 07:02:18,947 - hy3dgen.shapgen - INFO - Try to load model from local path: /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-dit-v2-0-turbo
+2026-10-26 07:02:18,950 - hy3dgen.shapgen - INFO - Loading model from /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-dit-v2-0-turbo/model.fp16.safetensors
+2026-10-26 07:02:37,155 - hy3dgen.shapgen - INFO - Try to load model from local path: /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-vae-v2-0-turbo
+2026-10-26 07:02:37,156 - hy3dgen.shapgen - INFO - Loading model from /workspace/hy3dgen_models/tencent/Hunyuan3D-2/hunyuan3d-vae-v2-0-turbo/model.fp16.safetensors
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is given, using pc_size=5120, pc_sharpedge_size=5120
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is given, using pc_size=5120, pc_sharpedge_size=5120
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  2.82it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  3.25it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.52it/s]
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:03,  1.28it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:08<00:04,  2.34s/it]Loading pipeline components...: 100%|██████████| 6/6 [00:08<00:00,  1.49s/it]
+[a3_paintfull] carga do modelo: 47.6 s; memoria apos carga 11.45 GB
+2026-10-26 07:03:08,173 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+/workspace/third_party/Hunyuan3D-2/hy3dgen/shapegen/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /opt/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+[a3_paintfull] aquecimento: 101.6 s
+2026-10-26 07:04:49,582 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] ACE_Coffee_Mug_Kristen_16_oz_cup: ok=True 102.8s faces=40000 pico=14.55GB etapas={'preprocess': 0.01, 'shape_diffusion': 4.06, 'shape_decode_mc': 5.14, 'mesh_postproc': 40.47, 'tex_delight': 4.68, 'tex_uv_unwrap': 3.83, 'tex_render_cond': 0.72, 'tex_multiview_diffusion': 38.63, 'tex_bake': 1.72, 'tex_inpaint': 2.92, 'tex_export': 0.09, 'export_glb': 0.5}
+2026-10-26 07:06:32,308 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] Schleich_African_Black_Rhino: ok=True 79.8s faces=40000 pico=14.55GB etapas={'preprocess': 0.02, 'shape_diffusion': 4.0, 'shape_decode_mc': 3.54, 'mesh_postproc': 18.66, 'tex_delight': 4.62, 'tex_uv_unwrap': 4.54, 'tex_render_cond': 0.68, 'tex_multiview_diffusion': 38.77, 'tex_bake': 1.79, 'tex_inpaint': 2.27, 'tex_export': 0.09, 'export_glb': 0.86}
+2026-10-26 07:07:52,243 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] Schleich_Bald_Eagle: ok=True 81.8s faces=40000 pico=14.55GB etapas={'preprocess': 0.01, 'shape_diffusion': 4.1, 'shape_decode_mc': 3.16, 'mesh_postproc': 21.97, 'tex_delight': 3.89, 'tex_uv_unwrap': 4.97, 'tex_render_cond': 0.66, 'tex_multiview_diffusion': 38.6, 'tex_bake': 1.48, 'tex_inpaint': 2.01, 'tex_export': 0.06, 'export_glb': 0.92}
+2026-10-26 07:09:14,033 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] Sonny_School_Bus: ok=True 99.4s faces=40000 pico=14.55GB etapas={'preprocess': 0.01, 'shape_diffusion': 4.05, 'shape_decode_mc': 5.31, 'mesh_postproc': 38.14, 'tex_delight': 4.56, 'tex_uv_unwrap': 2.44, 'tex_render_cond': 0.76, 'tex_multiview_diffusion': 38.5, 'tex_bake': 1.95, 'tex_inpaint': 2.82, 'tex_export': 0.13, 'export_glb': 0.77}
+2026-10-26 07:10:53,396 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] Threshold_Porcelain_Teapot_White: ok=True 85.5s faces=40000 pico=14.55GB etapas={'preprocess': 0.01, 'shape_diffusion': 3.96, 'shape_decode_mc': 4.2, 'mesh_postproc': 25.44, 'tex_delight': 4.55, 'tex_uv_unwrap': 4.38, 'tex_render_cond': 0.69, 'tex_multiview_diffusion': 38.69, 'tex_bake': 1.69, 'tex_inpaint': 1.08, 'tex_export': 0.09, 'export_glb': 0.71}
+2026-10-26 07:12:18,940 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] Transformers_Age_of_Extinction_Mega_1Step_Bumblebee_Figure: ok=True 85.4s faces=40000 pico=14.55GB etapas={'preprocess': 0.02, 'shape_diffusion': 4.01, 'shape_decode_mc': 4.54, 'mesh_postproc': 22.99, 'tex_delight': 5.66, 'tex_uv_unwrap': 2.12, 'tex_render_cond': 1.09, 'tex_multiview_diffusion': 38.74, 'tex_bake': 2.04, 'tex_inpaint': 3.43, 'tex_export': 0.09, 'export_glb': 0.63}
+2026-10-26 07:13:44,477 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+[a3_paintfull] Vtech_Roll_Learn_Turtle: ok=True 62.8s faces=40000 pico=14.55GB etapas={'preprocess': 0.02, 'shape_diffusion': 4.11, 'shape_decode_mc': 4.98, 'mesh_postproc': 23.94, 'tex_delight': 2.54, 'tex_uv_unwrap': 2.11, 'tex_render_cond': 0.32, 'tex_multiview_diffusion': 22.07, 'tex_bake': 0.65, 'tex_inpaint': 1.35, 'tex_export': 0.03, 'export_glb': 0.7}
+[a3_paintfull] FIM (loadavg inicio 5.4, fim 30.8)
