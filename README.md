@@ -17,6 +17,9 @@ servidor (a etapa seguinte — o servidor HTTP — usa a pasta `server/` deste m
   **rápido** ≈ 24 s / 1,7 MB, **padrão** ≈ 30 s / 2,0 MB, **alto** ≈ 57–82 s / 6,1 MB (medianas; ver relatório).
 * Resultados, tabelas e figuras: [`RELATORIO_SECAO.md`](RELATORIO_SECAO.md) e `evidencias/`, `resultados/`.
 
+> Publicação: o histórico git está pronto neste espelho local; para criar o repositório privado e enviar, rodar na
+> pasta: `gh repo create EduardoCaixeta/cerise-2026-gen3d --private --source . --remote origin --push`.
+
 ## Resultados principais (medidos no Spark, máquina compartilhada)
 
 | | Tempo/objeto | Aparência | Chamfer ↓ | F@0,05 ↑ | CLIP entrada ↑ |

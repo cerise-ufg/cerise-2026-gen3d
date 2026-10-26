@@ -386,7 +386,9 @@ do cavalo, cadarços, asas da águia). Nas fotos reais, a remoção de fundo fun
 
 ## 6. Repositório e reprodutibilidade
 
-Código, tabelas e figuras: <https://github.com/EduardoCaixeta/cerise-2026-gen3d> (privado). Estrutura: `models/`
+Código, tabelas e figuras: <https://github.com/EduardoCaixeta/cerise-2026-gen3d> (privado; o histórico está
+versionado no espelho local `E:\CERISE\FRENTES\REALIDADE AUMENTADA\GERACAO_3D` e a criação do repositório remoto +
+*push* ficou pendente de autorização — ver seção 7). Estrutura: `models/`
 (executores instrumentados e preparo dos pesos), `benchmark/` (conjunto GSO, renderizador, métricas, execução,
 agregação), `pipeline/` (pacote do servidor, presets, pós-processamento, `write_ready.py`), `validation/` (pytest,
 visualizador, grades, fotos CC0), `docker/` (Dockerfile e scripts de instalação), `evidencias/` e `resultados/`
@@ -400,9 +402,11 @@ GLBs gerados ficam no Spark (`~/cerise2026/hf_cache` e `~/cerise2026/gen3d/{data
   ociosa para fixar os tempos de referência do servidor.
 * **Subconjuntos:** Hunyuan3D-2.0 padrão e 2.1 foram medidos em 4 e 2 objetos, por custo de tempo; a comparação
   justa está na Tabela 3.
-* **Pendências que dependem do Eduardo:** login no Hugging Face e aceite das licenças de Stable Fast 3D, SPAR3D e
-  DINOv3 (TRELLIS.2) para completar o benchmark; a decisão de expor publicamente o servidor 3D (nada do Spark foi
-  exposto à internet).
+* **Pendências que dependem do Eduardo:** criar o repositório privado e enviar o histórico local
+  (`gh repo create EduardoCaixeta/cerise-2026-gen3d --private --source . --remote origin --push`, na pasta do
+  espelho local); login no Hugging Face e
+  aceite das licenças de Stable Fast 3D, SPAR3D e DINOv3 (TRELLIS.2) para completar o benchmark; a decisão de expor
+  publicamente o servidor 3D (nada do Spark foi exposto à internet).
 * **TRELLIS:** compilar `spconv`/`cumm` para aarch64/CUDA 13 (ou portar para `torchsparse`) num trabalho dedicado.
 * **Próximos passos técnicos:** usar as várias fotos que o app já captura (variante multivista Hunyuan3D-2mv);
   avaliar o Hunyuan3D-2.1 com renderização PBR na métrica; `torch.compile`/TensorRT na difusão multivista da textura;
