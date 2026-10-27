@@ -19,7 +19,7 @@ Ao final, você terá:
 
 | Item | Usado no projeto | Para reproduzir |
 |---|---|---|
-| GPU | NVIDIA DGX Spark: GB10 Blackwell (sm_121), 128 GB de memória unificada, teto de 24 GB para esta frente | GPU NVIDIA com 24 GB ou mais; picos medidos de 14,5 GB (pipeline) e 18,9 GB (worker) |
+| GPU | NVIDIA DGX Spark: GB10 Blackwell (sm_121), 128 GB de memória unificada, teto de 24 GB para esta frente | GPU NVIDIA com mais de 24 GB; picos medidos de 14,5 GB (pipeline) e, no worker, 18,9 GB alocados (22,9 GB no `nvidia-smi`); com 24 GB, suba o worker sem o *preset* alto (ver Problemas comuns) |
 | Sistema | Ubuntu 24.04, CPU aarch64 | Linux; x86_64 com as adaptações indicadas (não testado) |
 | Contêineres | Docker com Compose v2 e NVIDIA Container Toolkit; base `nvcr.io/nvidia/pytorch:26.05-py3` (PyTorch 2.12, CUDA 13.2, Python 3.12) | as mesmas versões e driver compatível com CUDA 13 |
 | Disco | pesos ~70 GB (só o pipeline: ~37 GB), imagem ~38 GB, Releases ~1,9 GB | 150 GB livres |
@@ -30,10 +30,11 @@ Tempo estimado: 12 min para construir a imagem; o download dos pesos depende da 
 
 ## Obtenção do código e dos dados
 
-1. Clone o repositório exatamente em `~/cerise2026/gen3d`, caminho usado por vários scripts.
+1. Autentique a GitHub CLI (escolha HTTPS e aceite autenticar o Git com as suas credenciais do GitHub) e clone o repositório exatamente em `~/cerise2026/gen3d`, caminho usado por vários scripts.
 
 ```bash
-git clone https://github.com/cerise-ufg/cerise-2026-gen3d.git ~/cerise2026/gen3d
+gh auth login
+gh repo clone cerise-ufg/cerise-2026-gen3d ~/cerise2026/gen3d
 mkdir -p ~/cerise2026/hf_cache
 ```
 
@@ -50,7 +51,7 @@ git -C nvdiffrast checkout 253ac4fcea7de5f396371124af597e6cc957bfae
 3. Baixe os pacotes do Release `dados-2026-10-26` (ou pela página Releases), confira o SHA-256 e extraia-os na raiz do repositório. O pacote `gen3d_dados_gso_cc0.tar.gz` traz o conjunto de avaliação, necessário ao benchmark e aos testes; `gen3d_servidor_brutos.tar.gz` traz as imagens da suíte de carga; os demais servem de referência (lista em [`RELEASES.md`](RELEASES.md)).
 
 ```bash
-cd ~/cerise2026/gen3d && gh auth login
+cd ~/cerise2026/gen3d
 gh release download dados-2026-10-26 -R cerise-ufg/cerise-2026-gen3d -D ~/gen3d_releases
 (cd ~/gen3d_releases && sha256sum -c SHA256SUMS)
 for f in ~/gen3d_releases/gen3d_*.tar.gz; do tar -xzf "$f"; done
@@ -70,11 +71,12 @@ bash docker/smoke_image.sh
 
 A conferência deve mostrar `cuda True`, `gen3d_pipeline ok; presets: ['rapido', 'padrao', 'alto']`, Node `v22.11.0` e glTF-Transform `4.5.1` (`resultados/docker_smoke.txt`).
 
-2. Em x86_64 (não testado), antes do build, troque o Node para x64 e a arquitetura CUDA pela da sua GPU (8.9 no exemplo) e confira se a imagem base tem variante amd64 no catálogo NGC.
+2. Em x86_64 (não testado), antes do build, troque o Node para x64 e a arquitetura CUDA pela da sua GPU (8.9 no exemplo), também nos scripts `docker/install_*.sh`, que redefinem `TORCH_CUDA_ARCH_LIST` ao compilar as extensões de TripoSR, InstantMesh e Hunyuan3D-2.1 no benchmark, e confira se a imagem base tem variante amd64 no catálogo NGC.
 
 ```bash
 sed -i -e 's/linux-arm64/linux-x64/g' \
   -e 's/ARCH_LIST="12.1"/ARCH_LIST="8.9"/' docker/Dockerfile
+sed -i 's/ARCH_LIST="12.1"/ARCH_LIST="8.9"/' docker/install_*.sh
 ```
 
 3. Baixe os pesos e monte a árvore `hy3dgen_models/`. O conjunto `hy2` traz forma, textura e *delight* do Hunyuan3D-2 e o 2mini; `clip` traz o CLIP das métricas. `make_local_tree.py` converte o UNet do módulo de textura para `.bin`, único formato aceito pelo carregador oficial, e `fix_turbo_unet.py` baixa o `.bin` do módulo turbo, cujo `.safetensors` tem chaves incompatíveis.
@@ -92,7 +94,7 @@ Para o benchmark completo, acrescente `hy21 triposr instantmesh`. A árvore usa 
 
 ## Geração de um objeto
 
-1. Gere um GLB a partir de uma foto. O `Gen3DPipeline` carrega forma e textura (~11,4 GB, cerca de 115 s) e aquece os *presets* (cerca de 80 s) uma vez; depois, cada geração leva dezenas de segundos.
+1. Gere um GLB a partir de uma foto. O exemplo carrega os *presets* rápido e padrão: o `Gen3DPipeline` carrega forma e textura (~11,4 GB, cerca de 115 s) e aquece os dois *presets* (cerca de 80 s) uma vez, valores medidos com esses dois *presets* (`resultados/READY.json`); depois, cada geração leva dezenas de segundos.
 
 ```bash
 mkdir -p /tmp/saida
@@ -101,11 +103,12 @@ sudo docker run --rm --gpus all --ipc=host \
   -v ~/cerise2026/gen3d/hy3dgen_models:/opt/gen3d/hy3dgen_models \
   -v ~/cerise2026/gen3d/validation/real:/fotos:ro -v /tmp/saida:/saida \
   cerise26_gen3d:latest python -c "import sys; sys.path.insert(0,'pipeline'); \
-from gen3d_pipeline import Gen3DPipeline; p=Gen3DPipeline(); \
+from gen3d_pipeline import Gen3DPipeline, DEFAULT_PRESETS; \
+p=Gen3DPipeline(presets={k: DEFAULT_PRESETS[k] for k in ['rapido','padrao']}); \
 print(p.generate('/fotos/cc0_rooster.jpg','/saida','padrao')['stats'])"
 ```
 
-2. Confira em `/tmp/saida` o `model.glb` (entregue ao app), os intermediários, `thumb.png` e `stats.json` (tempo por etapa, faces, tamanho, dimensões e pico de GPU). Para carregar só alguns *presets*, use `Gen3DPipeline(presets={k: DEFAULT_PRESETS[k] for k in ['rapido','padrao']})`.
+2. Confira em `/tmp/saida` o `model.glb` (entregue ao app), os intermediários, `thumb.png` e `stats.json` (tempo por etapa, faces, tamanho, dimensões e pico de GPU). Sem o argumento `presets`, o `Gen3DPipeline()` carrega também o alto, que usa o módulo de textura completo; medido sozinho, o alto levou 107 s de carga e 118 s de aquecimento (`resultados/READY.json`).
 
 **Tabela: Presets de pipeline/presets.json (forma com 5 passos e FlashVDM) e tempo mediano no GSO (resultados/READY.json)**
 
@@ -205,7 +208,7 @@ sudo docker logs -f cerise26_gen3d_worker1
 bash scripts/stop.sh       # parada graciosa; a fila fica no SQLite em data/
 ```
 
-A API escuta só em `127.0.0.1:8095`; o worker não tem rede. `bash scripts/start.sh 2` usa 2 *slots* com pesos compartilhados; `sudo touch data/PAUSE` drena a GPU sem derrubar a API; `bash scripts/redeploy.sh` reconstrói e recria tudo após mudanças no código. Os limites (fila de 32, 4 pedidos e 6 envios por minuto por cliente, retenção de 7 dias) ficam em `gen3d.env`, descritos em [`server/README.md`](server/README.md).
+A API escuta só em `127.0.0.1:8095`; o worker não tem rede. `bash scripts/start.sh 2` usa 2 *slots* com pesos compartilhados; `sudo touch data/PAUSE` drena a GPU sem derrubar a API; `bash scripts/redeploy.sh` reconstrói e recria tudo após mudanças no código. Os limites (fila de 32, até 4 pedidos em andamento por cliente, 6 envios por minuto por cliente e retenção de 7 dias) ficam em `gen3d.env` (`GEN3D_MAX_QUEUE`, `GEN3D_MAX_QUEUED_PER_CLIENT`, `GEN3D_RATE_JOBS_PER_MIN` e `GEN3D_RETENTION_DAYS`), descritos em [`server/README.md`](server/README.md).
 
 4. Rode os 18 testes automatizados, com motor simulado e sem GPU.
 
@@ -297,8 +300,8 @@ Os tamanhos de GLB da rodada de *presets* (1,65, 2,01 e 6,14 MB) correspondem a 
 - **Worker em loop de reinício após desligamento abrupto.** O cache do numba gravado no contêiner corrompeu. Mantenha `NUMBA_CACHE_DIR=/tmp/numba_cache` em `gen3d.env` e o `tmpfs` de `compose.yaml`, veja `sudo docker logs --tail 50 cerise26_gen3d_worker1` e recrie os contêineres, pois reiniciá-los não basta: `sudo GEN3D_WORKER_SLOTS=1 GEN3D_TRUST_PROXY=0 docker compose -f compose.yaml up -d --force-recreate` (ou `bash scripts/redeploy.sh`).
 - **GLB com textura PNG, maior que o esperado.** O `gltf-transform jpeg` 4.5 só recomprime texturas JPEG; o `pipeline/postprocess.py` atual passa `--formats "*"`. Reconstrua imagens antigas, confira `result.stats.texture_mime` e, sempre que a saída mudar, troque `GEN3D_PIPELINE_VERSION`, senão o cache devolve GLBs antigos.
 - **Erro ao carregar o UNet do módulo de textura.** Rode de novo `make_local_tree.py` e `fix_turbo_unet.py`, com o cache em `/root/.cache/huggingface`.
-- **`start.sh` acusa falta de `u2net.onnx` ou o worker tenta baixar pesos.** O worker não tem rede: baixe tudo antes.
-- **Worker não carrega o modelo ou não pega jobs.** Ele exige 10 GB de `MemAvailable` além do modelo (`GEN3D_MIN_AVAILABLE_GB`) e para enquanto existir `data/PAUSE`; sem o *preset* alto (`GEN3D_WORKER_PRESETS=rapido,padrao`), economizam-se ~4,4 GB.
+- **Falta do modelo de remoção de fundo.** O `start.sh` acusa falta de `u2net.onnx` ou o worker tenta baixar pesos: o worker não tem rede, baixe tudo antes.
+- **Worker não carrega o modelo ou não pega jobs.** Ele exige 10 GB de `MemAvailable` além do modelo (`GEN3D_MIN_AVAILABLE_GB`) e para enquanto existir `data/PAUSE`; sem o *preset* alto, economizam-se ~4,4 GB. Como o `compose.yaml` define `GEN3D_WORKER_PRESETS` no ambiente do worker, passe o valor na linha de comando, na pasta `server`: `sudo GEN3D_WORKER_SLOTS=1 GEN3D_TRUST_PROXY=0 GEN3D_WORKER_PRESETS=rapido,padrao docker compose -f compose.yaml up -d --force-recreate worker1`.
 - **HTTP 429 em testes manuais.** Aguarde o `Retry-After` ou, só para testes, aumente `GEN3D_RATE_JOBS_PER_MIN`.
 - **Falhas com gerações simultâneas.** O *scheduler* da difusão guarda estado; para concorrência, use os *slots* do worker, que têm travas por componente.
 - **Modelos bloqueados no benchmark.** TRELLIS e TRELLIS.2 dependem de `spconv` e `cumm`, sem pacotes para aarch64; Stable Fast 3D e SPAR3D exigem aceite da licença no Hugging Face. Em x86_64, não foram testados.
